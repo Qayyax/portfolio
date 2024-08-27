@@ -2,7 +2,7 @@
     {
         "name": "Job Listing Analyzer",
         "image": "/image/project/job_listing.png",
-        "liveURL": "",
+        "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
         "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
         "featured": false
     },
