@@ -1,100 +1,100 @@
 [
     {
-        name:"Job Listing Analyzer",
-        Image: "/image/project/job_listing.png",
-        liveURL: null,
-        repoURL: "https://github.com/Qayyax/job_listing_analyzer",
-        featured: false
+        "name": "Job Listing Analyzer",
+        "image": "/image/project/job_listing.png",
+        "liveURL": "",
+        "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
+        "featured": false
     },
     {
-        name:"Product List Component",
-        Image: "/image/project/product_list.png",
-        liveURL: "https://prlist-comp.netlify.app",
-        repoURL: "https://github.com/Qayyax/product_list",
-        featured: false
+        "name": "Product List Component",
+        "image": "/image/project/product_list.png",
+        "liveURL": "https://prlist-comp.netlify.app",
+        "repoURL": "https://github.com/Qayyax/product_list",
+        "featured": false
     },
     {
-        name:"REST Countries API",
-        Image: "/image/project/rest_countries.png",
-        liveURL: "https://rest-countries-projee.netlify.app",
-        repoURL: "https://github.com/Qayyax/rest_countries_api",
-        featured: false
+        "name": "REST Countries API",
+        "image": "/image/project/rest_countries.png",
+        "liveURL": "https://rest-countries-projee.netlify.app",
+        "repoURL": "https://github.com/Qayyax/rest_countries_api",
+        "featured": false
     },
     {
-        name:"Color Mood Picker",
-        Image: "/image/project/color_mood.png",
-        liveURL: "https://colour-mood-picker.netlify.app",
-        repoURL: "https://github.com/Qayyax/color-picker-practice",
-        featured: false
+        "name": "Color Mood Picker",
+        "image": "/image/project/color_mood.png",
+        "liveURL": "https://colour-mood-picker.netlify.app",
+        "repoURL": "https://github.com/Qayyax/color-picker-practice",
+        "featured": false
     },
     {
-        name:"Quizzical App",
-        Image: "/image/project/quizzical.png",
-        liveURL: "https://quizical-5.netlify.app",
-        repoURL: "https://github.com/Qayyax/quizical-app",
-        featured: false
+        "name": "Quizzical App",
+        "image": "/image/project/quizzical.png",
+        "liveURL": "https://quizical-5.netlify.app",
+        "repoURL": "https://github.com/Qayyax/quizical-app",
+        "featured": false
     },
     {
-        name:"Movie WatchList App",
-        Image: "/image/project/movie_watchlist.png",
-        liveURL: "https://movie-watchlist-ap.netlify.app",
-        repoURL: "https://github.com/Qayyax/movie-watchlist",
-        featured: false
+        "name": "Movie WatchList App",
+        "image": "/image/project/movie_watchlist.png",
+        "liveURL": "https://movie-watchlist-ap.netlify.app",
+        "repoURL": "https://github.com/Qayyax/movie-watchlist",
+        "featured": false
     },
     {
-        name:"Shopify Hackaton",
-        Image: "/image/project/shopify_hackaton.png",
-        liveURL: "https://shopify-hackaton.netlify.app/",
-        repoURL: "https://github.com/Qayyax/shopify_challenge",
-        featured: false
+        "name": "Shopify Hackaton",
+        "image": "/image/project/shopify_hackaton.png",
+        "liveURL": "https://shopify-hackaton.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/shopify_challenge",
+        "featured": false
     },
     {
-        name:"Custom Components",
-        Image: "/image/project/custom_components.png",
-        liveURL: "https://custom-componentsss.netlify.app/",
-        repoURL: "https://github.com/Qayyax/custom_components",
-        featured: false
+        "name": "Custom Components",
+        "image": "/image/project/custom_components.png",
+        "liveURL": "https://custom-componentsss.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/custom_components",
+        "featured": false
     },
     {
-        name:"Travel Journal",
-        Image: "/image/project/travel_journal.png",
-        liveURL: "https://travel-react-me.netlify.app",
-        repoURL: "https://github.com/Qayyax/travel-journal",
-        featured: false
+        "name": "Travel Journal",
+        "image": "/image/project/travel_journal.png",
+        "liveURL": "https://travel-react-me.netlify.app",
+        "repoURL": "https://github.com/Qayyax/travel-journal",
+        "featured": false
     },
     {
-        name:"Result Summary Component",
-        Image: "/image/project/result_summary.png",
-        liveURL: "https://resultsummary-comp.netlify.app",
-        repoURL: "https://github.com/Qayyax/result_summary",
-        featured: false
+        "name": "Result Summary Component",
+        "image": "/image/project/result_summary.png",
+        "liveURL": "https://resultsummary-comp.netlify.app",
+        "repoURL": "https://github.com/Qayyax/result_summary",
+        "featured": false
     },
     {
-        name:"Learning Journal",
-        Image: "/image/project/learning_journal.png",
-        liveURL: "https://learning-journal-1.netlify.app/",
-        repoURL: "https://github.com/Qayyax/Learning_journal",
-        featured: false
+        "name": "Learning Journal",
+        "image": "/image/project/learning_journal.png",
+        "liveURL": "https://learning-journal-1.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/Learning_journal",
+        "featured": false
     },
     {
-        name:"Unit Converter",
-        Image: "/image/project/unit_converter.png",
-        liveURL: "https://learning-journal-1.netlify.app",
-        repoURL: "https://github.com/Qayyax/unit_converter",
-        featured: false
+        "name": "Unit Converter",
+        "image": "/image/project/unit_converter.png",
+        "liveURL": "https://learning-journal-1.netlify.app",
+        "repoURL": "https://github.com/Qayyax/unit_converter",
+        "featured": false
     },
     {
-        name:"Workit Landing Page",
-        Image: "/image/project/workit_landing_page.png",
-        liveURL: "https://workitlandingpage2.netlify.app/",
-        repoURL: "https://github.com/Qayyax/workit-landing-page",
-        featured: false
+        "name": "Workit Landing Page",
+        "image": "/image/project/workit_landing_page.png",
+        "liveURL": "https://workitlandingpage2.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/workit-landing-page",
+        "featured": false
     },
     {
-        name:"Password Generator",
-        Image: "/image/project/password_generator.png",
-        liveURL: "https://15passwordgen.netlify.app/",
-        repoURL: "https://github.com/Qayyax/random_password_generator",
-        featured: false
-    },
+        "name": "Password Generator",
+        "image": "/image/project/password_generator.png",
+        "liveURL": "https://15passwordgen.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/random_password_generator",
+        "featured": false
+    }
 ]
