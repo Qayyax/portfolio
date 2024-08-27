@@ -11,7 +11,7 @@
         "image": "/image/project/product_list.png",
         "liveURL": "https://prlist-comp.netlify.app",
         "repoURL": "https://github.com/Qayyax/product_list",
-        "featured": false
+        "featured": true
     },
     {
         "name": "REST Countries API",
@@ -25,7 +25,7 @@
         "image": "/image/project/color_mood.png",
         "liveURL": "https://colour-mood-picker.netlify.app",
         "repoURL": "https://github.com/Qayyax/color-picker-practice",
-        "featured": false
+        "featured": true
     },
     {
         "name": "Quizzical App",
@@ -74,7 +74,7 @@
         "image": "/image/project/learning_journal.png",
         "liveURL": "https://learning-journal-1.netlify.app/",
         "repoURL": "https://github.com/Qayyax/Learning_journal",
-        "featured": false
+        "featured": true
     },
     {
         "name": "Unit Converter",
