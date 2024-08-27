@@ -16,7 +16,7 @@ export default function ProjectCard({ image, name, repoURL, liveURL }) {
                     src={image}
                     alt="project image"
                     className="w-[320px] h-[320px] rounded-2xl shadow-md
-                    md:w-[568px] md:h-[568px]"
+                    md:w-[392px] md:h-[392px]"
                 />
             </a>
             <div
