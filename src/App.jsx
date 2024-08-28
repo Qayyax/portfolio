@@ -1,6 +1,4 @@
-import Featured from "./components/home/Featured"
 import Home from "./components/home/Home"
-import MainComp from "./components/home/MainComp"
 import Project from "./components/projects/Project"
 import projectData from "./data/projects.json"
 
