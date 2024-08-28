@@ -1,3 +1,6 @@
+import DarkModeProvider from "./components/DarkModeProvider"
+import DarkModeToggle from "./components/DarkModeToggle"
+import Hamburger from "./components/Hamburger"
 import Home from "./components/home/Home"
 import Project from "./components/projects/Project"
 import projectData from "./data/projects.json"
@@ -6,9 +9,14 @@ function App() {
 
   return (
     <>
-      <h1>Work in Progress</h1>
-      <Home data={projectData} />
-      <Project data={projectData} />
+      <DarkModeProvider>
+        <div className="w-full bg-red flex justify-end">
+          <DarkModeToggle />
+          <Hamburger />
+        </div>
+        <Home data={projectData} />
+        <Project data={projectData} />
+      </DarkModeProvider>
     </>
   )
 }
