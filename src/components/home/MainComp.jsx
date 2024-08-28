@@ -3,7 +3,7 @@ import NavButtons from "./NavButtons";
 
 export default function divComp() {
     return (
-        <main>
+        <section>
             {/*Mobile version */}
             <div
                 className="flex flex-col items-center justify-center md:hidden"
@@ -60,7 +60,7 @@ export default function divComp() {
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
 
     )
 }

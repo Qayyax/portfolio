@@ -5,7 +5,7 @@ export default function Featured({ data }) {
 
     return (
         <section
-            className="flex flex-col items-center justify-center gap-y-12 md:items-start"
+            className="flex flex-col items-center justify-center gap-y-12 lg:items-start"
         >
             <h2
                 className="font-extrabold text-[1.5em] md:text-[2.25em]"
