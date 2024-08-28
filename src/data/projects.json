@@ -1,13 +1,6 @@
 [
     {
-        "name": "Job Listing Analyzer",
-        "image": "/image/project/job_listing.png",
-        "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
-        "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
-        "featured": false
-    },
-    {
-        "name": "Product List Component",
+        "name": "Product List",
         "image": "/image/project/product_list.png",
         "liveURL": "https://prlist-comp.netlify.app",
         "repoURL": "https://github.com/Qayyax/product_list",
@@ -35,10 +28,17 @@
         "featured": false
     },
     {
-        "name": "Movie WatchList App",
+        "name": "Movie WatchList",
         "image": "/image/project/movie_watchlist.png",
         "liveURL": "https://movie-watchlist-ap.netlify.app",
         "repoURL": "https://github.com/Qayyax/movie-watchlist",
+        "featured": false
+    },
+    {
+        "name": "Job Listing Analyzer",
+        "image": "/image/project/job_listing.png",
+        "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
+        "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
         "featured": false
     },
     {
@@ -63,7 +63,7 @@
         "featured": false
     },
     {
-        "name": "Result Summary Component",
+        "name": "Result Summary",
         "image": "/image/project/result_summary.png",
         "liveURL": "https://resultsummary-comp.netlify.app",
         "repoURL": "https://github.com/Qayyax/result_summary",
