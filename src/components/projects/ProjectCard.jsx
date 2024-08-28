@@ -20,7 +20,7 @@ export default function ProjectCard({ image, name, repoURL, liveURL }) {
                 />
             </a>
             <div
-                className="flex px-2 items-center justify-between"
+                className="flex px-2 items-center justify-between w-[320px] md:w-[392px]"
             >
                 <LiveSite URL={liveURL} name={name} />
                 <Repo URL={repoURL} />
