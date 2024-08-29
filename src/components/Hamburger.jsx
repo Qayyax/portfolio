@@ -32,8 +32,8 @@ export default function Hamburger() {
       </button>
       {isOpen && (
         <>
-          <div className="absolute w-[250px] top-0 h-screen backdrop-blur-sm z-30"></div>
-          <div className="absolute w-[250px] top-0 h-screen bg-[#6B4E92] opacity-90 text-white z-40 p-6">
+          <div className="fixed w-[250px] top-0 right-0 h-[100%] backdrop-blur-sm z-30"></div>
+          <div className="fixed w-[250px] top-0 right-0 h-[100%] bg-[#6B4E92] opacity-90 text-white z-40 p-6">
             <nav className="flex flex-col pt-[164px] pl-[39px] text-[1.5em]">
               <ul className="flex flex-col gap-y-10">
                 <li>
