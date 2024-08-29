@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <DarkModeProvider>
-        <div className="w-full bg-red flex justify-end">
+        <div className="w-full bg-red pt-4 flex items-center justify-end">
           <DarkModeToggle />
           <Hamburger />
         </div>

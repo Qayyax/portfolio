@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DarkModeContext } from "./DarkModeProvider";
-import { IoIosSunny} from "react-icons/io";
+import { IoIosSunny } from "react-icons/io";
 import { FaMoon } from "react-icons/fa";
 
 export default function DarkModeToggle() {
@@ -19,7 +19,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className={`flex items-center rounded-full w-[62px] py-[2.5px] px-[3.5px] transition-all duration-300 cursor-pointer
+      className={`flex items-center rounded-full w-[62px] py-[2.5px] px-[3.5px] transition-all duration-300 cursor-pointer h-[28px]
 ${isDarkMode ? "justify-start bg-white" : "justify-end bg-[#6B4E92]"}`}
     >
       {isDarkMode ? darkIcon : lightIcon}
