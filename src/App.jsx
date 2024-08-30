@@ -13,6 +13,7 @@ function App() {
       <DarkModeProvider>
         <Header />
         <Home data={projectData} />
+        <Project data={projectData} />
         <Footer />
       </DarkModeProvider>
     </>

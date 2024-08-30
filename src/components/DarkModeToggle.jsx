@@ -19,7 +19,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className={`flex items-center rounded-full w-[62px] py-[2.5px] px-[3.5px] transition-all duration-300 cursor-pointer h-[28px] shadow-inner md:px-[7px] md:py-[5px] md:h-[56px] md:w-[124px]
+      className={`flex items-center rounded-full w-[62px] py-[2.5px] px-[3.5px] transition-all duration-1000 cursor-pointer h-[28px] shadow-inner md:px-[7px] md:py-[5px] md:h-[56px] md:w-[124px]
 ${isDarkMode ? "justify-start bg-white" : "justify-end bg-[#6B4E92]"}`}
     >
       {isDarkMode ? darkIcon : lightIcon}

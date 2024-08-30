@@ -1,10 +1,15 @@
 import LiveSite from "./LiveSite";
 import Repo from "./Repo";
+import { DarkModeContext } from "../DarkModeProvider"
+import { useContext } from "react"
 
 export default function ProjectCard({ image, name, repoURL, liveURL }) {
+    const { isDarkMode } = useContext(DarkModeContext)
+    const shadow = isDarkMode ? "shadow-[0px_0px_10px_0px_#6B4E92]" : "shadow-[0px_0px_10px_0px_#00000029]"
+
     return (
         <section
-            className="flex flex-col gap-y-4"
+            className={`flex flex-col gap-y-4 shadow-lg rounded-xl p-2 ${shadow}`}
         >
             <a
                 href={liveURL}
