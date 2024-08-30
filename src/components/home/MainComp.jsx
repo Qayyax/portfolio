@@ -1,7 +1,12 @@
 import ImageCard from "./ImageCard";
 import NavButtons from "./NavButtons";
+import { DarkModeContext } from "../DarkModeProvider";
+import { useContext } from "react";
 
-export default function divComp() {
+export default function MainComp() {
+    const { isDarkMode } = useContext(DarkModeContext)
+    const h1Color = isDarkMode ? "text-white" : "text-[#201330]"
+    const textColor = isDarkMode ? "text-white" : "text-[#6B6B6B]"
     return (
         <section>
             {/*Mobile version */}
@@ -9,7 +14,7 @@ export default function divComp() {
                 className="flex flex-col items-center justify-center md:hidden"
             >
                 <h1
-                    className="font-extrabold text-[2.5em] mb-[22px] "
+                    className={`font-extrabold text-[2.5em] mb-[22px] ${h1Color}`}
                 >
                     {`Hi, I'm Tife`}
                 </h1>
@@ -19,7 +24,7 @@ export default function divComp() {
                     <ImageCard />
                 </div>
                 <p
-                    className="text-center max-w-[308px] mb-3.5 "
+                    className={`text-center max-w-[308px] mb-3.5 ${textColor}`}
                 >
                     A frontend developer crafting seamless user experience one pixel at a time
                 </p>
@@ -39,12 +44,12 @@ export default function divComp() {
                         className="flex flex-col items-start justify-center"
                     >
                         <h1
-                            className="font-extrabold text-[3.75em] mb-2"
+                            className={`font-extrabold text-[3.75em] mb-2 ${h1Color}`}
                         >
                             {`Hi, I'm Tife`}
                         </h1>
                         <p
-                            className="text-start max-w-[515px] mb-8 text-[1.5em] "
+                            className={`text-start max-w-[515px] mb-8 text-[1.5em] ${textColor}`}
                         >
                             A frontend developer crafting seamless user experience one pixel at a time
                         </p>

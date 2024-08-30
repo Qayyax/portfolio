@@ -11,20 +11,24 @@ export default function Header() {
   return (
     <header
       style={{ background: bgColor }}
-      className="flex items-baseline justify-between pt-16 pl-5 pr-8 md:py-9 md:items-center md:px-0"
+      className="flex items-center justify-center py-2 pl-5 pr-8 md:py-3"
     >
-      <p
-        style={{ color: textColor }}
-        className="md:text-[1.5em]"
-      >Tife Olatunji</p>
-      <div className="hidden md:block">
-        <NavBar />
-      </div>
       <div
-        className="flex items-center gap-x-3"
+        className="flex items-center justify-between w-full max-w-[1250px]"
       >
-        <DarkModeToggle />
-        <div className="md:hidden"><Hamburger /></div>
+        <p
+          style={{ color: textColor }}
+          className="md:text-[1.5em]"
+        >Tife Olatunji</p>
+        <div className="hidden md:block">
+          <NavBar />
+        </div>
+        <div
+          className="flex items-center gap-x-3"
+        >
+          <DarkModeToggle />
+          <div className="md:hidden"><Hamburger /></div>
+        </div>
       </div>
     </header>
   )

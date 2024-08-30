@@ -7,12 +7,12 @@ import projectData from "./data/projects.json"
 
 function App() {
 
+  // <Project data={projectData} />
   return (
     <>
       <DarkModeProvider>
         <Header />
         <Home data={projectData} />
-        <Project data={projectData} />
         <Footer />
       </DarkModeProvider>
     </>
