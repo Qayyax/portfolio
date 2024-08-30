@@ -9,7 +9,7 @@ export default function ProjectCard({ image, name, repoURL, liveURL }) {
 
     return (
         <section
-            className={`flex flex-col gap-y-4 shadow-lg rounded-xl p-2 ${shadow}`}
+            className={`flex flex-col  gap-y-4 rounded-xl p-2 ${shadow}`}
         >
             <a
                 href={liveURL}
