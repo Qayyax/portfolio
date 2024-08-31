@@ -8,7 +8,7 @@ export default function Project({ data }) {
 
     return (
         <section
-            className={`flex flex-col gap-y-10 items-center justify-center md:flex-row md:flex-wrap  md:gap-x-9 md:gap-y-20 ${bgColor}`}
+            className={`flex flex-col gap-y-10 items-center justify-center md:flex-row md:flex-wrap  md:gap-x-9 md:gap-y-15 ${bgColor} pt-10 md:pt-12`}
         >
             {data.map((item, index) => (
                 <ProjectCard

@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header
       style={{ background: bgColor }}
-      className="flex items-center justify-center py-2 pl-5 pr-8 md:py-3"
+      className="flex items-center sticky top-0 z-[100] justify-center py-2 pl-5 pr-8 md:py-3"
     >
       <div
         className="flex items-center justify-between w-full max-w-[1250px]"

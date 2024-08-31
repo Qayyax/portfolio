@@ -14,7 +14,7 @@ export default function Featured({ data }) {
                 className={`font-extrabold text-[1.5em] md:text-[2.25em] ${isDarkMode ? "text-white" : "text-[#201330]"}`}
             >Featured Projects</h2>
             <div
-                className="flex flex-col items-center justify-center gap-y-12 md:flex-row md:gap-x-9 flex-wrap"
+                className="flex flex-col items-center justify-center gap-y-10 md:flex-row md:gap-x-8 flex-wrap"
             >
                 {featuredProject.map((item, index) => (
                     <ProjectCard
