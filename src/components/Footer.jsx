@@ -50,7 +50,7 @@ md:items-start md:px-10 md:pb-4`}
         className="pt-4 px-[9.5px] border-t border-[#D3D3D3] flex flex-col items-center justify-center md:w-full"
       >
         <p className={`${contactSpanColor} text-[0.875em] md:text-[1em]`}>
-          <span>&copy;</span> Tife Olatunji. All rights reserved</p>
+          <span>&copy;</span> 2024 Tife Olatunji. All rights reserved</p>
         <p className={`${isDarkMode ? "text-white" : "text-[#D3D3D3]"} text-[0.625em] md:text-[0.75em]`}>
           Designed by Marienoel Emechebe</p>
       </div>

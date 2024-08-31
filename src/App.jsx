@@ -1,20 +1,25 @@
+import { Route, Routes } from "react-router-dom"
 import DarkModeProvider from "./components/DarkModeProvider"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
 import Home from "./components/home/Home"
-import Project from "./components/projects/Project"
 import projectData from "./data/projects.json"
+import MainLayout from "./pages/MainLayout"
+import ProjectLayout from "./pages/ProjectLayout"
 
 function App() {
-
   // <Project data={projectData} />
+  // <Header />
+  // <Home data={projectData} />
+  // <Project data={projectData} />
+  // <Footer />
   return (
     <>
       <DarkModeProvider>
-        <Header />
-        <Home data={projectData} />
-        <Project data={projectData} />
-        <Footer />
+        <Routes>
+          <Route element={<MainLayout />} >
+            <Route path="/" element={<Home data={projectData} />} />
+            <Route path="/project" element={<ProjectLayout data={projectData} />} />
+          </Route>
+        </Routes>
       </DarkModeProvider>
     </>
   )
