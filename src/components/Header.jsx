@@ -3,11 +3,16 @@ import Hamburger from "./Hamburger";
 import { DarkModeContext } from "./DarkModeProvider";
 import { useContext } from "react";
 import NavBar from "./NavBar";
+import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const { isDarkMode } = useContext(DarkModeContext)
-  const bgColor = isDarkMode ? "#201330" : "white"
   const textColor = isDarkMode ? "white" : "#201330"
+  const location = useLocation()
+  const isHomePage = location.pathname === "/"
+  const bgColor = isHomePage
+    ? (isDarkMode ? "#201330" : "white")
+    : (isDarkMode ? "#6B4E92" : "#ECDEFF");
   return (
     <header
       style={{ background: bgColor }}
