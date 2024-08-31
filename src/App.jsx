@@ -18,6 +18,7 @@ function App() {
           <Route element={<MainLayout />} >
             <Route path="/" element={<Home data={projectData} />} />
             <Route path="/project" element={<ProjectLayout data={projectData} />} />
+            <Route path="*" element={<Home data={projectData} />} />
           </Route>
         </Routes>
       </DarkModeProvider>

@@ -9,7 +9,7 @@ export default function Home({ data }) {
     return (
         <main
             className={`flex flex-col items-center justify-center gap-y-10 lg:gap-y-14 
-            px-10 pt-8 pb-4 lg:pt-[73px] lg:pb-[18px] ${bgColor}`}
+            px-5 pt-8 pb-4 lg:pt-[73px] lg:pb-[18px] ${bgColor}`}
         >
             <MainComp />
             <Featured data={data} />
