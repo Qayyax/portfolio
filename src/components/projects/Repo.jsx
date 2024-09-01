@@ -9,7 +9,7 @@ export default function Repo({ URL }) {
             href={URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={`cursor-pointer font-medium text-[0.875em] border ${darkMode} rounded-2xl p-2 hover:border-2`}
+            className={`cursor-pointer font-medium text-[0.875em] md:text-[1em] border ${darkMode} rounded-2xl p-2 hover:border-2`}
         >
             View on Github
         </a>

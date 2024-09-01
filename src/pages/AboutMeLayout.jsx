@@ -1,5 +1,6 @@
 import { DarkModeContext } from "../components/DarkModeProvider";
 import { useContext } from "react";
+import Download from "../components/about/Download";
 
 export default function AboutMeLayout() {
   const { isDarkMode } = useContext(DarkModeContext)
@@ -18,6 +19,7 @@ export default function AboutMeLayout() {
         <p className={`${pColor} md:text-[1.5em] w-[350px] md:w-[784px]`}>
           I specialize in creating responsive web applications and enhancing user experiences. My expertise includes JavaScript, TypeScript, React and Python. I have a proven track record in solving complex problems and integrating APIs.
         </p>
+        <Download />
       </section>
     </main>
   )

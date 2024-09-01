@@ -7,11 +7,6 @@ import ProjectLayout from "./pages/ProjectLayout"
 import AboutMeLayout from "./pages/AboutMeLayout"
 
 function App() {
-  // <Project data={projectData} />
-  // <Header />
-  // <Home data={projectData} />
-  // <Project data={projectData} />
-  // <Footer />
   return (
     <>
       <DarkModeProvider>
