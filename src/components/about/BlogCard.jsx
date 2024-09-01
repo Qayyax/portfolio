@@ -1,0 +1,31 @@
+import { DarkModeContext } from "../DarkModeProvider"
+import { useContext } from "react"
+
+export default function BlogCard({ image, title, excerpt }) {
+  const { isDarkMode } = useContext(DarkModeContext)
+  const h1Color = isDarkMode ? "text-white" : "text-[#201330]"
+
+  return (
+    <div
+      className="flex flex-col gap-y-4 md:flex-row md:gap-x-14 w-[320px] md:max-w-[1139px] px-2"
+    >
+      <img
+        src={image}
+        alt="picture of a blog"
+        className="rounded-[30px] w-[320px] h-[160px] lg:w-[560px] lg:h-[320px]"
+      />
+      <div>
+        <h2
+          className={`text-[1.5em] md:text-[2em] ${h1Color}`}
+        >
+          {title}
+        </h2>
+        <p
+          className={`md:text-[1.5em] text-[#6B6B6B]`}
+        >
+          {excerpt}
+        </p>
+      </div>
+    </div>
+  )
+}
