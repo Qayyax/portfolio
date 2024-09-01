@@ -4,6 +4,7 @@ import Home from "./components/home/Home"
 import projectData from "./data/projects.json"
 import MainLayout from "./pages/MainLayout"
 import ProjectLayout from "./pages/ProjectLayout"
+import AboutMeLayout from "./pages/AboutMeLayout"
 
 function App() {
   // <Project data={projectData} />
@@ -18,6 +19,7 @@ function App() {
           <Route element={<MainLayout />} >
             <Route path="/" element={<Home data={projectData} />} />
             <Route path="/project" element={<ProjectLayout data={projectData} />} />
+            <Route path="/about" element={<AboutMeLayout />} />
             <Route path="*" element={<Home data={projectData} />} />
           </Route>
         </Routes>
