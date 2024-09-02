@@ -6,7 +6,7 @@ export default function BlogLayout({ data }) {
   const { isDarkMode } = useContext(DarkModeContext)
   const bgColor = isDarkMode ? "bg-[#201330]" : "bg-white"
   return (
-    <section className={`flex flex-col items-center justify-center ${bgColor} py-3 px-2`}>
+    <section className={`flex flex-col items-center justify-center ${bgColor} py-3 px-6`}>
       <BlogPost data={data} />
     </section>
   )

@@ -8,7 +8,6 @@ export default function AboutMeLayout({ data }) {
   const bgColor = isDarkMode ? "bg-[#6B4E92]" : "bg-[#ECDEFF]"
   const textColor = isDarkMode ? "text-white" : "text-[#201330]"
   const pColor = isDarkMode ? "text-[#D3D3D3]" : "text-[#6B6B6B]"
-  // < BlogPost file = "/vite_config.md" />
 
   return (
     <main>
@@ -23,6 +22,7 @@ export default function AboutMeLayout({ data }) {
         </p>
         <Download />
       </section>
+      <Blogs data={data} />
     </main>
   )
 }

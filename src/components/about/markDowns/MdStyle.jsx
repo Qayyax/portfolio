@@ -8,7 +8,7 @@ export function CustomH1({ children }) {
   const color = isDarkMode ? "text-white" : "text-[#000000]"
   return (
     <h1
-      className={`${color} font-semibold text-[1.5em] md:text-[2.25em]`}
+      className={`${color} font-semibold text-[1.5em] md:text-[2.25em] my-4`}
     >
       {children}
     </h1>
@@ -16,9 +16,11 @@ export function CustomH1({ children }) {
 }
 
 export function CustomP({ children }) {
+  const { isDarkMode } = useContext(DarkModeContext)
+  const color = isDarkMode ? "text-white" : "text-[#000000]"
   return (
     <p
-      className={`text-[#D3D3D3]  md:text-[1.5em]`}
+      className={`${color}  md:text-[1.5em] mb-3`}
     >
       {children}
     </p>
@@ -30,7 +32,7 @@ export function CustomImg({ src, alt }) {
     <img
       src={src}
       alt={alt}
-      className="rounded-lg"
+      className="rounded-lg my-4"
     />
   )
 }
