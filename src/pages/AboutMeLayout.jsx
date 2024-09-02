@@ -1,8 +1,9 @@
 import { DarkModeContext } from "../components/DarkModeProvider";
 import { useContext } from "react";
 import Download from "../components/about/Download";
+import Blogs from "../components/about/Blogs";
 
-export default function AboutMeLayout() {
+export default function AboutMeLayout({ data }) {
   const { isDarkMode } = useContext(DarkModeContext)
   const bgColor = isDarkMode ? "bg-[#6B4E92]" : "bg-[#ECDEFF]"
   const textColor = isDarkMode ? "text-white" : "text-[#201330]"
@@ -25,3 +26,4 @@ export default function AboutMeLayout() {
     </main>
   )
 }
+// <Blogs data={data} />

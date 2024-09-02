@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom"
 import { DarkModeContext } from "../DarkModeProvider"
 import { useContext } from "react"
 
-export default function BlogCard({ image, title, excerpt }) {
+export default function BlogCard({ image, title, excerpt, slug }) {
   const { isDarkMode } = useContext(DarkModeContext)
   const h1Color = isDarkMode ? "text-white" : "text-[#201330]"
 
   return (
-    <div
+    <Link
       className="flex flex-col gap-y-4 md:flex-row md:gap-x-14 w-[320px] md:max-w-[1139px] px-2"
+      to={`/about/${slug}`}
     >
       <img
         src={image}
@@ -26,6 +28,6 @@ export default function BlogCard({ image, title, excerpt }) {
           {excerpt}
         </p>
       </div>
-    </div>
+    </Link>
   )
 }

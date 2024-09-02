@@ -21,6 +21,7 @@ export default function Blogs({ data }) {
             image={item.image}
             title={item.title}
             excerpt={item.excerpt}
+            slug={item.slug}
           />
         ))}
       </div>

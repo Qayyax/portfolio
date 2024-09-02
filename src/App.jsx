@@ -5,6 +5,7 @@ import projectData from "./data/projects.json"
 import MainLayout from "./pages/MainLayout"
 import ProjectLayout from "./pages/ProjectLayout"
 import AboutMeLayout from "./pages/AboutMeLayout"
+import BlogLayout from "./pages/BlogLayout"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home data={projectData} />} />
             <Route path="/project" element={<ProjectLayout data={projectData} />} />
             <Route path="/about" element={<AboutMeLayout />} />
+            <Route path="/about/:blogID" element={<BlogLayout />} />
             <Route path="*" element={<Home data={projectData} />} />
           </Route>
         </Routes>
