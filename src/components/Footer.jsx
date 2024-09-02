@@ -52,7 +52,7 @@ md:items-start md:px-10 md:pb-4`}
         <p className={`${contactSpanColor} text-[0.875em] md:text-[1em]`}>
           <span>&copy;</span> 2024 Tife Olatunji. All rights reserved</p>
         <p className={`${isDarkMode ? "text-white" : "text-[#D3D3D3]"} text-[0.625em] md:text-[0.75em]`}>
-          Designed by Marienoel Emechebe</p>
+          Designed by <a href="https://www.linkedin.com/in/marienoelemechebe/" target="_blank"> Marienoel Emechebe</a></p>
       </div>
     </footer>
   )
