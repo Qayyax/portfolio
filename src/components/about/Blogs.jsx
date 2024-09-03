@@ -13,7 +13,7 @@ export default function Blogs({ data }) {
     >
       <h2 className={`${h1Color} text-[1.5em] md:text-[2.25em]`}>Blog Posts</h2>
       <div
-        className="flex flex-col gap-y-8 md:gap-y-15 items-center justify-center"
+        className="flex flex-col gap-y-8 md:gap-y-15 items-center justify-center md:items-start"
       >
         {data.map((item, key) => (
           <BlogCard
