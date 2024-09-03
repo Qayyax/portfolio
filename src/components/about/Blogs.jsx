@@ -9,7 +9,7 @@ export default function Blogs({ data }) {
 
   return (
     <section
-      className={`flex flex-col py-3 md:py-4 items-center justify-center md:items-start gap-y-14 md:gap-y-16 ${bgColor} px-7 border-2 border-black`}
+      className={`flex flex-col py-3 md:py-4 items-center justify-center md:items-start gap-y-14 md:gap-y-16 ${bgColor} px-7`}
     >
       <h2 className={`${h1Color} text-[2.25em] md:ml-2`}>Blog Posts</h2>
       <div
