@@ -20,7 +20,7 @@ export function CustomP({ children }) {
   const color = isDarkMode ? "text-white" : "text-[#000000]"
   return (
     <p
-      className={`${color}  md:text-[1.5em] mb-3`}
+      className={`${color}  md:text-[1.5em] mb-3 tracking-wide leading-[3rem]`}
     >
       {children}
     </p>

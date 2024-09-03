@@ -26,4 +26,3 @@ export default function AboutMeLayout({ data }) {
     </main>
   )
 }
-// <Blogs data={data} />
