@@ -17,7 +17,7 @@ export default function AboutMeLayout({ data }) {
         <h1 className={`${textColor} font-extrabold text-[2.5em] md:text-[3.75em]`}>
           About Me
         </h1>
-        <p className={`${pColor} md:text-[1.5em] w-[350px] md:w-[784px] text-center`}>
+        <p className={`${pColor} md:text-[1.5em] w-[350px] md:w-[784px] text-center mb-3`}>
           I specialize in creating responsive web applications and enhancing user experiences. My expertise includes JavaScript, TypeScript, React and Python. I have a proven track record in solving complex problems and integrating APIs.
         </p>
         <Download />
