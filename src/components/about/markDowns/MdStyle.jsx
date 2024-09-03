@@ -32,7 +32,7 @@ export function CustomImg({ src, alt }) {
     <img
       src={src}
       alt={alt}
-      className="rounded-lg my-4 max-h-[250px] md:max-h-[400px] inline-block m-3"
+      className="rounded-lg my-4 max-h-[250px] md:max-h-[400px] inline-block m-3 shadow-md"
     />
   )
 }
