@@ -7,6 +7,13 @@
     "file": "/markdowns/code_journey.md"
     },
     {
+    "title": "My Esports Journey",
+    "image": "/image/blog/next_rated.png",
+    "excerpt": "A brief timeline of my esports journey",
+    "slug": "esport_journey",
+    "file": "/markdowns/esports_journey.md"
+    },
+    {
     "title": "My Art Journey",
     "image": "/image/blog/art4.JPEG",
     "excerpt": "A brief timeline of my interest in art",
