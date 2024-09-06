@@ -39,7 +39,7 @@
         "image": "/image/project/job_listing.png",
         "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
         "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
-        "featured": false
+        "featured": true
     },
     {
         "name": "Shopify Hackaton",
@@ -74,7 +74,7 @@
         "image": "/image/project/learning_journal.png",
         "liveURL": "https://learning-journal-1.netlify.app/",
         "repoURL": "https://github.com/Qayyax/Learning_journal",
-        "featured": true
+        "featured": false
     },
     {
         "name": "Unit Converter",
