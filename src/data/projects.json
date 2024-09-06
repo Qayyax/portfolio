@@ -14,6 +14,13 @@
         "featured": false
     },
     {
+        "name": "Job Listing Analyzer",
+        "image": "/image/project/job_listing.png",
+        "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
+        "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
+        "featured": true
+    },
+    {
         "name": "Color Mood Picker",
         "image": "/image/project/color_mood.png",
         "liveURL": "https://colour-mood-picker.netlify.app",
@@ -33,13 +40,6 @@
         "liveURL": "https://movie-watchlist-ap.netlify.app",
         "repoURL": "https://github.com/Qayyax/movie-watchlist",
         "featured": false
-    },
-    {
-        "name": "Job Listing Analyzer",
-        "image": "/image/project/job_listing.png",
-        "liveURL": "https://github.com/Qayyax/job_listing_analyzer",
-        "repoURL": "https://github.com/Qayyax/job_listing_analyzer",
-        "featured": true
     },
     {
         "name": "Shopify Hackaton",
