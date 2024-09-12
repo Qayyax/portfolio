@@ -4,7 +4,7 @@
         "image": "/image/project/product_list.png",
         "liveURL": "https://prlist-comp.netlify.app",
         "repoURL": "https://github.com/Qayyax/product_list",
-        "featured": true
+        "featured": false
     },
     {
         "name": "REST Countries API",
@@ -32,7 +32,7 @@
         "image": "/image/project/quizzical.png",
         "liveURL": "https://quizical-5.netlify.app",
         "repoURL": "https://github.com/Qayyax/quizical-app",
-        "featured": false
+        "featured": true
     },
     {
         "name": "Movie WatchList",
