@@ -54,10 +54,10 @@ export function CustomCode({ language, children }) {
   );
 }
 
-export function CustomLink({ href, text }) {
+export function CustomLink({ href, children }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
-      {text}
+      {children}
     </a>
   );
 }
