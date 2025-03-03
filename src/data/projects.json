@@ -1,10 +1,10 @@
 [
     {
-        "name": "Product List",
-        "image": "/image/project/product_list.png",
-        "liveURL": "https://prlist-comp.netlify.app",
-        "repoURL": "https://github.com/Qayyax/product_list",
-        "featured": false
+        "name": "TypeShooter",
+        "image": "/image/project/typeshooter.png",
+        "liveURL": "https://typeshooter.netlify.app/",
+        "repoURL": "https://github.com/Qayyax/TypeShooter",
+        "featured": true
     },
     {
         "name": "REST Countries API",
@@ -32,13 +32,20 @@
         "image": "/image/project/quizzical.png",
         "liveURL": "https://quizical-5.netlify.app",
         "repoURL": "https://github.com/Qayyax/quizical-app",
-        "featured": true
+        "featured": false
     },
     {
         "name": "Movie WatchList",
         "image": "/image/project/movie_watchlist.png",
         "liveURL": "https://movie-watchlist-ap.netlify.app",
         "repoURL": "https://github.com/Qayyax/movie-watchlist",
+        "featured": false
+    },
+    {
+        "name": "Product List",
+        "image": "/image/project/product_list.png",
+        "liveURL": "https://prlist-comp.netlify.app",
+        "repoURL": "https://github.com/Qayyax/product_list",
         "featured": false
     },
     {
