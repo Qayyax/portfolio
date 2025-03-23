@@ -4,7 +4,7 @@ import HomeText from "./ui/components/text/HomeText";
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center border-b-2 border-b-white p-3 sticky">
+      <nav className="flex justify-between items-center border-b-2 border-b-purple-500 p-3 sticky">
         <h3 className="flex gap-1 font-extrabold text-2xl">
           Tife <span className="hidden md:block">Olatunji</span>
         </h3>
