@@ -8,7 +8,11 @@ export default function DarkMode() {
   const toggleDark = () => setIsDark((prev) => !prev);
   return (
     <button onClick={toggleDark}>
-      {isDark ? <MdOutlineDarkMode /> : <CiSun />}
+      {isDark ? (
+        <MdOutlineDarkMode className="text-2xl" />
+      ) : (
+        <CiSun className="text-2xl" />
+      )}
     </button>
   );
 }
