@@ -4,9 +4,11 @@ import { dotGothic16, doto } from "@/app/ui/fonts";
 export default function HomeText() {
   const linkClasses = `text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold`;
   return (
-    <section className="font-extrabold flex flex-col items-start justify-center gap-1 p-4">
+    <div className="font-extrabold flex flex-col items-start justify-center gap-1 p-4">
       <h1 className="text-xl">Hi, I am Tife.</h1>
-      <div className={`${dotGothic16.className} tracking-wide`}>
+      <div
+        className={`${dotGothic16.className} tracking-wide flex flex-col gap-y-1`}
+      >
         <p>
           I am a fullstack developer with a master&apos;s degree in big data
           analytics. Currently, I am working on improving my coding career. I
@@ -31,6 +33,6 @@ export default function HomeText() {
           promise not to spam you with emails.
         </p>
       </div>
-    </section>
+    </div>
   );
 }

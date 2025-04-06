@@ -10,6 +10,7 @@ export default function Home() {
         </h3>
         <div>
           {/* putting darkmode and hamburger here for mobile*/}
+          {/* I may not want to implement darkmode anymore*/}
           {/* putting darkmode and nav routes here for desktop and tab*/}
           <MobileLeft />
         </div>
@@ -19,6 +20,10 @@ export default function Home() {
         {/* text component goes here */}
         <HomeText />
       </main>
+      <section>
+        {/* Here would be the featured projects section */}
+        {/* Should I make it slidable or static */}
+      </section>
     </>
   );
 }
