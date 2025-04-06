@@ -1,6 +1,7 @@
 import MobileLeft from "@/app/ui/layout/mobile-nav-right";
 import HomeText from "./ui/components/text/HomeText";
 import ProjectCard from "./ui/components/project/ProjectCard";
+import { doto } from "./ui/fonts";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <>
       <nav className="flex justify-between items-center border-b-2 border-b-purple-500 p-3 sticky">
-        <h3 className="flex gap-1 font-extrabold text-2xl">
+        <h3 className={`flex gap-1 font-extrabold text-2xl ${doto.className}`}>
           Tife <span className="hidden md:block">Olatunji</span>
         </h3>
         <div>
@@ -45,6 +46,9 @@ export default function Home() {
           tags={demoData.tags}
           image={demoData.image}
         />
+        {/* See more button goes here*/}
+        {/* it would be the same component as the component for navigations*/}
+        {/* The component would Link to .... in the website */}
       </section>
     </>
   );

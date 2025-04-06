@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Doto } from "next/font/google";
+import { DotGothic16 } from "next/font/google";
 import "./globals.css";
 
-const doto = Doto({
+const dotGothic16 = DotGothic16({
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${doto.className} antialiased`}>{children}</body>
+      <body className={` ${dotGothic16.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

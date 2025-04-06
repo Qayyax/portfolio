@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ProjectTags from "./ProjectTags";
 
+// Todo: change font
+
 type Props = {
   name: string; // name of the project duhhhh
   description: string; // short description of the project
@@ -30,6 +32,7 @@ export default function ProjectCard({
     <div>
       {/*image div goes here*/}
       {/* blurDataURL - you can add this as well to the Image properties */}
+      {/* or placeholder image can be a custom image in the public folder */}
       <Image
         src={image}
         alt={`Image for ${name}`}
@@ -37,9 +40,10 @@ export default function ProjectCard({
         height={200}
         placeholder="blur"
         blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
+        className="rounded-lg"
       />
       {/*title (with tags) component goes here*/}
-      <div>
+      <div className=" font-extrabold">
         {/* here would be display flex with space between*/}
         <p>{name}</p>
         <ProjectTags tags={tags} />
