@@ -11,10 +11,14 @@ export default function ProjectTags({ tags }: Props) {
   // which would take a string as a props
   return (
     <div>
-      {tags.map((tag, i) => (
-        // Styling needed soon
-        <ProjectTag key={i} tag={tag} />
-      ))}
+      {tags && tags.length > 0 ? (
+        tags.map((tag, i) => (
+          // Styling needed soon
+          <ProjectTag key={i} tag={tag} />
+        ))
+      ) : (
+        <ProjectTag tag="N/A" />
+      )}
     </div>
   );
 }

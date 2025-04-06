@@ -5,6 +5,7 @@ type Props = {
   name: string; // name of the project duhhhh
   description: string; // short description of the project
   challenges: string; // short story of the challenges faced
+  // if the challenges are long, there should be a see more button so it doesn't take a lot of space
   tags: string[]; // technologies used in the project
   image: string; // src of the image
 };
@@ -35,6 +36,7 @@ export default function ProjectCard({
         width={200}
         height={200}
         placeholder="blur"
+        blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
       />
       {/*title (with tags) component goes here*/}
       <div>
