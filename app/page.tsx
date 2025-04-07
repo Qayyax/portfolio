@@ -19,7 +19,7 @@ const demoData = {
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center border-b-2 border-b-purple-500 p-3 sticky">
+      <nav className="flex justify-between items-center border-b-2 border-b-purple-500 p-3 sticky top-0 bg-black">
         <h3 className={`flex gap-1 font-extrabold text-2xl ${doto.className}`}>
           Tife <span className="hidden md:block">Olatunji</span>
         </h3>
@@ -35,10 +35,15 @@ export default function Home() {
         {/* text component goes here */}
         <HomeText />
       </main>
-      <section>
+
+      {/* don't forget to remove the border */}
+      <section className="font-mono flex flex-col items-center justify-center border-2 border-red-800 px-3">
         {/* Here would be the featured project section */}
         {/* It would only be one project */}
         {/* Then see more of my would be the button under it */}
+        <h3 className={`font-extrabold text-2xl ${doto.className}`}>
+          Featured Project
+        </h3>
         <ProjectCard
           name={demoData.name}
           description={demoData.description}
@@ -46,7 +51,7 @@ export default function Home() {
           tags={demoData.tags}
           image={demoData.image}
         />
-        {/* See more button goes here*/}
+        {/* See More button goes here*/}
         {/* it would be the same component as the component for navigations*/}
         {/* The component would Link to .... in the website */}
       </section>

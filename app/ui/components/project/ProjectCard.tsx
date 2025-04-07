@@ -1,8 +1,6 @@
 import Image from "next/image";
 import ProjectTags from "./ProjectTags";
 
-// Todo: change font
-
 type Props = {
   name: string; // name of the project duhhhh
   description: string; // short description of the project
@@ -29,23 +27,26 @@ export default function ProjectCard({
   // The tag would be on the tag component
   // - Images, for now I set the fall back image to be blur, I don't know if it works
   return (
-    <div>
+    <div className="border-2 border-yellow-200 flex flex-col items-start">
       {/*image div goes here*/}
       {/* blurDataURL - you can add this as well to the Image properties */}
       {/* or placeholder image can be a custom image in the public folder */}
+
+      {/* for the image, make it glow or something */}
+      {/* though you know we are going for a vintage vibe */}
       <Image
         src={image}
         alt={`Image for ${name}`}
-        width={200}
+        width={325}
         height={200}
         placeholder="blur"
         blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
-        className="rounded-lg"
+        className="rounded-xl self-center"
       />
       {/*title (with tags) component goes here*/}
-      <div className=" font-extrabold">
+      <div className="flex flex-col gap-2">
         {/* here would be display flex with space between*/}
-        <p>{name}</p>
+        <h5 className="font-extrabold text-xl">{name}</h5>
         <ProjectTags tags={tags} />
       </div>
       {/* description goes here*/}

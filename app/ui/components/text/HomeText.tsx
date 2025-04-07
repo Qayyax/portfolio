@@ -4,7 +4,7 @@ import { dotGothic16, doto } from "@/app/ui/fonts";
 export default function HomeText() {
   const linkClasses = `text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold`;
   return (
-    <div className="font-extrabold flex flex-col items-start justify-center gap-1 p-4">
+    <div className="font-extrabold font-mono flex flex-col items-start justify-center gap-1 p-4">
       <h1 className={`text-xl font-mono`}>Hi, I am Tife.</h1>
       <div
         className={`${dotGothic16.className} tracking-wide flex flex-col gap-y-1`}
