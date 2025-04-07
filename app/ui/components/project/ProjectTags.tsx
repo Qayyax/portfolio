@@ -10,7 +10,7 @@ export default function ProjectTags({ tags }: Props) {
   // this would then map the tags on the ProjectTag component *
   // which would take a string as a props
   return (
-    <div className="inline-flex font-extrabold gap-2 border-2 border-white flex-wrap">
+    <div className="inline-flex font-bold gap-2 flex-wrap">
       {tags && tags.length > 0 ? (
         tags.map((tag, i) => (
           // Styling needed soon

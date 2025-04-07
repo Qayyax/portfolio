@@ -8,7 +8,7 @@ export default function ProjectTag({ tag }: Props) {
   // I can also use this outline-color property - check tailwind docs
   // https://tailwindcss.com/docs/outline-color
   return (
-    <div className=" font-mono text-sm  border-2 border-purple-600 rounded-md px-2">
+    <div className="font-mono text-sm  border-2 border-purple-600 rounded-md px-2">
       {tag}
     </div>
   );
