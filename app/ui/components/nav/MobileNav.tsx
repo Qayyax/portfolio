@@ -8,7 +8,7 @@ type Props = {
   to: string; // would be where the Link would point to
 };
 
-export default function MobileNav({ title, to }: Props) {
+export default function obileNav({ title, to }: Props) {
   // todo: - styling this shit
   return <Link href={to}>{title}</Link>;
 }
