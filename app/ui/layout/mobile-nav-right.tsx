@@ -2,6 +2,7 @@
 
 import Hamburger from "@/app/ui/components/nav/Hamburger";
 import { useState } from "react";
+import NavModal from "../components/nav/NavModal";
 
 export default function MobileLeft() {
   // This is where to  implement the state and the toggle of the ham
@@ -9,7 +10,6 @@ export default function MobileLeft() {
 
   const toggleHamburger = () => {
     setHamburgerOpen((prev) => !prev);
-    console.log(hamburgerOpen);
   };
 
   // when the ham is open, we need x as well to click so it closes the modal
@@ -20,6 +20,8 @@ export default function MobileLeft() {
       onClick={toggleHamburger}
     >
       <Hamburger />
+      {/*{hamburgerOpen && <Hamburger />} */}
+      {hamburgerOpen && <NavModal />}
     </div>
   );
 }

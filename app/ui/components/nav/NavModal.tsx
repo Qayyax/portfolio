@@ -14,19 +14,17 @@ const navRoutes: NavProperty[] = [
 ];
 
 export default function NavModal() {
-  // this would be the modal that shows up when the user clicks the Ham
   // I want it to have a glosry feel to it - I think?
+  // so black bg, purple accent color on the active nav
   // Modal, blury undertone, nav components for the mobile modal view
   // would import the mobile Nav component  here to use all the routes
   return (
-    <div className="h-full absolute">
+    <div className="h-screen absolute top-0 w-1/2 right-0 border-2 border-red-600">
       {/* space for the X component as well so that we can close the modal on click*/}
       {/* when we click the x we also want hamburger state to close as well */}
       {/* so I might need to take this up a state as well so that I can have the modal state here */}
-      {/* now I need to make the modal showup and take the whole screen */}
-      <div className="isolate w-1/2 bg-white/20 shadow-lg ring-1 ring-black/5">
+      <div className="isolate w-full h-full bg-black/90 shadow-lg ring-1 ring-black/5 pt-20">
         <ul>
-          {/* so this is the div for the routes */}
           {/* I think there is a state for Next Link */}
           {navRoutes.map((nav, index) => (
             <li key={index}>
