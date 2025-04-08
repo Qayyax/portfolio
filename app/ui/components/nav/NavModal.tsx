@@ -4,6 +4,11 @@ import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
+// TODO:
+// - X to close the hamburger
+// - design of the navigations
+// - then move on to tab and desktop design
+
 // I probably should put it in ts definitions so I can reuse
 type NavProperty = {
   title: string;
@@ -11,7 +16,8 @@ type NavProperty = {
 };
 
 const navRoutes: NavProperty[] = [
-  { title: "Home", to: "/" },
+  { title: "Home", to: "/" }, // would delete thyis later, or maybe I keep home
+  // I don't know if I need the home path
   { title: "About", to: "/about" },
   { title: "My_Space", to: "/my_space" },
   { title: "Projects", to: "/projects" },
@@ -32,7 +38,6 @@ export default function NavModal() {
       {/* so I might need to take this up a state as well so that I can have the modal state here */}
       <div className="isolate w-full h-full bg-black/90 shadow-lg ring-1 ring-black/5 pt-20">
         <ul className="flex flex-col gap-3 font-mono">
-          {/* I think there is a state for Next Link */}
           {navRoutes.map((nav, index) => (
             <li
               key={index}
