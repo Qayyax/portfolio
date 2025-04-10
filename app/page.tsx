@@ -24,9 +24,7 @@ export default function Home() {
           Tife <span className="hidden md:block">Olatunji</span>
         </h3>
         <div>
-          {/* putting darkmode and hamburger here for mobile*/}
-          {/* I may not want to implement darkmode anymore*/}
-          {/* putting darkmode and nav routes here for desktop and tab*/}
+          {/* putting nav routes here for desktop and tab*/}
           <MobileLeft />
         </div>
       </nav>
