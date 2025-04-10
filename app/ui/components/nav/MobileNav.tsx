@@ -2,13 +2,10 @@
 // Styling I guess, on hover maybe??
 
 import Link from "next/link";
+import { NavProperty } from "@/type";
 
-type Props = {
-  title: string; // would be the name of the nav
-  to: string; // would be where the Link would point to
-};
+type Props = NavProperty;
 
 export default function obileNav({ title, to }: Props) {
-  // todo: - styling this shit
   return <Link href={to}>{title}</Link>;
 }

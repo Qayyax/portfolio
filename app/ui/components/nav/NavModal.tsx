@@ -4,17 +4,11 @@ import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { MdClose } from "react-icons/md";
+import { NavProperty } from "@/type";
 
 // TODO:
-// - X to close the hamburger *
-// - design of the navigations
+// - design of the navigations * (I guess I would come back to this)
 // - then move on to tab and desktop design
-
-// I probably should put it in ts definitions so I can reuse
-type NavProperty = {
-  title: string;
-  to: string;
-};
 
 const navRoutes: NavProperty[] = [
   { title: "Home", to: "/" }, // would delete this later, or maybe I keep home
@@ -34,21 +28,18 @@ export default function NavModal({ closeHamburgerAction }: Props) {
   // so black bg, purple accent color on the active nav *
   // Modal, blury undertone, nav components for the mobile modal view
   // would import the mobile Nav component  here to use all the routes
+  // I still thinkt he x should be bolder, would comeback to that maybe
+  // Time to style the navigations
   const pathname = usePathname();
 
   return (
     <div className="h-screen absolute top-0 w-1/2 right-0 border-2 border-red-600">
-      {/* space for the X component as well so that we can close the modal on click*/}
-      {/* when we click the x we also want hamburger state to close as well */}
-      {/* so I might need to take this up a state as well so that I can have the modal state here */}
       <div className="isolate w-full h-full bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative">
         <div onClick={closeHamburgerAction} className=" absolute top-4">
-          {/* here I would put the X icon */}
-          {/* it would close hamburger on click */}
           <MdClose className="text-2xl text-purple-500" />
         </div>
 
-        <ul className="flex flex-col gap-3 font-mono">
+        <ul className="flex flex-col gap-4 font-mono text-2xl items-center">
           {navRoutes.map((nav, index) => (
             <li
               key={index}

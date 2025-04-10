@@ -2,6 +2,7 @@ import MobileLeft from "@/app/ui/layout/mobile-nav-right";
 import HomeText from "./ui/components/text/HomeText";
 import ProjectCard from "./ui/components/project/ProjectCard";
 import { doto } from "./ui/fonts";
+import DesktopNav from "./ui/layout/desktop-nav";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
@@ -16,16 +17,19 @@ const demoData = {
     "https://images.unsplash.com/photo-1742615869881-95b71cee478c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 };
 
+// How to maintain the nav and modal in the other navigations
 export default function Home() {
   return (
     <>
       <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 bg-black">
-        <h3 className={`flex gap-1 font-extrabold text-2xl ${doto.className}`}>
-          Tife <span className="hidden md:block">Olatunji</span>
+        <h3 className={`flex gap-2 font-extrabold text-2xl ${doto.className}`}>
+          Tife<span className="hidden md:block">Olatunji</span>
         </h3>
         <div>
           {/* putting nav routes here for desktop and tab*/}
+          {/* Time to work on the desktop version */}
           <MobileLeft />
+          <DesktopNav />
         </div>
       </nav>
       <main>
