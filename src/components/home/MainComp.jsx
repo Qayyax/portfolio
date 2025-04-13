@@ -17,7 +17,11 @@ export default function MainComp() {
         <div className="mb-6 ">
           <ImageCard />
         </div>
-        <p className={`text-center max-w-[308px] mb-3.5 ${textColor}`}>j</p>
+        <p className={`text-center max-w-[308px] mb-3.5 ${textColor}`}>
+          I am a fullstack developer with a master&apos;s degree in big data
+          analytics. Currently, I am working on improving my coding career. I
+          can build websites and apps.
+        </p>
         <div className="">
           <NavButtons />
         </div>
@@ -33,8 +37,9 @@ export default function MainComp() {
             <p
               className={`text-start max-w-[515px] mb-8 text-[1.5em] ${textColor}`}
             >
-              A frontend developer crafting seamless user experience one pixel
-              at a time
+              I am a fullstack developer with a master&apos;s degree in big data
+              analytics. Currently, I am working on improving my coding career.
+              I can build websites and apps.
             </p>
             <div className="">
               <NavButtons />
