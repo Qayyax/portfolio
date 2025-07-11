@@ -6,6 +6,6 @@ import { NavProperty } from "@/type";
 
 type Props = NavProperty;
 
-export default function obileNav({ title, to }: Props) {
+export default function MobileNav({ title, to }: Props) {
   return <Link href={to}>{title}</Link>;
 }
