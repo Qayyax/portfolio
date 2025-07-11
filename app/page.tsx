@@ -26,7 +26,7 @@ export default function Home() {
           Tife<span className="hidden md:block">Olatunji</span>
         </h3>
         <div>
-          {/* putting nav routes here for desktop and tab*/}
+          {/* putting nav routes here for desktop and tab */}
           {/* Time to work on the desktop version */}
           <MobileLeft />
           <DesktopNav />

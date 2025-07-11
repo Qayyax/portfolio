@@ -16,8 +16,6 @@ export default function DesktopNav() {
   // Styling so show the one the user is currently on
   // I need to turn the original nav in pages into a component of it's own
   // so I can resue
-  // I would come back to this later
-  // want to go off
   return (
     <div className="hidden md:block">
       <ul className="flex gap-3 font-bold font-mono justify-center items-center">
