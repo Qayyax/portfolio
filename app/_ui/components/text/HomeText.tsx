@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { dotGothic16, doto } from "@/app/ui/fonts";
+import { dotGothic16, doto } from "@/app/_ui/fonts";
 
 export default function HomeText() {
   const linkClasses = `text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold`;

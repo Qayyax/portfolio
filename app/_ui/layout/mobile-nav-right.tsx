@@ -1,6 +1,6 @@
 "use client";
 
-import Hamburger from "@/app/ui/components/nav/Hamburger";
+import Hamburger from "@/app/_ui/components/nav/Hamburger";
 import { useState } from "react";
 import NavModal from "../components/nav/NavModal";
 

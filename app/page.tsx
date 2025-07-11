@@ -1,8 +1,8 @@
-import MobileLeft from "@/app/ui/layout/mobile-nav-right";
-import HomeText from "./ui/components/text/HomeText";
-import ProjectCard from "./ui/components/project/ProjectCard";
-import { doto } from "./ui/fonts";
-import DesktopNav from "./ui/layout/desktop-nav";
+import MobileLeft from "@/app/_ui/layout/mobile-nav-right";
+import HomeText from "./_ui/components/text/HomeText";
+import ProjectCard from "./_ui/components/project/ProjectCard";
+import { doto } from "./_ui/fonts";
+import DesktopNav from "./_ui/layout/desktop-nav";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images

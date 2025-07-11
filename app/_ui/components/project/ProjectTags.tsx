@@ -1,4 +1,4 @@
-import ProjectTag from "@/app/ui/components/project/ProjectTag";
+import ProjectTag from "@/app/_ui/components/project/ProjectTag";
 
 type Props = {
   tags: string[];
