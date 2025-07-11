@@ -18,6 +18,14 @@ const demoData = {
 };
 
 // How to maintain the nav and modal in the other navigations
+// -- use layout.tsx for the navigation between the pages
+// TODO:
+// - [] layout for the navigation
+// - [] footer in the layout as well
+//  - [] remember footer is diff for desktop and mobile
+// - [] See more after the featured projects
+//  - [] I am considering removing it though
+// - [] Add featured blog
 export default function Home() {
   return (
     <>
