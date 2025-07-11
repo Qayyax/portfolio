@@ -26,6 +26,7 @@ const demoData = {
 // - [] See more after the featured projects
 //  - [] I am considering removing it though
 // - [] Add featured blog
+// - [] Change import to use @ and not ./
 export default function Home() {
   return (
     <>
