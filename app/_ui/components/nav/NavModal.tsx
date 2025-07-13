@@ -32,7 +32,7 @@ export default function NavModal({ closeHamburgerAction }: Props) {
         ></div>
         {/* right side */}
         <div className="h-screen absolute top-0 w-1/2 right-0 backdrop-blur-[3px] rounded-l-2xl z-20">
-          <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-l-2xl ">
+          <div className=" w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-4 ring-purple-400/5 pt-20 relative rounded-tl-2xl ">
             <div onClick={closeHamburgerAction} className=" absolute top-4">
               <MdClose className="text-4xl text-purple-500" />
             </div>
