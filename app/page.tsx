@@ -27,10 +27,11 @@ const demoData = {
 //  - [] I am considering removing it though
 // - [] Add featured blog
 // - [] Change import to use @ and not ./
+// - [] Adjust your text too as well
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 bg-black">
+      <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 ">
         <h3 className={`flex gap-2 font-extrabold text-2xl ${doto.className}`}>
           Tife<span className="hidden md:block">Olatunji</span>
         </h3>
