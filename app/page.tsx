@@ -1,8 +1,6 @@
-import MobileLeft from "@/app/_ui/layout/mobile-nav-right";
 import HomeText from "./_ui/components/text/HomeText";
 import ProjectCard from "./_ui/components/project/ProjectCard";
 import { doto } from "./_ui/fonts";
-import DesktopNav from "./_ui/layout/desktop-nav";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
@@ -20,7 +18,7 @@ const demoData = {
 // How to maintain the nav and modal in the other navigations
 // -- use layout.tsx for the navigation between the pages
 // TODO:
-// - [] layout for the navigation
+// - [X] layout for the navigation
 // - [] footer in the layout as well
 //  - [] remember footer is diff for desktop and mobile
 // - [] See more after the featured projects
@@ -31,17 +29,6 @@ const demoData = {
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 dark:bg-black bg-white">
-        <h3 className={`flex gap-2 font-extrabold text-2xl ${doto.className}`}>
-          Tife<span className="hidden md:block">Olatunji</span>
-        </h3>
-        <div>
-          {/* putting nav routes here for desktop and tab */}
-          {/* Time to work on the desktop version */}
-          <MobileLeft />
-          <DesktopNav />
-        </div>
-      </nav>
       <main>
         {/* Here would have the main text */}
         {/* text component goes here */}
