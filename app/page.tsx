@@ -31,7 +31,7 @@ const demoData = {
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 ">
+      <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0 dark:bg-black bg-white">
         <h3 className={`flex gap-2 font-extrabold text-2xl ${doto.className}`}>
           Tife<span className="hidden md:block">Olatunji</span>
         </h3>
