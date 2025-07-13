@@ -35,25 +35,31 @@ export default function NavModal({ closeHamburgerAction }: Props) {
     // another main div
     // it has 2 w-1/2, left and right
     // you click left, and the modal closes
-    <div className="h-screen absolute top-0 w-1/2 right-0  ">
-      <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-xl">
-        <div onClick={closeHamburgerAction} className=" absolute top-4">
-          <MdClose className="text-4xl text-purple-500" />
-        </div>
+    <>
+      {/* blur div */}
+      <div className="absolute top-0 right-0 w-1/2 h-screen z-10 backdrop-blur-sm "></div>
 
-        <ul className="flex flex-col gap-4 font-mono text-2xl items-center">
-          {navRoutes.map((nav, index) => (
-            <li
-              key={index}
-              className={clsx("some class here later", {
-                "border-b-4 border-purple-500": pathname === nav.to, // border bottom purple here when active
-              })}
-            >
-              <MobileNav title={nav.title} to={nav.to} />
-            </li>
-          ))}
-        </ul>
+      {/* modal div */}
+      <div className="h-screen absolute top-0 w-1/2 right-0  z-20">
+        <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-xl ">
+          <div onClick={closeHamburgerAction} className=" absolute top-4">
+            <MdClose className="text-4xl text-purple-500" />
+          </div>
+
+          <ul className="flex flex-col gap-4 font-mono text-2xl items-center">
+            {navRoutes.map((nav, index) => (
+              <li
+                key={index}
+                className={clsx("some class here later", {
+                  "border-b-4 border-purple-500": pathname === nav.to, // border bottom purple here when active
+                })}
+              >
+                <MobileNav title={nav.title} to={nav.to} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
