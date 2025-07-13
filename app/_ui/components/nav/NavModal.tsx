@@ -32,8 +32,11 @@ export default function NavModal({ closeHamburgerAction }: Props) {
   const pathname = usePathname();
 
   return (
-    <div className="h-screen absolute top-0 w-1/2 right-0 border-2 border-red-600">
-      <div className="isolate w-full h-full bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative">
+    // another main div
+    // it has 2 w-1/2, left and right
+    // you click left, and the modal closes
+    <div className="h-screen absolute top-0 w-1/2 right-0  ">
+      <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-xl">
         <div onClick={closeHamburgerAction} className=" absolute top-4">
           <MdClose className="text-4xl text-purple-500" />
         </div>
