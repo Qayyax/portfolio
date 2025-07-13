@@ -36,12 +36,8 @@ export default function NavModal({ closeHamburgerAction }: Props) {
     // it has 2 w-1/2, left and right
     // you click left, and the modal closes
     <>
-      {/* blur div */}
-      <div className="absolute top-0 right-0 w-1/2 h-screen z-10 backdrop-blur-sm "></div>
-
-      {/* modal div */}
-      <div className="h-screen absolute top-0 w-1/2 right-0  z-20">
-        <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-xl ">
+      <div className="h-screen absolute top-0 w-1/2 right-0 backdrop-blur-[3px] rounded-l-2xl z-20">
+        <div className="isolate w-full h-full bg-white/90 dark:bg-black/90 shadow-lg ring-1 ring-black/5 pt-20 relative rounded-l-2xl ">
           <div onClick={closeHamburgerAction} className=" absolute top-4">
             <MdClose className="text-4xl text-purple-500" />
           </div>
