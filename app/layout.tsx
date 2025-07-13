@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DotGothic16 } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/app/_ui/layout/navbar-component";
+import Navbar from "@/app/_ui/layout/navbar";
 
 const dotGothic16 = DotGothic16({
   subsets: ["latin"],
