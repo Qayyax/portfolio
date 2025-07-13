@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { DotGothic16 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/_ui/layout/navbar";
-
-const dotGothic16 = DotGothic16({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { dotGothic16 } from "./_ui/fonts";
 
 export const metadata: Metadata = {
   title: "Qayyax",
