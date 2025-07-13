@@ -4,7 +4,7 @@ import Hamburger from "@/app/_ui/components/nav/Hamburger";
 import { useState } from "react";
 import NavModal from "../components/nav/NavModal";
 
-export default function MobileLeft() {
+export default function MobileRight() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   const toggleHamburger = () => {

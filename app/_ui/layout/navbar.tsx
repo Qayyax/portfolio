@@ -1,6 +1,6 @@
 import { doto } from "@/app/_ui/fonts";
 import DesktopNav from "./desktop-nav";
-import MobileLeft from "./mobile-nav-right";
+import MobileRight from "./mobile-nav-right";
 
 export default function Navbar() {
   return (
@@ -10,7 +10,7 @@ export default function Navbar() {
       </h3>
       <div>
         {/* putting nav routes here for desktop and tab */}
-        <MobileLeft />
+        <MobileRight />
         <DesktopNav />
       </div>
     </nav>
