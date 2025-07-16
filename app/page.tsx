@@ -17,7 +17,6 @@ const demoData = {
 };
 
 // How to maintain the nav and modal in the other navigations
-// -- use layout.tsx for the navigation between the pages
 // TODO:
 // - [X] layout for the navigation
 // - [] footer in the layout as well
