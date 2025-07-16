@@ -12,6 +12,8 @@ import { FaGithub as Github } from "react-icons/fa";
 import { FaLinkedin as LinkedIn } from "react-icons/fa6";
 import { FaXTwitter as Twitter } from "react-icons/fa6";
 import { FaInstagram as Instagram } from "react-icons/fa6";
+import { IoMailOutline as Gmail } from "react-icons/io5";
+import { SiBuymeacoffee as Coffee } from "react-icons/si";
 
 const links = {
   youtube: {
