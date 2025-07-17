@@ -1,26 +1,21 @@
-import { NavProperty } from "@/type";
+"use client";
 import DesktopNavBtn from "../components/nav/DesktopNavButton";
-
-// I probably should export this since I have repeated this in 2 places
-const navRoutes: NavProperty[] = [
-  { title: "Home", to: "/" }, // would delete this later, or maybe I keep home
-  // I don't know if I need the home path
-  { title: "About", to: "/about" },
-  { title: "My_Space", to: "/my_space" },
-  { title: "Projects", to: "/projects" },
-  { title: "Store", to: "/store" },
-];
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+import navRoutes from "@/app/_data_exports/navroutes";
 
 export default function DesktopNav() {
-  // here would house the nav routes for the tablet / desktop versions
-  // Styling so show the one the user is currently on
-  // I need to turn the original nav in pages into a component of it's own
-  // so I can resue
+  const pathname = usePathname();
   return (
     <div className="hidden md:block">
       <ul className="flex gap-3 font-bold font-mono justify-center items-center">
         {navRoutes.map((nav, index) => (
-          <li key={index}>
+          <li
+            key={index}
+            className={clsx("some class here later", {
+              "border-4 border-purple-500 rounded-xl px-3": pathname === nav.to, // border bottom purple here when active
+            })}
+          >
             <DesktopNavBtn to={nav.to} title={nav.title} />
           </li>
         ))}

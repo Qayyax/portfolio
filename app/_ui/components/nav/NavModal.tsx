@@ -4,15 +4,7 @@ import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { MdClose } from "react-icons/md";
-import { NavProperty } from "@/type";
-
-const navRoutes: NavProperty[] = [
-  { title: "Home", to: "/" },
-  { title: "About", to: "/about" },
-  { title: "My_Space", to: "/my_space" },
-  { title: "Projects", to: "/projects" },
-  { title: "Store", to: "/store" },
-];
+import navRoutes from "@/app/_data_exports/navroutes";
 
 type Props = {
   closeHamburgerAction: () => void;
