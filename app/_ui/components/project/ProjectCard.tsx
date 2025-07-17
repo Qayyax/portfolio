@@ -21,7 +21,7 @@ export default function ProjectCard({
   // The tag would be on the tag component
   // - Images, for now I set the fall back image to be blur, I don't know if it works
   return (
-    <div className="border-2 border-purple-500 dark:border-purple-200 rounded-3xl p-2 flex flex-col items-start gap-2 max-w-[325px]">
+    <div className="border-2 border-purple-500 dark:border-purple-200 rounded-3xl p-2 flex flex-col items-start gap-2 max-w-[325px] backdrop-blur-2xl bg-black/5 dark:bg-white/5 shadow-sm shadow-purple-500/50 dark:shadow-purple-200/50">
       {/*image div goes here*/}
       {/* for the image, make it glow or something */}
       {/* though you know we are going for a retro vibe */}

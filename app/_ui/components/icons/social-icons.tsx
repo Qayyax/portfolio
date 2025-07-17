@@ -8,7 +8,7 @@ type Props = {
 export default function SocialIcon({ icon: Icon, to }: Props) {
   return (
     <a href={to} target="_blank">
-      <Icon className="text-2xl" />
+      <Icon className="text-2xl md:text-4xl" />
     </a>
   );
 }
