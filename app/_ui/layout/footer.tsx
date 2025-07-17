@@ -52,7 +52,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center items-center gap-4 p-5   bottom-0 w-[100%] bg-white dark:bg-black">
+    <footer className="flex justify-center items-center gap-4 p-5  mt-auto bottom-0 w-[100%] bg-white dark:bg-black">
       {links.map((item) => (
         <SocialIcon key={item.link} icon={item.icon} to={item.link} />
       ))}

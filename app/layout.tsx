@@ -18,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* I wonder why the font-mono doesn't apply directly to all the children, maybe cause of the font style */}
-      <body className={` ${dotGothic16.className} font-mono antialiased`}>
+      <body
+        className={` ${dotGothic16.className} font-mono antialiased flex flex-col min-h-dvh`}
+      >
         <Navbar />
         {children}
         <Footer />
