@@ -13,7 +13,11 @@ export default function HomeText() {
           I am a fullstack developer with a master&apos;s degree in big data
           analytics. Currently, I am working on improving my coding career. I
           can build websites and apps. You can{" "}
-          <a href="mailto:qayyax@gmail.com" className={linkClasses}>
+          <a
+            href="mailto:qayyax@gmail.com"
+            target="_blank"
+            className={linkClasses}
+          >
             {/* on hover the color should glow more or something*/}
             contact me
           </a>
