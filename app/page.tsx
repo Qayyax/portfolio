@@ -8,11 +8,12 @@ import { doto } from "./_ui/fonts";
 const demoData = {
   name: "Dummy Project",
   description: "This is just to test my component",
-  challenges:
-    "In this project, I faced the following challenges. I didn't see bla bla ...",
   tags: ["React", "TypeScript", "Python"],
   image:
     "https://images.unsplash.com/photo-1742615869881-95b71cee478c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  challenges: "/",
+  code: "https://github.com/Qayyax/lazy-vim-config",
+  liveSite: "https://tifelinks.vercel.app/",
 };
 
 // How to maintain the nav and modal in the other navigations
@@ -42,9 +43,11 @@ export default function Home() {
         <ProjectCard
           name={demoData.name}
           description={demoData.description}
-          challenges={demoData.challenges}
           tags={demoData.tags}
           image={demoData.image}
+          challenge={demoData.challenges}
+          code={demoData.code}
+          liveSite={demoData.liveSite}
         />
         {/* See More button goes here*/}
         {/* it would be the same component as the component for navigations*/}

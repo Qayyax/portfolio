@@ -2,3 +2,18 @@ export type NavProperty = {
   title: string;
   to: string;
 };
+
+export type ProjectAction = {
+  type: "code" | "challenge" | "live-site";
+  link: string;
+};
+
+export type Project = {
+  name: string;
+  description: string;
+  tags: string[];
+  image: string;
+  code: string;
+  challenge: string;
+  liveSite: string;
+};

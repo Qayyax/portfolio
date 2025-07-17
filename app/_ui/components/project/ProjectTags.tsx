@@ -5,12 +5,8 @@ type Props = {
 };
 
 export default function ProjectTags({ tags }: Props) {
-  // this part would take a props of string[] *
-  // which would be the tags of the projects built
-  // this would then map the tags on the ProjectTag component *
-  // which would take a string as a props
   return (
-    <div className="inline-flex font-bold gap-2 flex-wrap">
+    <div className="flex font-bold gap-2 flex-wrap">
       {tags && tags.length > 0 ? (
         tags.map((tag, i) => (
           // Styling needed soon
