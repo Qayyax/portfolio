@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/app/_ui/layout/navbar";
 import { dotGothic16 } from "./_ui/fonts";
+import Footer from "./_ui/layout/footer";
 
 export const metadata: Metadata = {
   title: "Qayyax",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={` ${dotGothic16.className} font-mono antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -18,7 +18,6 @@ const demoData = {
 
 // How to maintain the nav and modal in the other navigations
 // TODO:
-//  - [] remember footer is diff for desktop and mobile
 // - [] See more after the featured projects
 //  - [] I am considering removing it though
 // - [] Add featured blog
@@ -52,7 +51,6 @@ export default function Home() {
         {/* it would be the same component as the component for navigations*/}
         {/* The component would Link to .... in the website */}
       </section>
-      <Footer />
     </>
   );
 }
