@@ -1,7 +1,6 @@
 import HomeText from "./_ui/components/text/HomeText";
 import ProjectCard from "./_ui/components/project/ProjectCard";
 import { doto } from "./_ui/fonts";
-import Footer from "./_ui/layout/footer";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images

@@ -18,7 +18,6 @@ export default function ProjectCard({
   tags,
   image,
 }: Props) {
-  // - Project tags: string[] eg ([react, typeScript, python])
   // The tag would be on the tag component
   // - Images, for now I set the fall back image to be blur, I don't know if it works
   return (
@@ -54,7 +53,7 @@ export default function ProjectCard({
       <p>{description}</p>
 
       {/* challenges goes here*/}
-      <p className="text-purple-100">{challenges}</p>
+      <p className="text-purple-400">{challenges}</p>
     </div>
   );
 }
