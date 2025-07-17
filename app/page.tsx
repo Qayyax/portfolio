@@ -18,14 +18,12 @@ const demoData = {
 
 // How to maintain the nav and modal in the other navigations
 // TODO:
-// - [X] layout for the navigation
-// - [] footer in the layout as well
 //  - [] remember footer is diff for desktop and mobile
 // - [] See more after the featured projects
 //  - [] I am considering removing it though
 // - [] Add featured blog
-// - [] Change import to use @ and not ./
-// - [] Adjust your text too as well
+// - [] Adjust your intro text too as well
+
 export default function Home() {
   return (
     <>

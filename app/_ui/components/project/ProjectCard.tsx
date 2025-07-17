@@ -7,6 +7,7 @@ type Props = {
   challenges: string; // short story of the challenges faced
   // if the challenges are long, there should be a see more button so it doesn't take a lot of space
   tags: string[]; // technologies used in the project
+  // - Project tags: string[] eg ([react, typeScript, python])
   image: string; // src of the image
 };
 
@@ -17,12 +18,6 @@ export default function ProjectCard({
   tags,
   image,
 }: Props) {
-  // Here would be the project card,
-  // it takes a prop of type project
-  // type project would include
-  // - Project name
-  // - Project description
-  // - Challenges - like what I faced when working on the project
   // - Project tags: string[] eg ([react, typeScript, python])
   // The tag would be on the tag component
   // - Images, for now I set the fall back image to be blur, I don't know if it works
