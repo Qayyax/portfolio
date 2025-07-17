@@ -1,8 +1,3 @@
-// TODO:
-// - Icon links to :
-// - [] my name at the center of the footer
-// - [] gmail mail to mailto:qayyax@gmail.com
-
 import SocialIcon from "../components/icons/social-icons";
 
 import { FaYoutube as Youtube } from "react-icons/fa6";
