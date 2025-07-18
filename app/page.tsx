@@ -1,6 +1,7 @@
 import HomeText from "./_ui/components/text/HomeText";
 import ProjectCard from "./_ui/components/project/ProjectCard";
 import { doto } from "./_ui/fonts";
+import ReferralCards from "./_ui/components/referrals/referral-cards";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
@@ -56,6 +57,7 @@ export default function Home() {
         <h3 className={`font-extrabold text-2xl ${doto.className}`}>
           Referral Links
         </h3>
+        <ReferralCards />
       </section>
     </>
   );
