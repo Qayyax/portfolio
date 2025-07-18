@@ -54,7 +54,7 @@ export default function Home() {
         {/* it would be the same component as the component for navigations*/}
         {/* The component would Link to .... in the website */}
         {/* Referal links component */}
-        <h3 className={`font-extrabold text-2xl ${doto.className}`}>
+        <h3 className={`font-extrabold text-2xl ${doto.className} mt-3`}>
           Referral Links
         </h3>
         <ReferralCards />

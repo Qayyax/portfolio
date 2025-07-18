@@ -9,7 +9,7 @@ type Props = {
 
 export default function ReferralCard({ title, description, code }: Props) {
   return (
-    <div className="flex items-center justify-between gap-2">
+    <div className="flex items-center justify-between gap-2 py-2 px-1 border-2 border-purple-400 rounded-xl">
       {/* title */}
       <p>{title}</p>
       {/* description */}
