@@ -38,7 +38,7 @@ export default function Home() {
         {/* It would only be one project */}
         {/* Then see more of my would be the button under it */}
         <h3 className={`font-extrabold text-2xl ${doto.className}`}>
-          Featured Project
+          Featured Pages
         </h3>
         <ProjectCard
           name={demoData.name}
