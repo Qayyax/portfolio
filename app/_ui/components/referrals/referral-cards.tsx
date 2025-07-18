@@ -16,7 +16,7 @@ export default function ReferralCards() {
         />
       ))}
 
-      <p className="mt-2 italic">
+      <p className="my-2 italic">
         Want me to join your referral program,{" "}
         <a
           href="mailto:qayyax@gmail.com"
