@@ -7,12 +7,12 @@ export default function HomeText() {
     <div className="font-extrabold font-mono flex flex-col items-start justify-center gap-1 p-4">
       <h1 className={`text-xl font-mono`}>Hi, I am Tife.</h1>
       <div
-        className={`${dotGothic16.className} tracking-wide flex flex-col gap-y-1`}
+        className={`${dotGothic16.className} tracking-wide flex flex-col gap-y-2`}
       >
         <p className="font-mono">
           I am a fullstack developer with a master&apos;s degree in big data
-          analytics. Currently, I am working on improving my coding career. I
-          can build websites and apps. You can{" "}
+          analytics. I am currently working on improving my coding career. I can
+          build websites and mobile apps. You can{" "}
           <a
             href="mailto:qayyax@gmail.com"
             target="_blank"

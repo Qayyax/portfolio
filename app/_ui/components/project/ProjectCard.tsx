@@ -19,7 +19,7 @@ export default function ProjectCard({
   liveSite,
 }: Project) {
   return (
-    <div className="border-2 border-purple-500 dark:border-purple-200 rounded-3xl p-2 flex flex-col items-start gap-2 max-w-[325px]  bg-black/5 dark:bg-white/5 shadow-sm shadow-purple-500/50 dark:shadow-purple-200/50">
+    <div className="border-2 border-purple-500 dark:border-purple-200 rounded-3xl p-2 flex flex-col items-start gap-2 max-w-[325px]  shadow-sm shadow-purple-500/50 dark:shadow-purple-200/50">
       {/*image div goes here*/}
       {/* for the image, make it glow or something */}
       {/* though you know we are going for a retro vibe */}
@@ -31,7 +31,7 @@ export default function ProjectCard({
         height={200}
         placeholder="blur"
         blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
-        className="rounded-xl self-center"
+        className="rounded-2xl self-center"
       />
 
       {/*title (with tags) component goes here*/}
