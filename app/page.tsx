@@ -52,6 +52,10 @@ export default function Home() {
         {/* See More button goes here*/}
         {/* it would be the same component as the component for navigations*/}
         {/* The component would Link to .... in the website */}
+        {/* Referal links component */}
+        <h3 className={`font-extrabold text-2xl ${doto.className}`}>
+          Referral Links
+        </h3>
       </section>
     </>
   );
