@@ -1,13 +1,9 @@
-type Props = {
-  type: "code" | "link";
-  link?: string;
-  code?: string;
-};
+import { ReferralBtnType } from "@/type";
 
 // TODO:
 // - [] tool tip
-// - [] prop for tool tip
-export default function ReferralBtn({ type, link, code }: Props) {
+
+export default function ReferralBtn({ type, link, code }: ReferralBtnType) {
   return type === "code" ? (
     <button>{code}</button>
   ) : (

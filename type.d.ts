@@ -17,3 +17,9 @@ export type Project = {
   challenge: string;
   liveSite: string;
 };
+
+export type ReferralBtnType = {
+  type: "code" | "link";
+  link?: string;
+  code?: string;
+};
