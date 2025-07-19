@@ -7,6 +7,9 @@ type Props = {
   code: ReferralBtnType;
 };
 
+// TODO:
+// - [] tool tip would be the description
+
 export default function ReferralCard({ title, description, code }: Props) {
   return (
     <div className="flex items-center justify-between gap-2 py-2 px-1 border-2 border-purple-400 dark:border-purple-200 rounded-xl">
