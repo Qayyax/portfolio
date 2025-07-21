@@ -22,7 +22,6 @@ const demoData = {
 // - [] See more after the featured projects
 //  - [] I am considering removing it though
 // - [] Add featured blog
-// - [] Adjust your intro text too as well
 
 export default function Home() {
   return (

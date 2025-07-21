@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { dotGothic16, doto } from "@/app/_ui/fonts";
 
+// TODO:
+// - [] On hover of the a tags, the text should glow
+
 export default function HomeText() {
   const linkClasses = `text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold`;
   return (
@@ -11,14 +14,13 @@ export default function HomeText() {
       >
         <p className="font-mono">
           I am a fullstack developer with a master&apos;s degree in big data
-          analytics. I am currently working on improving my coding career. I can
-          build websites and mobile apps. You can{" "}
+          analytics. I am working on improving my coding career. I build
+          websites and mobile apps. You can{" "}
           <a
             href="mailto:qayyax@gmail.com"
             target="_blank"
             className={linkClasses}
           >
-            {/* on hover the color should glow more or something*/}
             contact me
           </a>
           .
