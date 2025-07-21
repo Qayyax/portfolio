@@ -11,5 +11,15 @@
 //        - [] tech videos
 // - [] Blogs
 export default function MySpace() {
-  return <div>This is My_Space page</div>;
+  return (
+    <section>
+      {/* Now streaming pane */}
+      <div>Now streaming iframe</div>
+      {/* Apps I find interesting pane */}
+      <div>Apps I find interesting</div>
+      <div>Art gallery</div>
+      <div>Video gallery</div>
+      <div>Anime I enjoy</div>
+    </section>
+  );
 }
