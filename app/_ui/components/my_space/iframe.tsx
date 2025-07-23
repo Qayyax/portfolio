@@ -3,7 +3,7 @@ export default async function Iframe() {
   // else it shows a funny cat video or something
   // white border around , or purple
   const live_stream_request = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=UCWw7LOewY4cPH4JAoN6rUTA&eventType=live&type=video`,
+    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&eventType=live&type=video`,
   );
   const live_stream_data = await live_stream_request.json();
   // if stream data items.length is 0 or pageInfo.totalResults == 0
