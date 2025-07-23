@@ -6,6 +6,10 @@ export default async function Iframe() {
     `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=UCWw7LOewY4cPH4JAoN6rUTA&eventType=live&type=video`,
   );
   const live_stream_data = await live_stream_request.json();
+  // if stream data items.length is 0 or pageInfo.totalResults == 0
+  // show iframe of a music
+  // else
+  // show iframe of livestream with a fixed size
 
   const live_stream_frame = (
     <div>
