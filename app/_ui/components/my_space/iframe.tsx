@@ -6,8 +6,13 @@ export default async function Iframe() {
     `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&eventType=live&type=video`,
   );
   const live_stream_data = await live_stream_request.json();
+  const tife_youtube_request = await fetch(
+    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&type=video&maxResults=20&videoEmbeddable=true`,
+  );
+  const tife_youtube_data = await tife_youtube_request.json();
+
   // if stream data items.length is 0 or pageInfo.totalResults == 0
-  // show iframe of a music
+  // show iframe of a any video from qayyax or TifeLogs
   // else
   // show iframe of livestream with a fixed size
 
