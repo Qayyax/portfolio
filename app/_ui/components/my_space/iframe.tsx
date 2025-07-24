@@ -15,6 +15,17 @@ export default async function Iframe() {
   // show iframe of a any video from qayyax or TifeLogs
   // else
   // show iframe of livestream with a fixed size
+  //
+  const EMBED_URL = "https://www.youtube.com/embed/";
+  const EMBEDED_PARAMS = `?autoplay=1&mute=1`;
+
+  if (
+    live_stream_data?.pageInfo?.totalResults === 0 ||
+    live_stream_data?.items.length === 0
+  ) {
+    // math.random of a video from tife logs
+    const randNum = Math.floor(Math.random() * tife_youtube_data?.items.length);
+  }
 
   const live_stream_frame = (
     <div>
@@ -44,7 +55,7 @@ export default async function Iframe() {
 //     "regionCode": "CA",
 //     "pageInfo": {
 //         "totalResults": 1,
-//         "resultsPerPage": 1
+//         "resultsPerPage":1
 //     },
 //     "items": [
 //         {
