@@ -77,6 +77,7 @@ export default async function Iframe() {
     }
   };
 
+  // change this to iframe, and it uses normal iframe with embed and video id
   const live_stream_frame = (
     <div>
       <iframe
