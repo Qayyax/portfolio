@@ -62,7 +62,7 @@ export default async function Iframe() {
   const EMBED_URL = "https://www.youtube.com/embed/";
   const EMBEDED_PARAMS = `?autoplay=1&mute=1`;
 
-  const getVideoId = () => {
+  const getVideoDetails = () => {
     if (
       liveStreamData?.pageInfo?.totalResults === 0 ||
       liveStreamData?.items.length === 0
@@ -70,17 +70,20 @@ export default async function Iframe() {
       // math.random of a video from tife logs
       const randNum = Math.floor(Math.random() * tifeYoutubeData?.items.length);
       const videoID = tifeYoutubeData?.items[randNum].id.videoId;
-      return videoID;
+      const videoTitle = tifeYoutubeData?.items[randNum].snippet.title;
+      return { videoID, videoTitle };
     } else {
       const videoId = liveStreamData?.items[0].id.videoId;
-      return videoId;
+      const videoTitle = liveStreamData?.items[0].snippet.title;
+      return { videoId, videoTitle };
     }
   };
 
-  const videoId = getVideoId();
+  const { videoId, videoTitle } = getVideoDetails();
   const videoSource = `${EMBED_URL}${videoId}${EMBEDED_PARAMS}`;
   return (
     <div>
+      <p>{videoTitle}</p>
       <iframe width="100%" height="315" src={videoSource}></iframe>
     </div>
   );
