@@ -27,7 +27,7 @@ export default function HomeText() {
           <Link href="/my_space" className={linkClasses}>
             {/* on hover the color should glow more or something*/}
             My_space
-          </Link>
+          </Link>{" "}
           for my interests and blog posts.
         </p>
         <p className="font-mono">
