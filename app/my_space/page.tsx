@@ -18,7 +18,6 @@ export default function MySpace() {
     <section>
       {/* Now streaming pane */}
       <div>
-        Now streaming iframe
         <Iframe />
       </div>
       {/* Apps I find interesting pane */}

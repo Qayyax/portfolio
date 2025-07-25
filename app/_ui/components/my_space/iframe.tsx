@@ -60,7 +60,6 @@ export default async function Iframe() {
   // show iframe of livestream with a fixed size
   //
   const EMBED_URL = "https://www.youtube.com/embed/";
-  const EMBEDED_PARAMS = `?autoplay=1&mute=1`;
 
   const getVideoDetails = () => {
     if (
@@ -74,17 +73,26 @@ export default async function Iframe() {
       return { videoID, videoTitle };
     } else {
       const videoId = liveStreamData?.items[0].id.videoId;
-      const videoTitle = liveStreamData?.items[0].snippet.title;
+      const videoTitle = "🔴" + liveStreamData?.items[0].snippet.title;
       return { videoId, videoTitle };
     }
   };
 
   const { videoId, videoTitle } = getVideoDetails();
-  const videoSource = `${EMBED_URL}${videoId}${EMBEDED_PARAMS}`;
+  const videoSource = `${EMBED_URL}${videoId}`;
   return (
-    <div>
-      <p>{videoTitle}</p>
-      <iframe width="100%" height="315" src={videoSource}></iframe>
+    <div className="flex flex-col items-center justify-center gap-4">
+      <p className="border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+        {videoTitle}
+      </p>
+      <div className="border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+        <iframe
+          height="240"
+          src={videoSource}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
     </div>
   );
 }
