@@ -1,6 +1,6 @@
 // TODO:
 // - [x] iframe that comes up when I am streaming.
-// - [] multisections
+// - [x] multisections
 // - [] Apps I find interesting
 // - [] Interest gallery
 //    - [] Art gallery
@@ -11,20 +11,32 @@
 //        - [] tech videos
 
 import Iframe from "../_ui/components/my_space/iframe";
+import Section from "../_ui/components/my_space/space-sections";
 
 // - [] Blogs
 export default function MySpace() {
   return (
-    <section>
+    <section className="p-2">
       {/* Now streaming pane */}
       <div>
+        {" "}
         <Iframe />
       </div>
-      {/* Apps I find interesting pane */}
-      <div>Apps I find interesting</div>
-      <div>Art gallery</div>
-      <div>Video gallery</div>
-      <div>Anime I enjoy</div>
+      <Section header="Interesting Apps">
+        <div>component goes here</div>
+      </Section>
+
+      <Section header="Art Gallery">
+        <div>component goes here</div>
+      </Section>
+
+      <Section header="Video Gallery">
+        <div>component goes here</div>
+      </Section>
+
+      <Section header="Anime List">
+        <div>component goes here</div>
+      </Section>
     </section>
   );
 }
