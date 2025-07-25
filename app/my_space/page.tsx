@@ -14,6 +14,7 @@
 // So I think for mobile, they would click the component
 // which would take them to the page
 // But on desktop, they would see snippet, then click to get the full thing
+// would move the sections below to mobile component
 
 import Iframe from "../_ui/components/my_space/iframe";
 import Section from "../_ui/components/my_space/space-sections";
