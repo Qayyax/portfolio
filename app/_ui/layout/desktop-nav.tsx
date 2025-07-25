@@ -13,8 +13,8 @@ export default function DesktopNav() {
           <li
             key={index}
             className={clsx("some class here later", {
-              "border-x-4 border-purple-500 rounded-lg px-3":
-                pathname === nav.to, // border bottom purple here when active
+              "border-x-2 border-purple-500 rounded-lg px-3":
+                pathname === nav.to || pathname.startsWith(nav.to + "/"), // border bottom purple here when active
             })}
           >
             <DesktopNavBtn to={nav.to} title={nav.title} />
