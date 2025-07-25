@@ -4,7 +4,6 @@ import { Project } from "@/type";
 import ProjectActionBtn from "./ProjectActionBtn";
 
 //TODO:
-//- [] action buttons (code, challenge, live-site)
 //- [] code open leads to github code
 //- [] challenge opens a modal of the challenge faced or opens the projects/id/challenge
 //- [] livesite leads to the actual website
