@@ -34,7 +34,8 @@ export default function NavModal({ closeHamburgerAction }: Props) {
                 <li
                   key={index}
                   className={clsx("some class here later", {
-                    "border-b-4 border-purple-500": pathname === nav.to, // border bottom purple here when active
+                    "border-x-4 px-2 rounded-xl border-purple-500":
+                      pathname === nav.to, // border bottom purple here when active
                   })}
                 >
                   <MobileNav title={nav.title} to={nav.to} />
