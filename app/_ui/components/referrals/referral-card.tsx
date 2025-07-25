@@ -7,9 +7,6 @@ type Props = {
   code: ReferralBtnType;
 };
 
-// TODO:
-// - [] tool tip would be the description
-
 export default function ReferralCard({ title, description, code }: Props) {
   return (
     <div className="relative group">
