@@ -1,6 +1,9 @@
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 
+// TODO:
+// - [] onClick of the component it goes to the nested routes
+
 export default function MySpaceMobile() {
   return (
     <section className="p-2 flex flex-col gap-4">
