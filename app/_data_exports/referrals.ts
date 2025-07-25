@@ -19,7 +19,7 @@ export const referrals = [
   },
   {
     title: "BorderPass",
-    description: "Canadian immegration lawyers",
+    description: "Canadian immigration lawyers",
     code: {
       type: "link",
       link: "app.borderpass.ai/refer/zRUmrb",
