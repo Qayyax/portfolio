@@ -20,7 +20,7 @@ export default function NavModal({ closeHamburgerAction }: Props) {
         {/* when you click this side we close hamburger */}
         <div
           onClick={closeHamburgerAction}
-          className="h-screen absolute top-0 w-1/2 left-0 backdrop-blur-[1px] "
+          className="h-screen absolute top-0 w-1/2 left-0 backdrop-blur-[1px]"
         ></div>
         {/* right side */}
         <div className="h-screen absolute top-0 w-1/2 right-0 backdrop-blur-[3px] rounded-l-2xl z-20">
