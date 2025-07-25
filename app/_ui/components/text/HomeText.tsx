@@ -1,11 +1,8 @@
 import Link from "next/link";
 import { dotGothic16, doto } from "@/app/_ui/fonts";
 
-// TODO:
-// - [] On hover of the a tags, the text should glow
-
 export default function HomeText() {
-  const linkClasses = `text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold`;
+  const linkClasses = `text-purple-700 dark:text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold rounded-xl hover:px-2 transition-shadow duration-300 hover:shadow-[0_0_10px_rgba(168,85,247,0.8)] focus:shadow-[0_0_10px_rgba(168,85,247,0.8)]`;
   return (
     <div className="font-extrabold font-mono flex flex-col items-start justify-center gap-1 p-4">
       <h1 className={`text-xl font-mono`}>Hi, I am Tife.</h1>
@@ -29,7 +26,7 @@ export default function HomeText() {
           I love art, anime, tech, and games. Check out{" "}
           <Link href="/my_space" className={linkClasses}>
             {/* on hover the color should glow more or something*/}
-            My_space{" "}
+            My_space
           </Link>
           for my interests and blog posts.
         </p>

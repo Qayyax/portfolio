@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 
@@ -13,7 +14,9 @@ export default function MySpaceMobile() {
         <Iframe />
       </div>
       <Section header="Interesting Apps">
-        <div>component goes here</div>
+        <Link href="/my_space/apps">
+          <div>component goes here</div>
+        </Link>
       </Section>
 
       <Section header="Art Gallery">
