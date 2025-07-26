@@ -2,6 +2,7 @@ import Link from "next/link";
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 import InterestingApp from "../../components/my_space/interesting-app";
+import Anime from "../../components/my_space/anime";
 
 // TODO:
 // - [] onClick of the component it goes to the nested routes
@@ -29,16 +30,16 @@ export default function MySpaceMobile() {
         />
       </Section>
 
-      <Section header="Art Gallery">
-        <div>component goes here</div>
-      </Section>
+      {/* <Section header="Art Gallery"> */}
+      {/*   <div>component goes here</div> */}
+      {/* </Section> */}
+      {/**/}
+      {/* <Section header="Video Gallery"> */}
+      {/*   <div>component goes here</div> */}
+      {/* </Section> */}
 
-      <Section header="Video Gallery">
-        <div>component goes here</div>
-      </Section>
-
-      <Section header="Anime List">
-        <div>component goes here</div>
+      <Section header="Anime / Manga List">
+        <Anime />
       </Section>
     </section>
   );
