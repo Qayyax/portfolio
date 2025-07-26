@@ -1,11 +1,7 @@
+import { InterestingAppType } from "@/type";
 import { doto } from "../../fonts";
 
-type Props = {
-  name: string;
-  platform: string;
-  description: string;
-  link: string;
-};
+type Props = InterestingAppType;
 
 export default function InterestingApp({
   name,

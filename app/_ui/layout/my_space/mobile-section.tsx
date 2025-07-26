@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 import InterestingApp from "../../components/my_space/interesting-app";

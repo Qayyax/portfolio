@@ -23,3 +23,10 @@ export type ReferralBtnType = {
   link?: string;
   code?: string;
 };
+
+export type InterestingAppType = {
+  name: string;
+  platform: string;
+  description: string;
+  link: string;
+};
