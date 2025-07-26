@@ -1,6 +1,5 @@
 import { doto } from "../../fonts";
 
-// This is the component for interesting apps
 type Props = {
   name: string;
   platform: string;

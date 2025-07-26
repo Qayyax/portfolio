@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
+import InterestingApp from "../../components/my_space/interesting-app";
 
 // TODO:
 // - [] onClick of the component it goes to the nested routes
@@ -14,9 +15,18 @@ export default function MySpaceMobile() {
         <Iframe />
       </div>
       <Section header="Interesting Apps">
-        <Link href="/my_space/apps">
-          <div>component goes here</div>
-        </Link>
+        <InterestingApp
+          name="Loop"
+          description="Used to tile your apps on mac"
+          platform="MacOS"
+          link="https://github.com/MrKai77/Loop"
+        />
+        <InterestingApp
+          name="Loop"
+          description="Used to tile your apps on mac"
+          platform="MacOS"
+          link="https://github.com/MrKai77/Loop"
+        />
       </Section>
 
       <Section header="Art Gallery">
