@@ -9,6 +9,7 @@ export default function InterestingAppsPage() {
         name="Loop"
         description="Used to tile your apps on mac"
         platform="MacOS"
+        link="https://github.com/MrKai77/Loop"
       />
     </div>
   );
