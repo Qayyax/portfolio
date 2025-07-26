@@ -29,7 +29,7 @@ export default function InterestingApp({
 
       {/* description div */}
       <div
-        className={`${border} p-2 font-mono flex flex-col items-start justify-center gap-3`}
+        className={`p-2 font-mono flex flex-col items-start justify-center gap-3`}
       >
         <p>{description}</p>
         <a
