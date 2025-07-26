@@ -8,7 +8,8 @@ export default function Anime() {
     "Hunter x Hunter",
     "Sakamoto Days",
     "Attack on Titans",
-    "The Time I got Reincarnated as a Slime",
+    "That Time I Got Reincarnated as a Slime",
+    "Solo Leveling",
   ];
   return (
     <div className="border-2 border-purple-400 dark:border-purple-200 rounded-xl p-2 w-full">
