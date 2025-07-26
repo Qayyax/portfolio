@@ -7,9 +7,6 @@ type Props = {
   code: ReferralBtnType;
 };
 
-// TODO:
-// on Hover : - animate the description under this
-
 export default function ReferralCard({ title, description, code }: Props) {
   return (
     <div className="relative group">
