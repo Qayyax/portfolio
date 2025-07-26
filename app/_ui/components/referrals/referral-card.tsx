@@ -10,16 +10,14 @@ type Props = {
 export default function ReferralCard({ title, description, code }: Props) {
   return (
     <div className="relative group">
-      <div className="flex items-center justify-between gap-2 py-2 px-1 border-2 border-purple-400 dark:border-purple-200 rounded-xl">
+      <div className="grid grid-cols-3 items-center justify-between gap-2 py-2 px-1 border-2 border-purple-400 dark:border-purple-200 rounded-xl divide-x-3 divide-dashed divide-white">
         {/* title */}
-        <p className="flex-1">{title}</p>
+        <p>{title}</p>
         {/* description */}
-        <div className="border-l-2 border-r-2 border-dashed pr-2 flex-1">
-          &nbsp;
-        </div>
+        <div className="">&nbsp;</div>
 
         {/* Referral code */}
-        <div className=" flex-1 flex justify-end ">
+        <div className=" flex justify-end ">
           <ReferralBtn type={code.type} link={code.link} code={code.code} />
         </div>
       </div>
