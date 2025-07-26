@@ -9,7 +9,7 @@ export default function InterestingApp({ name, platform, description }: Props) {
   return (
     <div className={`flex flex-col gap-2 p-2 ${border}`}>
       {/* header div */}
-      <div className={`flex items-center justify-between font-extrabold `}>
+      <div className={`flex items-center justify-between font-extrabold px-2 `}>
         <p>{name}</p>
         <p>{platform}</p>
       </div>
