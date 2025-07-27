@@ -9,6 +9,7 @@ export default function InterestingApps({ appData }: Props) {
     <div>
       {appData.map((app) => (
         <InterestingApp
+          key={app.name}
           name={app.name}
           description={app.description}
           platform={app.platform}
