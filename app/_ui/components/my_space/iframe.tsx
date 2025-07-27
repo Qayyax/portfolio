@@ -51,7 +51,7 @@ export default async function Iframe() {
   const liveStreamData: YouTubeSearchResponse = await liveStreamRequest.json();
   const tifeYoutubeRequest = await fetch(
     `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&type=video&maxResults=20&videoEmbeddable=true`,
-    { next: { revalidate: 60 } },
+    { next: { revalidate: 3600 } },
   );
   const tifeYoutubeData: YouTubeSearchResponse =
     await tifeYoutubeRequest.json();
