@@ -5,7 +5,6 @@ import ProjectActionBtn from "./ProjectActionBtn";
 
 //TODO:
 //- [] code open leads to github code
-//- [] challenge opens a modal of the challenge faced or opens the projects/id/challenge
 //- [] livesite leads to the actual website
 
 export default function ProjectCard({
@@ -14,7 +13,6 @@ export default function ProjectCard({
   tags,
   image,
   code,
-  challenge,
   liveSite,
 }: Project) {
   return (
@@ -49,7 +47,6 @@ export default function ProjectCard({
       {/* Project action links goes here*/}
       <div className="flex gap-2 font-bold flex-wrap  w-full justify-between px-2">
         <ProjectActionBtn type="code" link={code} />
-        <ProjectActionBtn type="challenge" link={challenge} />
         <ProjectActionBtn type="live-site" link={liveSite} />
       </div>
     </div>

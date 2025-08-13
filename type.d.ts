@@ -14,7 +14,6 @@ export type Project = {
   tags: string[];
   image: string;
   code: string;
-  challenge: string;
   liveSite: string;
 };
 
