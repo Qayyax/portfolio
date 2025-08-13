@@ -27,17 +27,19 @@ export default function Home() {
         <h3 className={`font-extrabold text-2xl ${doto.className}`}>
           Featured Pages
         </h3>
-        {featuredData.map((data) => (
-          <ProjectCard
-            key={data.code}
-            name={data.name}
-            description={data.description}
-            tags={data.tags}
-            image={data.image}
-            code={data.code}
-            liveSite={data.liveSite}
-          />
-        ))}
+        <div className="flex flex-col md:flex-row md:justify-around items-center justify-center gap-2 md:w-full">
+          {featuredData.map((data) => (
+            <ProjectCard
+              key={data.code}
+              name={data.name}
+              description={data.description}
+              tags={data.tags}
+              image={data.image}
+              code={data.code}
+              liveSite={data.liveSite}
+            />
+          ))}
+        </div>
         {/* Referal links component */}
         <h3 className={`font-extrabold text-2xl ${doto.className} my-3`}>
           Referral Links
