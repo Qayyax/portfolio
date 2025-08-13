@@ -2,24 +2,12 @@ import HomeText from "./_ui/components/text/HomeText";
 import ProjectCard from "./_ui/components/project/ProjectCard";
 import { doto } from "./_ui/fonts";
 import ReferralCards from "./_ui/components/referrals/referral-cards";
+import featuredData from "./_data_exports/featuredData";
 
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
 
-const demoData = {
-  name: "Dummy Project",
-  description: "This is just to test my component",
-  tags: ["React", "TypeScript", "Python"],
-  image:
-    "https://images.unsplash.com/photo-1742615869881-95b71cee478c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  code: "https://github.com/Qayyax/lazy-vim-config",
-  liveSite: "https://tifelinks.vercel.app/",
-};
-
-// How to maintain the nav and modal in the other navigations
 // TODO:
-// - [] See more after the featured projects
-//  - [] I am considering removing it though
 // - [] Add featured blog
 
 export default function Home() {
@@ -39,17 +27,17 @@ export default function Home() {
         <h3 className={`font-extrabold text-2xl ${doto.className}`}>
           Featured Pages
         </h3>
-        <ProjectCard
-          name={demoData.name}
-          description={demoData.description}
-          tags={demoData.tags}
-          image={demoData.image}
-          code={demoData.code}
-          liveSite={demoData.liveSite}
-        />
-        {/* See More button goes here*/}
-        {/* it would be the same component as the component for navigations*/}
-        {/* The component would Link to .... in the website */}
+        {featuredData.map((data) => (
+          <ProjectCard
+            key={data.code}
+            name={data.name}
+            description={data.description}
+            tags={data.tags}
+            image={data.image}
+            code={data.code}
+            liveSite={data.liveSite}
+          />
+        ))}
         {/* Referal links component */}
         <h3 className={`font-extrabold text-2xl ${doto.className} my-3`}>
           Referral Links
