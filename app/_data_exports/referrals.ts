@@ -26,4 +26,13 @@ export const referrals = [
       code: "zRUmrb",
     },
   },
+  {
+    title: "SkillShare",
+    description: "One month free on SkillShare",
+    code: {
+      type: "link",
+      link: "https://skl.sh/4oDFtkn",
+      code: "4oDFtkn",
+    },
+  },
 ];
