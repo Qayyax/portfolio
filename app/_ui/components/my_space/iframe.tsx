@@ -74,14 +74,16 @@ export default async function Iframe() {
       const videoTitle = tifeYoutubeData?.items[randNum].snippet.title;
       return { videoID, videoTitle };
     } else {
-      const videoId = liveStreamData?.items[0].id.videoId;
+      const videoID = liveStreamData?.items[0].id.videoId;
       const videoTitle = "🔴" + liveStreamData?.items[0].snippet.title;
-      return { videoId, videoTitle };
+      return { videoID, videoTitle };
     }
   };
 
-  const { videoId, videoTitle } = getVideoDetails();
-  const videoSource = `${EMBED_URL}${videoId}`;
+  const { videoID, videoTitle } = getVideoDetails();
+  const videoSource = `${EMBED_URL}${videoID}`;
+  console.log("VideoID:", videoID);
+  console.log("VideoTitle:", videoTitle);
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
