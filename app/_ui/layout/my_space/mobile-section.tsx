@@ -10,6 +10,11 @@ export default function MySpaceMobile() {
       <Section header="My Youtube Video">
         <Iframe />
       </Section>
+
+      <Section header="Anime / Manga List">
+        <Anime />
+      </Section>
+
       <Section header="Interesting Apps">
         <InterestingApp
           name="Loop"
@@ -23,10 +28,6 @@ export default function MySpaceMobile() {
           platform="MacOS"
           link="https://github.com/MrKai77/Loop"
         />
-      </Section>
-
-      <Section header="Anime / Manga List">
-        <Anime />
       </Section>
     </section>
   );
