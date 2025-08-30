@@ -7,10 +7,9 @@ export default function MySpaceMobile() {
   return (
     <section className="p-2 flex flex-col gap-4">
       {/* Now streaming pane */}
-      <div>
-        {" "}
+      <Section header="My Youtube Video">
         <Iframe />
-      </div>
+      </Section>
       <Section header="Interesting Apps">
         <InterestingApp
           name="Loop"
