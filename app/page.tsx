@@ -14,16 +14,11 @@ export default function Home() {
   return (
     <>
       <main>
-        {/* Here would have the main text */}
-        {/* text component goes here */}
         <HomeText />
       </main>
 
-      {/* don't forget to remove the border */}
       <section className="font-mono flex flex-col items-center justify-center px-3 gap-2">
         {/* Here would be the featured project section */}
-        {/* It would only be one project */}
-        {/* Then see more of my would be the button under it */}
         <h3 className={`font-extrabold text-2xl ${doto.className}`}>
           Featured Pages
         </h3>

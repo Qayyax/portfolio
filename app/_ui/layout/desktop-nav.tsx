@@ -7,7 +7,7 @@ import navRoutes from "@/app/_data_exports/navroutes";
 export default function DesktopNav() {
   const pathname = usePathname();
   return (
-    <div className="hidden md:block">
+    <div className="">
       <ul className="flex gap-3 font-bold font-mono justify-center items-center">
         {navRoutes.map((nav, index) => (
           <li
