@@ -7,14 +7,15 @@ import interestingApps from "@/app/_data_exports/interestingApps";
 export default function MySpaceMobile() {
   return (
     <section className="p-2 flex flex-col gap-4">
-      {/* Now streaming pane */}
-      <Section header="My Youtube Video">
-        <Iframe />
-      </Section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 justify-center items-center">
+        <Section header="My Youtube Video">
+          <Iframe />
+        </Section>
 
-      <Section header="Anime / Manga List">
-        <Anime />
-      </Section>
+        <Section header="Anime / Manga List">
+          <Anime />
+        </Section>
+      </div>
 
       <Section header="Interesting Apps">
         <InterestingApps appData={interestingApps} />
