@@ -1,9 +1,11 @@
 import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
-import InterestingApp from "../../components/my_space/interesting-app";
 import Anime from "../../components/my_space/anime";
+import InterestingApps from "../../components/my_space/interesting-apps";
+import interestingApps from "@/app/_data_exports/interestingApps";
 
 export default function MySpaceMobile() {
+  console.log(interestingApps);
   return (
     <section className="p-2 flex flex-col gap-4">
       {/* Now streaming pane */}
@@ -16,18 +18,7 @@ export default function MySpaceMobile() {
       </Section>
 
       <Section header="Interesting Apps">
-        <InterestingApp
-          name="Loop"
-          description="Used to tile your apps on mac"
-          platform="MacOS"
-          link="https://github.com/MrKai77/Loop"
-        />
-        <InterestingApp
-          name="Loop"
-          description="Used to tile your apps on mac"
-          platform="MacOS"
-          link="https://github.com/MrKai77/Loop"
-        />
+        <InterestingApps appData={interestingApps} />
       </Section>
     </section>
   );
