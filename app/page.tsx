@@ -7,9 +7,6 @@ import featuredData from "./_data_exports/featuredData";
 // You need to check the next.config.ts to change the remote patters of the images configuration
 // Maybe when you make the API endpoint for the images
 
-// TODO:
-// - [] Add featured blog
-
 export default function Home() {
   return (
     <>
