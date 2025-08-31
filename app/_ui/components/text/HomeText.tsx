@@ -32,8 +32,14 @@ export default function HomeText() {
         </p>
         <p className="font-mono">
           I have a store that is coming soon. Join my{" "}
-          <a className={linkClasses}>newsletter</a> to stay informed about it. I
-          promise not to spam you with emails.
+          <a
+            className={linkClasses}
+            href="https://mailchi.mp/f40e0b3d432e/tifes-newsletter"
+            target="_blank"
+          >
+            newsletter
+          </a>{" "}
+          to stay informed about it. I promise not to spam you with emails.
         </p>
       </div>
     </div>
