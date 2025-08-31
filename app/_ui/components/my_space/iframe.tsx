@@ -82,8 +82,6 @@ export default async function Iframe() {
 
   const { videoID, videoTitle } = getVideoDetails();
   const videoSource = `${EMBED_URL}${videoID}`;
-  console.log("VideoID:", videoID);
-  console.log("VideoTitle:", videoTitle);
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
