@@ -38,6 +38,12 @@ const interestingApps: InterestingAppType[] = [
     platform: "MacOS",
     link: "https://apphousekitchen.com/",
   },
+  {
+    name: "Hidden Bar",
+    description: "To hide icons from your status bar",
+    platform: "MacOS",
+    link: "https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12",
+  },
 ];
 
 export default interestingApps;
