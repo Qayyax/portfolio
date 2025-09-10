@@ -4,6 +4,10 @@ export default function Books() {
   const favouriteBooks = [
     ["Feel Good Productivity", "Ali Abdaal"],
     ["The Slight Edge", "Jeff Olson"],
+    [
+      "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "James Clear",
+    ],
     ["Unfuck Yourself", "Gary John Bishop"],
     ["The 4-Hour Workweek", "Tim Ferriss"],
     ["Million Dollar Weekend", "Noah Kagan"],
@@ -12,6 +16,10 @@ export default function Books() {
     [
       "The Defining Decade: Why Your Twenties Matter--And How to Make the Most of Them Now",
       "Meg Jay",
+    ],
+    [
+      "How to Not Die Alone: The Surprising Science That Will Help You Find Love",
+      "Logan Ury",
     ],
   ];
   return (

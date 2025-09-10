@@ -19,6 +19,9 @@ export default function MySpaceMobile() {
       </div>
 
       <Section header="Books I Enjoyed">
+        <p className="italic font-thin">
+          Make sure to practice anything you read that has value to you
+        </p>
         <Books />
       </Section>
 
