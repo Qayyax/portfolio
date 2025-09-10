@@ -16,11 +16,11 @@ export default function MySpaceMobile() {
         <Section header="Anime / Manga List">
           <Anime />
         </Section>
-
-        <Section header="Books I enjoyed">
-          <Books />
-        </Section>
       </div>
+
+      <Section header="Books I Enjoyed">
+        <Books />
+      </Section>
 
       <Section header="Interesting Apps">
         <InterestingApps appData={interestingApps} />

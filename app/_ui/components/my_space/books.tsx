@@ -1,7 +1,19 @@
 import { doto } from "../../fonts";
 
 export default function Books() {
-  const favouriteBooks = [["Feel Good Productivity", "Ali Abdaal"]];
+  const favouriteBooks = [
+    ["Feel Good Productivity", "Ali Abdaal"],
+    ["The Slight Edge", "Jeff Olson"],
+    ["Unfuck Yourself", "Gary John Bishop"],
+    ["The 4-Hour Workweek", "Tim Ferriss"],
+    ["Million Dollar Weekend", "Noah Kagan"],
+    ["The Millionaire Fastlane", "M. J. DeMarco"],
+    ["Show Your Work!", "Austin Kleon"],
+    [
+      "The Defining Decade: Why Your Twenties Matter--And How to Make the Most of Them Now",
+      "Meg Jay",
+    ],
+  ];
   return (
     <div className="border-2 border-purple-400 dark:border-purple-200 rounded-xl p-2 px-3">
       <ul>
