@@ -3,6 +3,7 @@ import Section from "../../components/my_space/space-sections";
 import Anime from "../../components/my_space/anime";
 import InterestingApps from "../../components/my_space/interesting-apps";
 import interestingApps from "@/app/_data_exports/interestingApps";
+import Books from "../../components/my_space/books";
 
 export default function MySpaceMobile() {
   return (
@@ -14,6 +15,10 @@ export default function MySpaceMobile() {
 
         <Section header="Anime / Manga List">
           <Anime />
+        </Section>
+
+        <Section header="Books I enjoyed">
+          <Books />
         </Section>
       </div>
 

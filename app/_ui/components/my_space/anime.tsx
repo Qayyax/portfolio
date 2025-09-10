@@ -1,3 +1,5 @@
+import { doto } from "../../fonts";
+
 export default function Anime() {
   const favouriteAnime = [
     "One Piece",
@@ -16,7 +18,7 @@ export default function Anime() {
       <ul>
         {favouriteAnime.map((anime) => (
           <li key={anime}>
-            {"->"} {anime}
+            <span className={`${doto.className}`}>{"->"}</span> {anime}
           </li>
         ))}
       </ul>
