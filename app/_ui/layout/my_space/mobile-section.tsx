@@ -4,6 +4,7 @@ import Anime from "../../components/my_space/anime";
 import InterestingApps from "../../components/my_space/interesting-apps";
 import interestingApps from "@/app/_data_exports/interestingApps";
 import Books from "../../components/my_space/books";
+import StudyPlaylist from "../../components/my_space/studyPlaylist";
 
 export default function MySpaceMobile() {
   return (
@@ -13,8 +14,8 @@ export default function MySpaceMobile() {
           <Iframe />
         </Section>
 
-        <Section header="Anime / Manga List">
-          <Anime />
+        <Section header="My Study Playlist">
+          <StudyPlaylist />
         </Section>
       </div>
 
@@ -23,6 +24,10 @@ export default function MySpaceMobile() {
           Make sure to practice anything you read that has value to you
         </p>
         <Books />
+      </Section>
+
+      <Section header="Anime / Manga List">
+        <Anime />
       </Section>
 
       <Section header="Interesting Apps">
