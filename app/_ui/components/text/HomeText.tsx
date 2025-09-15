@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { dotGothic16, doto } from "@/app/_ui/fonts";
 
-export default function HomeText() {
+export default async function HomeText() {
   const linkClasses = `text-purple-700 dark:text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold rounded-xl hover:px-2 transition-shadow duration-300 hover:shadow-[0_0_10px_rgba(168,85,247,0.8)] focus:shadow-[0_0_10px_rgba(168,85,247,0.8)]`;
   return (
     <div className="font-extrabold font-mono flex flex-col items-start justify-center gap-1 p-4">
@@ -25,13 +25,12 @@ export default function HomeText() {
         <p className="font-mono">
           I love art, anime, tech, and games. Check out{" "}
           <Link href="/my_space" className={linkClasses}>
-            {/* on hover the color should glow more or something*/}
             My_space
           </Link>{" "}
-          for my interests and blog posts.
+          for my interests, books, anime list, apps I like...
         </p>
         <p className="font-mono">
-          I have a store that is coming soon. Join my{" "}
+          I have a store coming soon. Join my{" "}
           <a
             className={linkClasses}
             href="https://mailchi.mp/f40e0b3d432e/tifes-newsletter"
@@ -42,6 +41,8 @@ export default function HomeText() {
           to stay informed about it. I promise not to spam you with emails.
         </p>
       </div>
+
+      <div></div>
     </div>
   );
 }
