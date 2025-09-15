@@ -2,6 +2,10 @@ import Link from "next/link";
 import { dotGothic16, doto } from "@/app/_ui/fonts";
 
 export default async function HomeText() {
+  const randomQuoteRequest = await fetch("https://zenquotes.io/api/random", {
+    next: { revalidate: 3600 },
+  });
+  const quote = await randomQuoteRequest.json();
   const linkClasses = `text-purple-700 dark:text-purple-400 text-lg cursor-pointer ${doto.className} font-extrabold rounded-xl hover:px-2 transition-shadow duration-300 hover:shadow-[0_0_10px_rgba(168,85,247,0.8)] focus:shadow-[0_0_10px_rgba(168,85,247,0.8)]`;
   return (
     <div className="font-extrabold font-mono flex flex-col items-start justify-center gap-1 p-4">
@@ -42,7 +46,14 @@ export default async function HomeText() {
         </p>
       </div>
 
-      <div></div>
+      <div className="mt-5  font-normal ">
+        <p className="italic">
+          &ldquo;{quote[0]?.q}&rdquo; &mdash;{" "}
+          <span className={`font-extrabold ${doto.className}`}>
+            {quote[0]?.a}
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
