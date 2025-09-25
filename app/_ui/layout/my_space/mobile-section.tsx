@@ -6,6 +6,7 @@ import interestingApps from "@/app/_data_exports/interestingApps";
 import Books from "../../components/my_space/books";
 import StudyPlaylist from "../../components/my_space/studyPlaylist";
 import ProjectCard from "../../components/project/ProjectCard";
+import ProjectActionBtn from "../../components/project/ProjectActionBtn";
 
 export default function MySpaceMobile() {
   return (
@@ -40,6 +41,17 @@ export default function MySpaceMobile() {
 
       <Section header="Anime / Manga List">
         <Anime />
+      </Section>
+
+      <Section header="Art Gallery">
+        <p className="italic font-thin text-center">
+          Discover the sketches, art work, and illustrations I share between
+          coding sessions.
+        </p>
+        <ProjectActionBtn
+          type="live-site"
+          link="https://www.deviantart.com/qayyax/gallery"
+        />
       </Section>
 
       <Section header="Interesting Apps">
