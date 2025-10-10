@@ -21,6 +21,11 @@ export default function Books() {
       "How to Not Die Alone: The Surprising Science That Will Help You Find Love",
       "Logan Ury",
     ],
+    [
+      "The Deep Magic of Daily Consistency (The audio book is nice)",
+      "Robin Sharma",
+    ],
+    ["Rewire the Loop", "Zach Apple"],
   ];
   return (
     <div className="border-2 border-purple-400 dark:border-purple-200 rounded-xl p-2 px-3">
