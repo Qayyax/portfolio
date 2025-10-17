@@ -34,19 +34,21 @@ export default async function HomeText() {
           for my interests, books, anime list, apps I like...
         </p>
         <p className="font-mono">
-          I have a store coming soon. Join my{" "}
+          You can also join my{" "}
           <a
             className={linkClasses}
-            href="https://mailchi.mp/f40e0b3d432e/tifes-newsletter"
+            href="https://qayyax.substack.com/"
             target="_blank"
           >
             newsletter
           </a>{" "}
-          to stay informed about it. I promise not to spam you with emails.
+          to stay informed about what I am up to, I post art, daily journal, as
+          well as tech content.
         </p>
       </div>
 
-      <div className="mt-5  font-normal ">
+      <div className="mt-5  font-normal space-y-3">
+        <p>Daily Quote (it changes everyday):</p>
         <p className="italic">
           &ldquo;{quote[0]?.q}&rdquo; &mdash;{" "}
           <span className={`font-extrabold ${doto.className}`}>
