@@ -26,6 +26,8 @@ export default function Books() {
       "Robin Sharma",
     ],
     ["Rewire the Loop", "Zach Apple"],
+    ["The 5 Second Rule", "Mel Robbins"],
+    ["The Fine Art of Small Talk", "Debra Fine"],
   ];
   return (
     <div className="border-2 border-purple-400 dark:border-purple-200 rounded-xl p-2 px-3">
