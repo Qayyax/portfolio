@@ -7,6 +7,7 @@ export default function Anime() {
     "Demon Slayer",
     "Naruto",
     "Bleach",
+    "Dragonball Z",
     "Hunter x Hunter",
     "Sakamoto Days",
     "Attack on Titans",
