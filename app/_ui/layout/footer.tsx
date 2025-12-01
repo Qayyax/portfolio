@@ -2,9 +2,6 @@ import SocialIcon from "../components/icons/social-icons";
 
 import { FaYoutube as Youtube } from "react-icons/fa6";
 import { FaGithub as Github } from "react-icons/fa";
-import { FaLinkedin as LinkedIn } from "react-icons/fa6";
-import { FaXTwitter as Twitter } from "react-icons/fa6";
-// import { FaInstagram as Instagram } from "react-icons/fa6";
 import { IoMailOutline as Gmail } from "react-icons/io5";
 import { SiBuymeacoffee as Coffee } from "react-icons/si";
 import { FaPalette as Palette } from "react-icons/fa6";
@@ -26,34 +23,16 @@ const links = [
     icon: Github,
   },
   {
-    title: "LinkedIn",
-    link: "https://www.linkedin.com/in/tife-olatunji-b12729296/",
-    description: "Send me a message here :)",
-    icon: LinkedIn,
+    title: "Gmail",
+    link: "mailto:qayyax@gmail.com",
+    icon: Gmail,
+    description: "Send me a mail",
   },
-  // {
-  //   title: "Instagram",
-  //   link: "https://www.instagram.com/tife_len/",
-  //   icon: Instagram,
-  //   description: "I post art and random things, chat with me here",
-  // },
   {
     title: "Art Gallery",
     link: "https://www.deviantart.com/qayyax/gallery",
     icon: Palette,
     description: "See my DeviantArt sketches and illustration studies",
-  },
-  {
-    title: "X / Twitter",
-    link: "https://x.com/qayyax",
-    icon: Twitter,
-    description: "I only post when I make something",
-  },
-  {
-    title: "Gmail",
-    link: "mailto:qayyax@gmail.com",
-    icon: Gmail,
-    description: "Send me a mail",
   },
 ];
 
