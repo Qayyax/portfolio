@@ -5,6 +5,9 @@ import { FaGithub as Github } from "react-icons/fa";
 import { IoMailOutline as Gmail } from "react-icons/io5";
 import { SiBuymeacoffee as Coffee } from "react-icons/si";
 import { FaPalette as Palette } from "react-icons/fa6";
+import { FaLinkedin as LinkedIn } from "react-icons/fa6";
+import { FaXTwitter as Twitter } from "react-icons/fa6";
+import { FaInstagram as Instagram } from "react-icons/fa6";
 
 const links = [
   {
@@ -29,10 +32,28 @@ const links = [
     description: "Send me a mail",
   },
   {
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/tife-olatunji-b12729296/",
+    description: "Send me a message here :)",
+    icon: LinkedIn,
+  },
+  {
     title: "Art Gallery",
     link: "https://www.deviantart.com/qayyax/gallery",
     icon: Palette,
     description: "See my DeviantArt sketches and illustration studies",
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/tife_len/",
+    icon: Instagram,
+    description: "I post art and random things",
+  },
+  {
+    title: "X / Twitter",
+    link: "https://x.com/qayyax",
+    icon: Twitter,
+    description: "I only post when I make something",
   },
 ];
 
