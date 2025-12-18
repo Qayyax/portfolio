@@ -7,7 +7,6 @@ import { SiBuymeacoffee as Coffee } from "react-icons/si";
 import { FaPalette as Palette } from "react-icons/fa6";
 import { FaLinkedin as LinkedIn } from "react-icons/fa6";
 import { FaXTwitter as Twitter } from "react-icons/fa6";
-import { FaInstagram as Instagram } from "react-icons/fa6";
 
 const links = [
   {
@@ -42,12 +41,6 @@ const links = [
     link: "https://www.deviantart.com/qayyax/gallery",
     icon: Palette,
     description: "See my DeviantArt sketches and illustration studies",
-  },
-  {
-    title: "Instagram",
-    link: "https://www.instagram.com/tife_len/",
-    icon: Instagram,
-    description: "I post art and random things",
   },
   {
     title: "X / Twitter",
