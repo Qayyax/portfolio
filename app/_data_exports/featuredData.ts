@@ -15,7 +15,7 @@ const featuredData: FeaturedData[] = [
     description: "My NeoVim configuration",
     tags: ["Lua", "MD", "LazyVim"],
     image:
-      "https://pbs.twimg.com/media/GvtMKvkWoAA5lwx?format=jpg&name=4096x4096",
+      "https://images.unsplash.com/photo-1640552435388-a54879e72b28?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     code: "https://github.com/Qayyax/lazy-vim-config",
     liveSite: "https://github.com/Qayyax/lazy-vim-config",
   },
