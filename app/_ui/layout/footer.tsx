@@ -6,7 +6,7 @@ import { IoMailOutline as Gmail } from "react-icons/io5";
 import { SiBuymeacoffee as Coffee } from "react-icons/si";
 import { FaPalette as Palette } from "react-icons/fa6";
 import { FaLinkedin as LinkedIn } from "react-icons/fa6";
-import { FaXTwitter as Twitter } from "react-icons/fa6";
+// import { FaXTwitter as Twitter } from "react-icons/fa6";
 
 const links = [
   {
@@ -42,12 +42,12 @@ const links = [
     icon: Palette,
     description: "See my DeviantArt sketches and illustration studies",
   },
-  {
-    title: "X / Twitter",
-    link: "https://x.com/qayyax",
-    icon: Twitter,
-    description: "I only post when I make something",
-  },
+  // {
+  //   title: "X / Twitter",
+  //   link: "https://x.com/qayyax",
+  //   icon: Twitter,
+  //   description: "I only post when I make something",
+  // },
 ];
 
 export default function Footer() {
