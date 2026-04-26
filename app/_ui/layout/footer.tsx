@@ -6,6 +6,7 @@ import { IoMailOutline as Gmail } from "react-icons/io5";
 import { SiBuymeacoffee as Coffee } from "react-icons/si";
 import { FaPalette as Palette } from "react-icons/fa6";
 import { FaLinkedin as LinkedIn } from "react-icons/fa6";
+import { FaCamera as Camera } from "react-icons/fa";
 // import { FaXTwitter as Twitter } from "react-icons/fa6";
 
 const links = [
@@ -41,6 +42,12 @@ const links = [
     link: "https://www.deviantart.com/qayyax/gallery",
     icon: Palette,
     description: "See my DeviantArt sketches and illustration studies",
+  },
+  {
+    title: "Photo Gallery",
+    link: "https://www.flickr.com/photos/204502360@N07/",
+    icon: Camera,
+    description: "Pictures I capture on walks and in my daily life",
   },
   // {
   //   title: "X / Twitter",

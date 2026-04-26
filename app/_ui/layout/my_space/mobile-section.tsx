@@ -54,6 +54,16 @@ export default function MySpaceMobile() {
         />
       </Section>
 
+      <Section header="Photo Gallery">
+        <p className="italic font-thin text-center">
+          Discover pictures I take during my night walks and in my daily life.
+        </p>
+        <ProjectActionBtn
+          type="live-site"
+          link="https://www.flickr.com/photos/204502360@N07/"
+        />
+      </Section>
+
       <Section header="Interesting Apps">
         <InterestingApps appData={interestingApps} />
       </Section>
