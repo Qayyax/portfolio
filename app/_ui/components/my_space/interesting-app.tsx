@@ -27,7 +27,7 @@ export default function InterestingApp({
       <div
         className={`p-2 font-mono flex flex-col items-start justify-center gap-3`}
       >
-        <p>{description}</p>
+        <p className="text-center w-full">{description}</p>
         <a
           href={link}
           target="_blank"

@@ -15,12 +15,6 @@ const interestingApps: InterestingAppType[] = [
     link: "https://nikitabobko.github.io/AeroSpace/guide",
   },
   {
-    name: "Maccy",
-    description: "Clipboard manager for Mac",
-    platform: "MacOS",
-    link: "https://maccy.app/",
-  },
-  {
     name: "Rocket",
     description: "Emoji app for Mac",
     platform: "MacOS",
@@ -28,9 +22,9 @@ const interestingApps: InterestingAppType[] = [
   },
   {
     name: "Shottr",
-    description: "ScreenShot app for Mac",
+    description: "ScreenShot app for Mac that lets you anotate",
     platform: "MacOS",
-    link: "https://matthewpalmer.net/rocket/",
+    link: "https://shottr.cc/",
   },
   {
     name: "Aldente",
@@ -43,6 +37,18 @@ const interestingApps: InterestingAppType[] = [
     description: "To hide icons from your status bar",
     platform: "MacOS",
     link: "https://apps.apple.com/us/app/hidden-bar/id1452453066?mt=12",
+  },
+  {
+    name: "Mole",
+    description: "Mac terminal app to clean your storage and manage your cache",
+    platform: "MacOS",
+    link: "https://github.com/tw93/Mole.git",
+  },
+  {
+    name: "Maccy",
+    description: "Clipboard manager for Mac",
+    platform: "MacOS",
+    link: "https://maccy.app/",
   },
 ];
 
