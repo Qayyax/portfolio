@@ -15,6 +15,12 @@ const interestingApps: InterestingAppType[] = [
     link: "https://nikitabobko.github.io/AeroSpace/guide",
   },
   {
+    name: "Backdrop",
+    description: "Wallpaper engine for MacOS",
+    platform: "MacOS",
+    link: "https://cindori.com/backdrop",
+  },
+  {
     name: "Rocket",
     description: "Emoji app for Mac",
     platform: "MacOS",
