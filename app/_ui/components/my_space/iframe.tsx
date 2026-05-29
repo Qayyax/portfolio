@@ -41,60 +41,72 @@ type Thumbnail = {
 };
 
 export default async function Iframe() {
-  // want to check if there is live-stream, if yes, then it shows it at the top
-  // else it shows a funny cat video or something
-  // white border around , or purple
-  const liveStreamRequest = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&eventType=live&type=video`,
-    { cache: "no-store" },
-  );
-  const liveStreamData: YouTubeSearchResponse = await liveStreamRequest.json();
-  const tifeYoutubeRequest = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&type=video&maxResults=20&videoEmbeddable=true`,
-    { next: { revalidate: 3600 } },
-  );
-  const tifeYoutubeData: YouTubeSearchResponse =
-    await tifeYoutubeRequest.json();
-
-  // if stream data items.length is 0 or pageInfo.totalResults == 0
-  // show iframe of a any video from qayyax or TifeLogs
-  // else
-  // show iframe of livestream with a fixed size
-  //
   const EMBED_URL = "https://www.youtube.com/embed/";
 
-  const getVideoDetails = () => {
-    if (
-      liveStreamData?.pageInfo?.totalResults === 0 ||
-      liveStreamData?.items.length === 0
-    ) {
-      // math.random of a video from tife logs
-      const randNum = Math.floor(Math.random() * tifeYoutubeData?.items.length);
-      const videoID = tifeYoutubeData?.items[randNum].id.videoId;
-      const videoTitle = tifeYoutubeData?.items[randNum].snippet.title;
-      return { videoID, videoTitle };
-    } else {
-      const videoID = liveStreamData?.items[0].id.videoId;
-      const videoTitle = "🔴" + liveStreamData?.items[0].snippet.title;
-      return { videoID, videoTitle };
-    }
-  };
+  try {
+    const liveStreamRequest = await fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&eventType=live&type=video`,
+      { cache: "no-store" },
+    );
+    const liveStreamData: YouTubeSearchResponse = await liveStreamRequest.json();
+    const tifeYoutubeRequest = await fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API}&part=snippet&channelId=${process.env.YOUTUBE_ID}&type=video&maxResults=20&videoEmbeddable=true`,
+      { next: { revalidate: 3600 } },
+    );
+    const tifeYoutubeData: YouTubeSearchResponse =
+      await tifeYoutubeRequest.json();
 
-  const { videoID, videoTitle } = getVideoDetails();
-  const videoSource = `${EMBED_URL}${videoID}`;
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
-        {videoTitle}
-      </p>
-      <div className="border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
-        <iframe
-          height="240"
-          src={videoSource}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+    // if stream data items.length is 0 or pageInfo.totalResults == 0
+    // show iframe of a any video from qayyax or TifeLogs
+    // else
+    // show iframe of livestream with a fixed size
+    //
+    const liveItems = liveStreamData?.items;
+    const videoItems = tifeYoutubeData?.items;
+
+    const isLive = liveItems && liveItems.length > 0;
+
+    let videoID: string | undefined;
+    let videoTitle: string;
+
+    if (isLive) {
+      videoID = liveItems[0].id.videoId;
+      videoTitle = "🔴" + liveItems[0].snippet.title;
+    } else if (videoItems && videoItems.length > 0) {
+      const randNum = Math.floor(Math.random() * videoItems.length);
+      videoID = videoItems[randNum].id.videoId;
+      videoTitle = videoItems[randNum].snippet.title;
+    } else {
+      return <IframeFallback />;
+    }
+
+    const videoSource = `${EMBED_URL}${videoID}`;
+    return (
+      <div className="flex flex-col items-center justify-center gap-4">
+        <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+          {videoTitle}
+        </p>
+        <div className="border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+          <iframe
+            height="240"
+            src={videoSource}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
+    );
+  } catch {
+    return <IframeFallback />;
+  }
+}
+
+function IframeFallback() {
+  return (
+    <div className="flex items-center justify-center border-2 border-purple-400 dark:border-purple-200 rounded-lg p-4 h-[240px] w-[350px]">
+      <p className="font-mono text-center text-sm">
+        Video unavailable right now. Check back later!
+      </p>
     </div>
   );
 }
