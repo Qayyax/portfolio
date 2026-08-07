@@ -81,8 +81,10 @@ export default function Books() {
           <li key={book[0]}>
             <p>
               <span className={`${doto.className}`}>{"->"}</span>{" "}
-              <a href={book[2]}>{book[0]}</a> :{" "}
-              <span className={`${doto.className}`}>{book[1]}</span>
+              <a href={book[2]} target="_blank">
+                {book[0]}
+              </a>{" "}
+              : <span className={`${doto.className}`}>{book[1]}</span>
             </p>
           </li>
         ))}
