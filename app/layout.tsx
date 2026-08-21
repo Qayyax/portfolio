@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/app/_ui/layout/navbar";
-import { dotGothic16 } from "./_ui/fonts";
+import { fraunces, ibmPlexMono, inter } from "./_ui/fonts";
 import Footer from "./_ui/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Qayyax",
+  title: "Tife Olatunji — Log",
   description:
-    "Qayyax portfolio website, which also contains his store and more",
+    "Nigeria-raised, Toronto-based. Training, art, photography, video, and language learning.",
 };
 
 export default function RootLayout({
@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* I wonder why the font-mono doesn't apply directly to all the children, maybe cause of the font style */}
       <body
-        className={` ${dotGothic16.className} font-mono antialiased flex flex-col min-h-dvh`}
+        className={`${fraunces.variable} ${ibmPlexMono.variable} ${inter.variable} antialiased flex flex-col min-h-dvh`}
+        style={{ fontFamily: "var(--font-inter), sans-serif" }}
       >
         <Navbar />
         {children}
