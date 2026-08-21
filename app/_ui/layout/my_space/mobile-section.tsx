@@ -21,7 +21,7 @@ export default function MySpaceMobile() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Section header="My Youtube Video">
           <Iframe />
         </Section>
