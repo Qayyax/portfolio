@@ -1,104 +1,243 @@
+import { doto } from "./_ui/fonts";
 import vitals from "./_data_exports/vitals";
+import { pplSplit } from "./_data_exports/training";
+import { artGallery, photoGallery } from "./_data_exports/gallery";
+import { journalEntries, frenchStreak } from "./_data_exports/journal";
+import recentVideos from "./_data_exports/videos";
+import GalleryGrid from "./_ui/components/gallery/GalleryGrid";
+import Iframe from "./_ui/components/my_space/iframe";
+
+function SectionHeader({ number, title }: { number: string; title: string }) {
+  return (
+    <div className="flex items-center gap-3 mb-8">
+      <span className="text-purple-500 font-mono text-xs font-bold">{"// "}{number}</span>
+      <h2 className={`text-2xl font-extrabold ${doto.className}`}>{title.toUpperCase()}</h2>
+      <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800" />
+    </div>
+  );
+}
 
 export default function Home() {
-  const today = new Date().toLocaleDateString("en-US", {
-    month: "short",
-    day: "2-digit",
-    year: "numeric",
-  }).toUpperCase();
+  const today = new Date()
+    .toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" })
+    .toUpperCase();
 
   return (
-    <main>
-      <header
-        className="py-16 pb-10 border-b"
-        style={{ borderColor: "var(--color-line)" }}
-      >
-        <div className="max-w-[920px] mx-auto px-7">
-          {/* dateline */}
-          <div
-            className="text-[0.75rem] tracking-[0.12em] uppercase mb-[22px] flex items-center gap-[10px] [font-family:var(--font-mono-plex)]"
-            style={{ color: "var(--color-ink-soft)" }}
-          >
-            <span
-              className="inline-block w-[7px] h-[7px] rounded-full shrink-0"
-              style={{ background: "var(--color-rust)" }}
-            />
-            LOG — TORONTO, ON — {today}
+    <main className="max-w-4xl mx-auto px-4 w-full">
+
+      {/* ── HERO ── */}
+      <header className="py-12 border-b-2 border-purple-500/20">
+        <p className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6 flex items-center gap-2">
+          <span className="inline-block w-2 h-2 rounded-full bg-purple-500 shrink-0" />
+          LOG — TORONTO, ON — {today}
+        </p>
+
+        <h1 className={`text-4xl md:text-6xl font-extrabold leading-tight ${doto.className}`}>
+          Hi, I&apos;m Tife.
+          <br />
+          This is what I&apos;m{" "}
+          <span className="text-purple-500">building</span>,<br />
+          on and off screen.&rdquo;
+        </h1>
+
+        <p className="mt-5 text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+          Nigeria-raised, Toronto-based. Most days start with a run before
+          sunrise and end with a set of sketches or a rough cut. I lift, I run,
+          I draw, I shoot film-style photos, and I&apos;m slowly getting fluent
+          in French.{" "}
+          <strong className="text-black dark:text-white">
+            This site is the log of all of it.
+          </strong>
+        </p>
+
+        {/* vitals strip */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 border-2 border-purple-500 divide-y-2 md:divide-y-0 md:divide-x-2 divide-purple-500">
+          {vitals.map((v) => (
+            <div key={v.label} className="p-4">
+              <div className={`text-2xl font-extrabold text-purple-500 ${doto.className}`}>
+                {v.num}
+                {v.unit && <span className="text-base">{v.unit}</span>}
+              </div>
+              <div className="text-xs uppercase font-mono text-gray-500 mt-1 tracking-widest">
+                {v.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </header>
+
+      {/* ── TRAINING ── */}
+      <section id="training" className="py-12 border-b-2 border-purple-500/20">
+        <SectionHeader number="01" title="Training" />
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
+          Six days on, a run every single one of them. The split is simple —
+          push, pull, legs, repeat — but the discipline is the whole point.
+        </p>
+
+        <div className="grid grid-cols-4 md:grid-cols-7 border-2 border-purple-500 divide-x-2 divide-purple-500 mb-5 overflow-hidden">
+          {pplSplit.map(({ day, workout, rest }) => (
+            <div
+              key={day}
+              className={`p-3 text-center ${rest ? "opacity-30" : ""}`}
+            >
+              <div className="text-xs font-mono text-gray-500 uppercase tracking-wider">
+                {day}
+              </div>
+              <div
+                className={`text-sm font-bold mt-1 ${doto.className} ${!rest ? "text-purple-500" : ""}`}
+              >
+                {workout}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+          Plus a{" "}
+          <strong className="text-black dark:text-white">10km run daily</strong>{" "}
+          — before or after lifting, doesn&apos;t matter, it happens. Meals stay
+          simple on purpose: quinoa, ground beef, vegetables, repeat.
+        </p>
+      </section>
+
+      {/* ── ART ── */}
+      <section id="art" className="py-12 border-b-2 border-purple-500/20">
+        <SectionHeader number="02" title="Art" />
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
+          Portraits and studies, mostly done in Procreate, mostly late at
+          night. Anime aesthetics show up a lot — Toji Zenin has been a
+          recurring reference.
+        </p>
+
+        <GalleryGrid
+          items={artGallery}
+          placeholderLabels={[
+            "PORTRAIT STUDY",
+            "SKETCH — LINE WORK",
+            "COLOR STUDY",
+          ]}
+        />
+
+        <a
+          href="https://www.deviantart.com/qayyax/gallery"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+        >
+          → View full gallery on DeviantArt
+        </a>
+      </section>
+
+      {/* ── PHOTO ── */}
+      <section id="photo" className="py-12 border-b-2 border-purple-500/20">
+        <SectionHeader number="03" title="Photography" />
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
+          Shot on a Fujifilm X-M5. Mostly street and lifestyle — Toronto in
+          the in-between moments, not the postcard ones.
+        </p>
+
+        <GalleryGrid
+          items={photoGallery}
+          placeholderLabels={[
+            "TORONTO — STREET",
+            "GOLDEN HOUR",
+            "SUBWAY — GRAIN",
+          ]}
+        />
+
+        <a
+          href="https://www.flickr.com/photos/204502360@N07/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+        >
+          → More on Flickr
+        </a>
+      </section>
+
+      {/* ── FILM ── */}
+      <section id="film" className="py-12 border-b-2 border-purple-500/20">
+        <SectionHeader number="04" title="Film" />
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
+          TifeLogs — the video side of the log. Training days, art timelapses,
+          life in Toronto as a newcomer figuring it out.
+        </p>
+
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+          <div className="w-full md:w-auto shrink-0">
+            <Iframe />
+          </div>
+          <ul className="w-full border-t-2 border-purple-500/30 md:border-t-0 md:border-l-2 md:border-purple-500/30 md:pl-6 pt-4 md:pt-0">
+            {recentVideos.map((v) => (
+              <li
+                key={v.title}
+                className="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-900 text-sm gap-4"
+              >
+                <span>{v.title}</span>
+                <span className={`text-purple-500 shrink-0 ${doto.className}`}>
+                  {v.duration}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <a
+          href="https://www.youtube.com/@TifeLogs"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+        >
+          → YouTube @TifeLogs
+        </a>
+      </section>
+
+      {/* ── JOURNAL ── */}
+      <section id="journal" className="py-12">
+        <SectionHeader number="05" title="Journal" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              French, twice a week with a tutor, every day on my own. Working
+              toward NCLC 7 for Express Entry.
+            </p>
+            <div className="flex flex-wrap gap-[6px] mt-2">
+              {Array.from({ length: frenchStreak.total }).map((_, i) => (
+                <span
+                  key={i}
+                  className={`inline-block w-[14px] h-[14px] rounded-sm ${
+                    i < frenchStreak.active
+                      ? "bg-purple-500"
+                      : "bg-gray-200 dark:bg-gray-800"
+                  }`}
+                />
+              ))}
+            </div>
+            <p className="text-xs font-mono text-gray-500 mt-2">
+              {frenchStreak.active}/{frenchStreak.total} days this fortnight
+            </p>
           </div>
 
-          {/* headline */}
-          <h1
-            className="font-[450] leading-[1.05] tracking-[-0.01em] max-w-[11ch]"
-            style={{
-              fontFamily: "var(--font-fraunces)",
-              fontSize: "clamp(2.4rem, 6vw, 4.1rem)",
-            }}
-          >
-            Hi, I&apos;m Tife.{" "}
-            <br />
-            This is what I&apos;m{" "}
-            <em
-              className="not-italic font-[450]"
-              style={{
-                fontStyle: "italic",
-                color: "var(--color-indigo)",
-              }}
-            >
-              building
-            </em>
-            , on and off screen.
-          </h1>
-
-          {/* lede */}
-          <p
-            className="mt-[22px] max-w-[52ch] text-[1.05rem] [font-family:var(--font-inter)]"
-            style={{ color: "var(--color-ink-soft)" }}
-          >
-            Nigeria-raised, Toronto-based. Most days start with a run before
-            sunrise and end with a set of sketches or a rough cut. I lift, I
-            run, I draw, I shoot film-style photos, and I&apos;m slowly getting
-            fluent in French.{" "}
-            <strong style={{ color: "var(--color-ink)" }}>
-              This site is the log of all of it.
-            </strong>
-          </p>
-
-          {/* vitals strip */}
-          <div
-            className="mt-9 grid border"
-            style={{
-              gridTemplateColumns: "repeat(4, 1fr)",
-              borderColor: "var(--color-ink)",
-              background: "var(--color-ink)",
-              gap: "1px",
-            }}
-          >
-            {vitals.map((v) => (
+          <div>
+            {journalEntries.map((entry) => (
               <div
-                key={v.label}
-                className="px-[18px] py-4"
-                style={{ background: "var(--color-paper)" }}
+                key={entry.date}
+                className="py-4 border-t border-gray-200 dark:border-gray-800"
               >
-                <div
-                  className="text-[1.5rem] font-[500] [font-family:var(--font-mono-plex)]"
-                  style={{ color: "var(--color-indigo)" }}
+                <span
+                  className={`block text-xs font-mono text-purple-500 mb-1 tracking-widest ${doto.className}`}
                 >
-                  {v.num}
-                  {v.unit && (
-                    <span className="text-[0.9rem]">{v.unit}</span>
-                  )}
-                </div>
-                <div
-                  className="text-[0.68rem] tracking-[0.05em] uppercase mt-1 [font-family:var(--font-mono-plex)]"
-                  style={{ color: "var(--color-ink-soft)" }}
-                >
-                  {v.label}
-                </div>
+                  {entry.date}
+                </span>
+                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {entry.text}
+                </p>
               </div>
             ))}
           </div>
         </div>
-      </header>
+      </section>
     </main>
   );
 }

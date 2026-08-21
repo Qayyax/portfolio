@@ -36,7 +36,7 @@ export default function ArtPage() {
 
         <GalleryGrid
           items={artGallery}
-          emptyMessage="Images coming soon — add files to /public/gallery/art/ and register them in _data_exports/gallery.ts"
+          placeholderLabels={["PORTRAIT STUDY", "SKETCH — LINE WORK", "COLOR STUDY"]}
         />
 
         <a
