@@ -7,11 +7,21 @@ import Books from "../../components/my_space/books";
 import StudyPlaylist from "../../components/my_space/studyPlaylist";
 import ProjectCard from "../../components/project/ProjectCard";
 import ProjectActionBtn from "../../components/project/ProjectActionBtn";
+import { doto } from "../../fonts";
 
 export default function MySpaceMobile() {
   return (
-    <section className="p-2 flex flex-col gap-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-center items-center">
+    <div className="max-w-4xl mx-auto px-4 w-full py-8 flex flex-col gap-5">
+      <div className="border-b-2 border-purple-500/20 pb-4 mb-2">
+        <h1 className={`text-3xl font-extrabold ${doto.className}`}>
+          MY_<span className="text-purple-500">SPACE</span>
+        </h1>
+        <p className="text-sm text-gray-500 mt-1 font-mono">
+          interests, links, media, and misc
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Section header="My Youtube Video">
           <Iframe />
         </Section>
@@ -33,7 +43,7 @@ export default function MySpaceMobile() {
       </div>
 
       <Section header="Books I Enjoyed">
-        <p className="italic font-thin">
+        <p className="italic text-sm text-gray-500">
           Make sure to practice anything you read that has value to you
         </p>
         <Books />
@@ -43,30 +53,31 @@ export default function MySpaceMobile() {
         <Anime />
       </Section>
 
-      <Section header="Art Gallery">
-        <p className="italic font-thin text-center">
-          Discover the sketches, art work, and illustrations I share between
-          coding sessions.
-        </p>
-        <ProjectActionBtn
-          type="live-site"
-          link="https://www.deviantart.com/qayyax/gallery"
-        />
-      </Section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <Section header="Art Gallery">
+          <p className="italic text-sm text-gray-500 text-center">
+            Sketches, artwork, and illustrations from Procreate.
+          </p>
+          <ProjectActionBtn
+            type="live-site"
+            link="https://www.deviantart.com/qayyax/gallery"
+          />
+        </Section>
 
-      <Section header="Photo Gallery">
-        <p className="italic font-thin text-center">
-          Discover pictures I take during my night walks and in my daily life.
-        </p>
-        <ProjectActionBtn
-          type="live-site"
-          link="https://www.flickr.com/photos/204502360@N07/"
-        />
-      </Section>
+        <Section header="Photo Gallery">
+          <p className="italic text-sm text-gray-500 text-center">
+            Pictures taken on walks and in daily life on a Fujifilm X-M5.
+          </p>
+          <ProjectActionBtn
+            type="live-site"
+            link="https://www.flickr.com/photos/204502360@N07/"
+          />
+        </Section>
+      </div>
 
       <Section header="Interesting Apps">
         <InterestingApps appData={interestingApps} />
       </Section>
-    </section>
+    </div>
   );
 }
