@@ -14,9 +14,9 @@ export default async function HomeText() {
         className={`${dotGothic16.className} tracking-wide flex flex-col gap-y-2`}
       >
         <p className="font-mono">
-          I am a fullstack developer with a master&apos;s degree in big data
-          analytics. I am working on improving my coding career. I build
-          websites and mobile apps. You can{" "}
+          My hobbies include running, working out at the gym, drawing, taking
+          pictures with my camera, reading, and sometimes making videos of
+          memories. You can{" "}
           <a
             href="mailto:qayyax@gmail.com"
             target="_blank"
