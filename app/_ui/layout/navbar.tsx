@@ -1,5 +1,6 @@
 import { doto } from "@/app/_ui/fonts";
 import DesktopNav from "./desktop-nav";
+import MobileRight from "./mobile-nav-right";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -11,7 +12,12 @@ export default function Navbar() {
           <span className="hidden md:block">Olatunji</span>
         </Link>
       </h3>
-      <DesktopNav />
+      {/* desktop */}
+      <div className="hidden md:block">
+        <DesktopNav />
+      </div>
+      {/* mobile — hamburger + slide-in panel */}
+      <MobileRight />
     </nav>
   );
 }

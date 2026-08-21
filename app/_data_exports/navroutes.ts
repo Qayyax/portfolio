@@ -1,12 +1,9 @@
 import { NavProperty } from "@/type";
 
 const navRoutes: NavProperty[] = [
-  { title: "Training", to: "/#training" },
-  { title: "Art", to: "/#art" },
-  { title: "Photo", to: "/#photo" },
-  { title: "Film", to: "/#film" },
-  { title: "Journal", to: "/#journal" },
+  { title: "Home", to: "/" },
   { title: "My_Space", to: "/my_space" },
+  { title: "Store", to: "/store" },
 ];
 
 export default navRoutes;

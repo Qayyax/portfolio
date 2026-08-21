@@ -9,12 +9,9 @@ export default function Section({ header, children }: Props) {
   return (
     <section
       id={header.toLowerCase().replaceAll(" ", "-")}
-      className="flex flex-col gap-4 border-2 border-purple-500/25 rounded-lg p-5"
+      className="font-mono flex flex-col items-center justify-center p-4 gap-3 border-2 border-purple-400/30 dark:border-purple-200/20 rounded-2xl"
     >
-      <div className="flex items-center gap-3">
-        <h3 className={`font-extrabold text-xl ${doto.className}`}>{header}</h3>
-        <div className="flex-1 h-px bg-purple-500/20" />
-      </div>
+      <h3 className={`font-extrabold text-2xl ${doto.className}`}>{header}</h3>
       {children}
     </section>
   );

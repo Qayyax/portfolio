@@ -83,10 +83,10 @@ export default async function Iframe() {
     const videoSource = `${EMBED_URL}${videoID}`;
     return (
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+        <p className="font-bold font-mono border-2 border-purple-400 dark:border-purple-200 rounded-2xl p-1">
           {videoTitle}
         </p>
-        <div className="border-2 border-purple-400 dark:border-purple-200 rounded-lg p-1">
+        <div className="border-2 border-purple-400 dark:border-purple-200 rounded-2xl p-1">
           <iframe
             height="240"
             src={videoSource}
@@ -103,7 +103,7 @@ export default async function Iframe() {
 
 function IframeFallback() {
   return (
-    <div className="flex items-center justify-center border-2 border-purple-400 dark:border-purple-200 rounded-lg p-4 h-[240px] w-[350px]">
+    <div className="flex items-center justify-center border-2 border-purple-400 dark:border-purple-200 rounded-2xl p-4 h-[240px] w-[350px]">
       <p className="font-mono text-center text-sm">
         Video unavailable right now. Check back later!
       </p>

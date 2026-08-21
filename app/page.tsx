@@ -37,7 +37,7 @@ export default function Home() {
           <br />
           This is what I&apos;m{" "}
           <span className="text-purple-500">building</span>,<br />
-          on and off screen.&rdquo;
+          on and off screen.
         </h1>
 
         <p className="mt-5 text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
@@ -50,8 +50,8 @@ export default function Home() {
           </strong>
         </p>
 
-        {/* vitals strip */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 border-2 border-purple-500 divide-y-2 md:divide-y-0 md:divide-x-2 divide-purple-500">
+        {/* vitals strip — rounded box */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 border-2 border-purple-500 divide-y-2 md:divide-y-0 md:divide-x-2 divide-purple-500 rounded-2xl overflow-hidden">
           {vitals.map((v) => (
             <div key={v.label} className="p-4">
               <div className={`text-2xl font-extrabold text-purple-500 ${doto.className}`}>
@@ -74,18 +74,14 @@ export default function Home() {
           push, pull, legs, repeat — but the discipline is the whole point.
         </p>
 
-        <div className="grid grid-cols-4 md:grid-cols-7 border-2 border-purple-500 divide-x-2 divide-purple-500 mb-5 overflow-hidden">
+        {/* PPL grid — rounded box */}
+        <div className="grid grid-cols-4 md:grid-cols-7 border-2 border-purple-500 divide-x-2 divide-purple-500 mb-5 rounded-2xl overflow-hidden">
           {pplSplit.map(({ day, workout, rest }) => (
-            <div
-              key={day}
-              className={`p-3 text-center ${rest ? "opacity-30" : ""}`}
-            >
+            <div key={day} className={`p-3 text-center ${rest ? "opacity-30" : ""}`}>
               <div className="text-xs font-mono text-gray-500 uppercase tracking-wider">
                 {day}
               </div>
-              <div
-                className={`text-sm font-bold mt-1 ${doto.className} ${!rest ? "text-purple-500" : ""}`}
-              >
+              <div className={`text-sm font-bold mt-1 ${doto.className} ${!rest ? "text-purple-500" : ""}`}>
                 {workout}
               </div>
             </div>
@@ -105,17 +101,12 @@ export default function Home() {
         <SectionHeader number="02" title="Art" />
         <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
           Portraits and studies, mostly done in Procreate, mostly late at
-          night. Anime aesthetics show up a lot — Toji Zenin has been a
-          recurring reference.
+          night. Anime aesthetics show up a lot.
         </p>
 
         <GalleryGrid
           items={artGallery}
-          placeholderLabels={[
-            "PORTRAIT STUDY",
-            "SKETCH — LINE WORK",
-            "COLOR STUDY",
-          ]}
+          placeholderLabels={["PORTRAIT STUDY", "SKETCH — LINE WORK", "COLOR STUDY"]}
         />
 
         <a
@@ -138,11 +129,7 @@ export default function Home() {
 
         <GalleryGrid
           items={photoGallery}
-          placeholderLabels={[
-            "TORONTO — STREET",
-            "GOLDEN HOUR",
-            "SUBWAY — GRAIN",
-          ]}
+          placeholderLabels={["TORONTO — STREET", "GOLDEN HOUR", "SUBWAY — GRAIN"]}
         />
 
         <a
@@ -159,15 +146,16 @@ export default function Home() {
       <section id="film" className="py-12 border-b-2 border-purple-500/20">
         <SectionHeader number="04" title="Film" />
         <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
-          TifeLogs — the video side of the log. Training days, art timelapses,
-          life in Toronto as a newcomer figuring it out.
+          TifeLogs — training days, art timelapses, life in Toronto as a
+          newcomer figuring it out.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-6 items-start">
+        {/* film box — rounded */}
+        <div className="border-2 border-purple-500/30 rounded-2xl p-4 flex flex-col md:flex-row gap-6 items-start">
           <div className="w-full md:w-auto shrink-0">
             <Iframe />
           </div>
-          <ul className="w-full border-t-2 border-purple-500/30 md:border-t-0 md:border-l-2 md:border-purple-500/30 md:pl-6 pt-4 md:pt-0">
+          <ul className="w-full pt-2">
             {recentVideos.map((v) => (
               <li
                 key={v.title}
@@ -196,13 +184,14 @@ export default function Home() {
       <section id="journal" className="py-12">
         <SectionHeader number="05" title="Journal" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* journal box — rounded */}
+        <div className="border-2 border-purple-500/30 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
               French, twice a week with a tutor, every day on my own. Working
               toward NCLC 7 for Express Entry.
             </p>
-            <div className="flex flex-wrap gap-[6px] mt-2">
+            <div className="flex flex-wrap gap-[6px]">
               {Array.from({ length: frenchStreak.total }).map((_, i) => (
                 <span
                   key={i}
@@ -223,11 +212,9 @@ export default function Home() {
             {journalEntries.map((entry) => (
               <div
                 key={entry.date}
-                className="py-4 border-t border-gray-200 dark:border-gray-800"
+                className="py-3 border-t border-gray-200 dark:border-gray-800"
               >
-                <span
-                  className={`block text-xs font-mono text-purple-500 mb-1 tracking-widest ${doto.className}`}
-                >
+                <span className={`block text-xs font-mono text-purple-500 mb-1 tracking-widest ${doto.className}`}>
                   {entry.date}
                 </span>
                 <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">

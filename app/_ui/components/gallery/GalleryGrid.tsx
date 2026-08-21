@@ -20,7 +20,7 @@ export default function GalleryGrid({ items, placeholderLabels }: Props) {
         {placeholderGradients.map((gradient, i) => (
           <div
             key={i}
-            className={`relative overflow-hidden border-2 border-purple-500/30 bg-gradient-to-br ${gradient} flex items-end p-3`}
+            className={`relative overflow-hidden border-2 border-purple-500/30 rounded-2xl bg-gradient-to-br ${gradient} flex items-end p-3`}
             style={{ aspectRatio: "4/5" }}
           >
             <span className="text-[0.68rem] tracking-widest font-mono text-purple-400/60 uppercase">
@@ -37,7 +37,7 @@ export default function GalleryGrid({ items, placeholderLabels }: Props) {
       {items.map((item) => (
         <div
           key={item.src}
-          className="relative overflow-hidden border-2 border-purple-500/30"
+          className="relative overflow-hidden border-2 border-purple-500/30 rounded-2xl"
           style={{ aspectRatio: "4/5" }}
         >
           <Image

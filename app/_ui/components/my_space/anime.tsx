@@ -15,7 +15,7 @@ export default function Anime() {
     "Solo Leveling",
   ];
   return (
-    <div className="border-2 border-purple-400 dark:border-purple-200 rounded-xl p-2 px-3">
+    <div className="border-2 border-purple-400 dark:border-purple-200 rounded-2xl p-2 px-3">
       <ul>
         {favouriteAnime.map((anime) => (
           <li key={anime}>
