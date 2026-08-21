@@ -1,18 +1,24 @@
-import { doto } from "@/app/_ui/fonts";
-import DesktopNav from "./desktop-nav";
 import Link from "next/link";
+import DesktopNav from "./desktop-nav";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center border-b-4 border-b-purple-500 p-3 sticky top-0   bg-white/90 dark:bg-black/90 z-90 backdrop-blur-sm">
-      <h3 className={` font-extrabold text-2xl ${doto.className}`}>
-        <Link href="/" className="flex gap-2">
-          Tife
-          <span className="hidden md:block">Olatunji</span>
+    <nav
+      className="sticky top-0 z-50 border-b"
+      style={{
+        background: "rgba(240,237,230,0.92)",
+        backdropFilter: "blur(6px)",
+        borderColor: "var(--color-line)",
+      }}
+    >
+      <div className="max-w-[920px] mx-auto px-7 flex items-center justify-between h-16">
+        <Link
+          href="/"
+          className="text-[1.05rem] font-semibold tracking-[0.01em]"
+          style={{ fontFamily: "var(--font-fraunces)" }}
+        >
+          TIFE<span style={{ color: "var(--color-rust)" }}>.</span>OLATUNJI
         </Link>
-      </h3>
-      <div>
-        {/* putting nav routes here for desktop and tab */}
         <DesktopNav />
       </div>
     </nav>
