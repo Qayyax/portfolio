@@ -2,28 +2,33 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import navRoutes from "@/app/_data_exports/navroutes";
+import clsx from "clsx";
 
 export default function DesktopNav() {
   const pathname = usePathname();
   return (
-    <ul className="flex gap-[26px] text-[0.78rem] tracking-[0.08em] uppercase">
+    <ul className="flex gap-3 font-bold font-mono justify-center items-center">
       {navRoutes.map((nav) => {
-        const active = pathname === nav.to || pathname.startsWith(nav.to + "/");
+        const isAnchor = nav.to.startsWith("/#");
+        const active =
+          !isAnchor &&
+          (pathname === nav.to || pathname.startsWith(nav.to + "/"));
         return (
-          <li key={nav.to}>
-            <Link
-              href={nav.to}
-              className="transition-opacity duration-150"
-              style={{
-                opacity: active ? 1 : 0.65,
-                borderBottom: active
-                  ? `1px solid var(--color-rust)`
-                  : "1px solid transparent",
-                fontFamily: "var(--font-inter)",
-              }}
-            >
-              {nav.title}
-            </Link>
+          <li
+            key={nav.to}
+            className={clsx({
+              "border-x-2 border-purple-500 rounded-lg px-3": active,
+            })}
+          >
+            {isAnchor ? (
+              <a href={nav.to} className="hover:text-purple-500 transition-colors">
+                {nav.title}
+              </a>
+            ) : (
+              <Link href={nav.to} className="hover:text-purple-500 transition-colors">
+                {nav.title}
+              </Link>
+            )}
           </li>
         );
       })}
