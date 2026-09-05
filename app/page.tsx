@@ -2,9 +2,8 @@ import { doto } from "./_ui/fonts";
 import { FaStrava } from "react-icons/fa";
 import { artGallery, photoGallery } from "./_data_exports/gallery";
 import { journalEntries, frenchStreak } from "./_data_exports/journal";
-import recentVideos from "./_data_exports/videos";
 import GalleryGrid from "./_ui/components/gallery/GalleryGrid";
-import Iframe from "./_ui/components/my_space/iframe";
+import YoutubeShorts from "./_ui/components/film/YoutubeShorts";
 
 function SectionHeader({ number, title }: { number: string; title: string }) {
   return (
@@ -116,29 +115,10 @@ export default async function Home() {
       <section id="film" className="py-12 border-b-2 border-purple-500/20">
         <SectionHeader number="03" title="Film" />
         <p className="text-gray-600 dark:text-gray-400 max-w-xl mb-6 leading-relaxed">
-          TifeLogs — training days, art timelapses, life in Toronto as a
-          newcomer figuring it out.
+          TifeLogs — training days, art timelapses.
         </p>
 
-        {/* film box — rounded */}
-        <div className="border-2 border-purple-500/30 rounded-2xl p-4 flex flex-col md:flex-row gap-6 items-start">
-          <div className="w-full md:w-auto shrink-0">
-            <Iframe />
-          </div>
-          <ul className="w-full pt-2">
-            {recentVideos.map((v) => (
-              <li
-                key={v.title}
-                className="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-900 text-sm gap-4"
-              >
-                <span>{v.title}</span>
-                <span className={`text-purple-500 shrink-0 ${doto.className}`}>
-                  {v.duration}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <YoutubeShorts />
 
         <a
           href="https://www.youtube.com/@TifeLogs"
