@@ -5,9 +5,9 @@ import { dotGothic16 } from "./_ui/fonts";
 import Footer from "./_ui/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Tife Olatunji — Log",
+  title: "Qayyax",
   description:
-    "Nigeria-raised, Toronto-based. Training, art, photography, video, and language learning.",
+    "Running, drawing, photography, cycling, film, and language learning — a log of my interests.",
 };
 
 export default function RootLayout({

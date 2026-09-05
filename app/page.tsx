@@ -1,9 +1,9 @@
 import { doto } from "./_ui/fonts";
 import { FaStrava } from "react-icons/fa";
 import { artGallery, photoGallery } from "./_data_exports/gallery";
-import { journalEntries, frenchStreak } from "./_data_exports/journal";
 import GalleryGrid from "./_ui/components/gallery/GalleryGrid";
 import YoutubeShorts from "./_ui/components/film/YoutubeShorts";
+import ReferralCards from "./_ui/components/referrals/referral-cards";
 
 function SectionHeader({ number, title }: { number: string; title: string }) {
   return (
@@ -82,7 +82,7 @@ export default async function Home() {
           href="https://www.deviantart.com/qayyax/gallery"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+          className={`inline-block mt-4 text-sm font-extrabold text-white bg-purple-600 border-2 border-purple-400 rounded-xl px-4 py-2 hover:bg-purple-500 hover:border-purple-300 transition-colors shadow-md shadow-purple-500/30 ${doto.className}`}
         >
           → View full gallery on DeviantArt
         </a>
@@ -105,7 +105,7 @@ export default async function Home() {
           href="https://www.flickr.com/photos/204502360@N07/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+          className={`inline-block mt-4 text-sm font-extrabold text-white bg-purple-600 border-2 border-purple-400 rounded-xl px-4 py-2 hover:bg-purple-500 hover:border-purple-300 transition-colors shadow-md shadow-purple-500/30 ${doto.className}`}
         >
           → More on Flickr
         </a>
@@ -124,56 +124,19 @@ export default async function Home() {
           href="https://www.youtube.com/@TifeLogs"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 text-sm font-mono text-purple-500 hover:underline"
+          className={`inline-block mt-4 text-sm font-extrabold text-white bg-purple-600 border-2 border-purple-400 rounded-xl px-4 py-2 hover:bg-purple-500 hover:border-purple-300 transition-colors shadow-md shadow-purple-500/30 ${doto.className}`}
         >
           → YouTube @TifeLogs
         </a>
       </section>
 
-      {/* ── JOURNAL ── */}
-      <section id="journal" className="py-12">
-        <SectionHeader number="04" title="Journal" />
-
-        {/* journal box — rounded */}
-        <div className="border-2 border-purple-500/30 rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed text-sm">
-              French, twice a week with a tutor, every day on my own. Working
-              toward NCLC 7 for Express Entry.
-            </p>
-            <div className="flex flex-wrap gap-[6px]">
-              {Array.from({ length: frenchStreak.total }).map((_, i) => (
-                <span
-                  key={i}
-                  className={`inline-block w-[14px] h-[14px] rounded-sm ${
-                    i < frenchStreak.active
-                      ? "bg-purple-500"
-                      : "bg-gray-200 dark:bg-gray-800"
-                  }`}
-                />
-              ))}
-            </div>
-            <p className="text-xs font-mono text-gray-500 mt-2">
-              {frenchStreak.active}/{frenchStreak.total} days this fortnight
-            </p>
-          </div>
-
-          <div>
-            {journalEntries.map((entry) => (
-              <div
-                key={entry.date}
-                className="py-3 border-t border-gray-200 dark:border-gray-800"
-              >
-                <span className={`block text-xs font-mono text-purple-500 mb-1 tracking-widest ${doto.className}`}>
-                  {entry.date}
-                </span>
-                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                  {entry.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* ── REFERRALS ── */}
+      <section id="referrals" className="py-12">
+        <SectionHeader number="04" title="Referrals" />
+        <p className="text-sm text-gray-500 font-mono -mt-4 mb-6">
+          Apps I use — codes &amp; links that get you a discount.
+        </p>
+        <ReferralCards />
       </section>
     </main>
   );
