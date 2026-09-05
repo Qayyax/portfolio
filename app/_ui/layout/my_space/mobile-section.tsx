@@ -1,15 +1,16 @@
-import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 import Anime from "../../components/my_space/anime";
 import InterestingApps from "../../components/my_space/interesting-apps";
 import interestingApps from "@/app/_data_exports/interestingApps";
 import Books from "../../components/my_space/books";
-import StudyPlaylist from "../../components/my_space/studyPlaylist";
 import ProjectCard from "../../components/project/ProjectCard";
-import ProjectActionBtn from "../../components/project/ProjectActionBtn";
+import featuredData from "@/app/_data_exports/featuredData";
 import { doto } from "../../fonts";
 
 export default function MySpaceMobile() {
+  const neovim = featuredData.find((d) => d.name === "NeoVim Config")!;
+  const typeShooter = featuredData.find((d) => d.name === "TypeShooter")!;
+
   return (
     <div className="w-full px-5 md:px-10 py-8 flex flex-col gap-5">
       <div className="border-b-2 border-purple-500/20 pb-4 mb-2">
@@ -22,12 +23,26 @@ export default function MySpaceMobile() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Section header="My Youtube Video">
-          <Iframe />
+        <Section header="NeoVim Config">
+          <ProjectCard
+            name={neovim.name}
+            description={neovim.description}
+            tags={neovim.tags}
+            image={neovim.image}
+            liveSite={neovim.liveSite}
+            code={neovim.code}
+          />
         </Section>
 
-        <Section header="My Study Playlist">
-          <StudyPlaylist />
+        <Section header="TypeShooter">
+          <ProjectCard
+            name={typeShooter.name}
+            description={typeShooter.description}
+            tags={typeShooter.tags}
+            image={typeShooter.image}
+            liveSite={typeShooter.liveSite}
+            code={typeShooter.code}
+          />
         </Section>
 
         <Section header="My Dotfiles">
@@ -52,28 +67,6 @@ export default function MySpaceMobile() {
       <Section header="Anime / Manga List">
         <Anime />
       </Section>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Section header="Art Gallery">
-          <p className="italic text-sm text-gray-500 text-center">
-            Sketches, artwork, and illustrations from Procreate.
-          </p>
-          <ProjectActionBtn
-            type="live-site"
-            link="https://www.deviantart.com/qayyax/gallery"
-          />
-        </Section>
-
-        <Section header="Photo Gallery">
-          <p className="italic text-sm text-gray-500 text-center">
-            Pictures taken on walks and in daily life on a Fujifilm X-M5.
-          </p>
-          <ProjectActionBtn
-            type="live-site"
-            link="https://www.flickr.com/photos/204502360@N07/"
-          />
-        </Section>
-      </div>
 
       <Section header="Interesting Apps">
         <InterestingApps appData={interestingApps} />
