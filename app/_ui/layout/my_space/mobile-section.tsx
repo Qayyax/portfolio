@@ -11,7 +11,7 @@ import { doto } from "../../fonts";
 
 export default function MySpaceMobile() {
   return (
-    <div className="max-w-4xl mx-auto px-4 w-full py-8 flex flex-col gap-5">
+    <div className="w-full px-5 md:px-10 py-8 flex flex-col gap-5">
       <div className="border-b-2 border-purple-500/20 pb-4 mb-2">
         <h1 className={`text-3xl font-extrabold ${doto.className}`}>
           MY_<span className="text-purple-500">SPACE</span>

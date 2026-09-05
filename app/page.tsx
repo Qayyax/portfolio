@@ -17,13 +17,22 @@ function SectionHeader({ number, title }: { number: string; title: string }) {
   );
 }
 
-export default function Home() {
+export default async function Home() {
   const today = new Date()
     .toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" })
     .toUpperCase();
 
+  let quote: { q: string; a: string } | null = null;
+  try {
+    const res = await fetch("https://zenquotes.io/api/random", { next: { revalidate: 3600 } });
+    const data = await res.json();
+    quote = data[0] ?? null;
+  } catch {
+    // quote stays null
+  }
+
   return (
-    <main className="max-w-4xl mx-auto px-4 w-full">
+    <main className="w-full px-5 md:px-10">
 
       {/* ── HERO ── */}
       <header className="py-12 border-b-2 border-purple-500/20">
@@ -64,6 +73,14 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {/* daily quote */}
+        {quote && (
+          <div className="mt-6 border-l-4 border-purple-500 pl-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400 italic">&ldquo;{quote.q}&rdquo;</p>
+            <p className="text-xs font-mono text-purple-500 mt-1">— {quote.a}</p>
+          </div>
+        )}
       </header>
 
       {/* ── TRAINING ── */}

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ArtPage() {
   return (
-    <main className="max-w-[920px] mx-auto px-7">
+    <main className="w-full px-5 md:px-10">
       <section className="py-16 border-b" style={{ borderColor: "var(--color-line)" }}>
         <div className="flex items-baseline gap-4 mb-[34px]">
           <span
