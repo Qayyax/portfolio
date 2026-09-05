@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tife Olatunji — Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EDE6;
+    --paper-dim:#E6E2D8;
+    --ink:#201D1A;
+    --ink-soft:#57534C;
+    --indigo:#2B3A67;
+    --rust:#A8451F;
+    --sage:#5C6B4F;
+    --line:#C9C2B3;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--indigo); color:var(--paper);}
+
+  a{color:inherit; text-decoration:none;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(240,237,230,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .brand{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; letter-spacing:0.01em;}
+  .brand span{color:var(--rust);}
+  .navlinks{display:flex; gap:26px; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;}
+  .navlinks a{opacity:0.65; transition:opacity .15s;}
+  .navlinks a:hover{opacity:1;}
+  .navlinks a{border-bottom:1px solid transparent;}
+  .navlinks a:hover{border-bottom-color:var(--rust);}
+
+  /* ---------- HERO / LOG ENTRY ---------- */
+  header.log{
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .entry-date{
+    font-size:0.75rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .entry-date::before{
+    content:"";
+    width:7px; height:7px; border-radius:50%;
+    background:var(--rust);
+    display:inline-block;
+  }
+  h1.display{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-size:clamp(2.4rem, 6vw, 4.1rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    max-width:11ch;
+  }
+  h1.display em{
+    font-style:italic;
+    font-weight:450;
+    color:var(--indigo);
+  }
+  .lede{
+    margin-top:22px;
+    max-width:52ch;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+  }
+  .lede strong{color:var(--ink); font-weight:600;}
+
+  /* vitals strip */
+  .vitals{
+    margin-top:36px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border:1px solid var(--ink);
+    background:var(--ink);
+  }
+  .vital{
+    background:var(--paper);
+    padding:16px 18px;
+    border-right:1px solid var(--ink);
+  }
+  .vital:last-child{border-right:none;}
+  .vital .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;
+    font-weight:500;
+    color:var(--indigo);
+  }
+  .vital .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:64px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .sec-head{
+    display:flex; align-items:baseline; gap:16px;
+    margin-bottom:34px;
+  }
+  .sec-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--rust);
+    white-space:nowrap;
+  }
+  .sec-head h2{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-size:1.9rem;
+  }
+  .sec-rule{flex:1; height:1px; background:var(--line); align-self:center;}
+  .sec-note{color:var(--ink-soft); max-width:58ch; margin-bottom:30px; font-size:0.96rem;}
+
+  /* ---------- TRAINING ---------- */
+  .split-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:22px;
+  }
+  .split-day{background:var(--paper); padding:16px 10px; text-align:center;}
+  .split-day .d{font-family:'IBM Plex Mono', monospace; font-size:0.68rem; color:var(--ink-soft); text-transform:uppercase;}
+  .split-day .w{font-family:'Fraunces', serif; font-size:1.02rem; margin-top:6px;}
+  .split-day.rest{opacity:0.4;}
+  .training-note{font-size:0.9rem; color:var(--ink-soft); max-width:60ch;}
+  .training-note strong{color:var(--ink);}
+
+  /* ---------- GALLERY GRIDS (art / photo) ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:14px;
+  }
+  .tile{
+    aspect-ratio:4/5;
+    border:1px solid var(--line);
+    display:flex; align-items:flex-end;
+    padding:14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .tile .cap{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--paper);
+    position:relative; z-index:2;
+    letter-spacing:0.03em;
+  }
+  .tile::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.55) 100%);
+  }
+  .tile.a1{background:linear-gradient(155deg,#5C6B4F,#232A1E);}
+  .tile.a2{background:linear-gradient(155deg,#7A5C3E,#2B211A);}
+  .tile.a3{background:linear-gradient(155deg,#2B3A67,#171D33);}
+  .tile.p1{background:linear-gradient(155deg,#8A8477,#332F29);}
+  .tile.p2{background:linear-gradient(155deg,#A8451F,#2B1409);}
+  .tile.p3{background:linear-gradient(155deg,#4B4B4B,#161616);}
+  .gallery-more{
+    margin-top:16px; font-family:'IBM Plex Mono', monospace; font-size:0.75rem;
+    color:var(--indigo); display:inline-block;
+    border-bottom:1px solid var(--indigo); padding-bottom:2px;
+  }
+
+  /* ---------- FILM / VIDEO ---------- */
+  .video-row{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:24px; align-items:center;
+  }
+  .video-frame{
+    aspect-ratio:16/9;
+    background:linear-gradient(155deg,#201D1A,#3A342C);
+    border:1px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .play-btn{
+    width:52px; height:52px; border-radius:50%;
+    border:1.5px solid var(--paper);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .play-btn::after{
+    content:"";
+    border-style:solid;
+    border-width:8px 0 8px 13px;
+    border-color:transparent transparent transparent var(--paper);
+    margin-left:3px;
+  }
+  .video-frame .cap{
+    position:absolute; bottom:14px; left:14px;
+    font-family:'IBM Plex Mono', monospace; color:var(--paper); font-size:0.7rem; opacity:0.8;
+  }
+  .video-list{list-style:none;}
+  .video-list li{
+    padding:12px 0; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; font-size:0.88rem;
+  }
+  .video-list li:last-child{border-bottom:1px solid var(--line);}
+  .video-list .t{font-family:'IBM Plex Mono', monospace; color:var(--ink-soft); font-size:0.75rem;}
+
+  /* ---------- JOURNAL / LANGUAGE ---------- */
+  .journal-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .streak{
+    display:flex; gap:6px; margin-top:16px;
+  }
+  .streak i{
+    width:14px; height:14px;
+    background:var(--indigo);
+    display:inline-block;
+  }
+  .streak i.off{background:var(--line);}
+  .journal-entry{padding:14px 0; border-top:1px solid var(--line); font-size:0.9rem;}
+  .journal-entry .t{font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--ink-soft); display:block; margin-bottom:4px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:48px 0 70px;}
+  .foot-grid{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px;}
+  .foot-links{display:flex; gap:20px; flex-wrap:wrap; font-size:0.8rem;}
+  .foot-links a{color:var(--ink-soft); border-bottom:1px solid transparent;}
+  .foot-links a:hover{color:var(--ink); border-bottom-color:var(--rust);}
+  .foot-quote{
+    font-family:'Fraunces', serif; font-style:italic; color:var(--ink-soft);
+    max-width:34ch; font-size:0.95rem;
+  }
+
+  @media (max-width:720px){
+    .navlinks{display:none;}
+    .vitals{grid-template-columns:repeat(2,1fr);}
+    .vital:nth-child(2){border-right:none;}
+    .vital:nth-child(3){border-top:1px solid var(--ink);}
+    .vital:nth-child(4){border-top:1px solid var(--ink);}
+    .split-grid{grid-template-columns:repeat(3,1fr);}
+    .grid{grid-template-columns:repeat(2,1fr);}
+    .video-row{grid-template-columns:1fr;}
+    .journal-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">TIFE<span>.</span>OLATUNJI</div>
+    <div class="navlinks">
+      <a href="#training">Training</a>
+      <a href="#art">Art</a>
+      <a href="#photo">Photo</a>
+      <a href="#film">Film</a>
+      <a href="#journal">Journal</a>
+    </div>
+  </div>
+</nav>
+
+<header class="log">
+  <div class="wrap">
+    <div class="entry-date mono">LOG — TORONTO, ON — AUG 21 2026</div>
+    <h1 class="display">Hi, I'm Tife.<br>This is what I'm <em>building</em>, on and off screen.</h1>
+    <p class="lede">Nigeria-raised, Toronto-based. Most days start with a run before sunrise and end with a set of sketches or a rough cut. I lift, I run, I draw, I shoot film-style photos, and I'm slowly getting fluent in French. <strong>This site is the log of all of it.</strong></p>
+
+    <div class="vitals">
+      <div class="vital">
+        <div class="num">85→75<span style="font-size:0.9rem;">kg</span></div>
+        <div class="lbl">Current Cut</div>
+      </div>
+      <div class="vital">
+        <div class="num">10<span style="font-size:0.9rem;">km</span></div>
+        <div class="lbl">Daily Run</div>
+      </div>
+      <div class="vital">
+        <div class="num">6<span style="font-size:0.9rem;">/wk</span></div>
+        <div class="lbl">PPL Split</div>
+      </div>
+      <div class="vital">
+        <div class="num">NCLC 7</div>
+        <div class="lbl">French Target</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="training">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag mono">01</span>
+      <h2>Training</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <p class="sec-note">Six days on, a run every single one of them. The split is simple — push, pull, legs, repeat — but the discipline is the whole point.</p>
+
+    <div class="split-grid">
+      <div class="split-day"><div class="d">Mon</div><div class="w">Push</div></div>
+      <div class="split-day"><div class="d">Tue</div><div class="w">Pull</div></div>
+      <div class="split-day"><div class="d">Wed</div><div class="w">Legs</div></div>
+      <div class="split-day"><div class="d">Thu</div><div class="w">Push</div></div>
+      <div class="split-day"><div class="d">Fri</div><div class="w">Pull</div></div>
+      <div class="split-day"><div class="d">Sat</div><div class="w">Legs</div></div>
+    </div>
+    <p class="training-note">Plus a <strong>10km run daily</strong> — before or after lifting, doesn't matter, it happens. Meals stay simple on purpose: quinoa, ground beef, vegetables, repeat. Progress photos and weekly numbers live here as the cut continues.</p>
+  </div>
+</section>
+
+<section id="art">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag mono">02</span>
+      <h2>Art</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <p class="sec-note">Portraits and studies, mostly done in Procreate, mostly late at night. Anime aesthetics show up a lot — Toji Zenin has been a recurring reference, if not for the character then for the frame.</p>
+    <div class="grid">
+      <div class="tile a1"><span class="cap">PORTRAIT STUDY — 07/26</span></div>
+      <div class="tile a2"><span class="cap">SKETCH — LINE WORK</span></div>
+      <div class="tile a3"><span class="cap">COLOR STUDY — DUSK</span></div>
+    </div>
+    <a class="gallery-more" href="#">View full gallery on DeviantArt →</a>
+  </div>
+</section>
+
+<section id="photo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag mono">03</span>
+      <h2>Photography</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <p class="sec-note">Shot on a Fujifilm X-M5. Mostly street and lifestyle — Toronto in the in-between moments, not the postcard ones.</p>
+    <div class="grid">
+      <div class="tile p1"><span class="cap">TORONTO — STREET, JUL</span></div>
+      <div class="tile p2"><span class="cap">GOLDEN HOUR — QUEEN ST</span></div>
+      <div class="tile p3"><span class="cap">SUBWAY — GRAIN</span></div>
+    </div>
+    <a class="gallery-more" href="#">More on Flickr →</a>
+  </div>
+</section>
+
+<section id="film">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag mono">04</span>
+      <h2>Film</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <p class="sec-note">TifeLogs — the video side of the log. Training days, art timelapses, life in Toronto as a newcomer figuring it out.</p>
+    <div class="video-row">
+      <div class="video-frame">
+        <div class="play-btn"></div>
+        <span class="cap">LATEST — TIFELOGS</span>
+      </div>
+      <ul class="video-list">
+        <li><span>Cut update: week 6</span><span class="t">10:42</span></li>
+        <li><span>Procreate portrait, start to finish</span><span class="t">14:05</span></li>
+        <li><span>A day in Toronto</span><span class="t">08:21</span></li>
+        <li><span>PPL leg day, full session</span><span class="t">22:10</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag mono">05</span>
+      <h2>Journal</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="journal-grid">
+      <div>
+        <p class="sec-note" style="margin-bottom:0;">French, twice a week with a tutor, every day on my own. Working toward NCLC 7 for Express Entry.</p>
+        <div class="streak">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i><i class="off"></i>
+        </div>
+      </div>
+      <div>
+        <div class="journal-entry">
+          <span class="t">AUG 19 2026</span>
+          Le futur simple finally clicked this week. Small win, felt big.
+        </div>
+        <div class="journal-entry">
+          <span class="t">AUG 12 2026</span>
+          Broke a personal pace record on the morning run. Cutting is working.
+        </div>
+        <div class="journal-entry">
+          <span class="t">AUG 03 2026</span>
+          New portrait study up — first one in a while I'm actually proud of.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-links">
+          <a href="mailto:qayyax@gmail.com">Email</a>
+          <a href="https://www.youtube.com/@TifeLogs">YouTube</a>
+          <a href="https://www.deviantart.com/qayyax/gallery">DeviantArt</a>
+          <a href="https://www.flickr.com/photos/204502360@N07/">Flickr</a>
+          <a href="https://www.github.com/qayyax">GitHub</a>
+          <a href="https://coff.ee/qayyax">Buy me a coffee</a>
+        </div>
+      </div>
+      <p class="foot-quote">"It is not the knowing that is difficult, but the doing."</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

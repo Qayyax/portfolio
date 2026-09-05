@@ -7,7 +7,7 @@ import Footer from "./_ui/layout/footer";
 export const metadata: Metadata = {
   title: "Qayyax",
   description:
-    "Qayyax portfolio website, which also contains his store and more",
+    "Running, drawing, photography, cycling, film, and language learning — a log of my interests.",
 };
 
 export default function RootLayout({
@@ -17,9 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* I wonder why the font-mono doesn't apply directly to all the children, maybe cause of the font style */}
       <body
-        className={` ${dotGothic16.className} font-mono antialiased flex flex-col min-h-dvh`}
+        className={`${dotGothic16.className} font-mono antialiased flex flex-col min-h-dvh`}
       >
         <Navbar />
         {children}

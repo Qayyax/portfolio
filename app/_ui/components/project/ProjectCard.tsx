@@ -1,38 +1,41 @@
 import Image from "next/image";
 import ProjectTags from "./ProjectTags";
 import { Project } from "@/type";
-import ProjectActionBtn from "./ProjectActionBtn";
+import { doto } from "../../fonts";
 
-export default function ProjectCard({
-  name,
-  description,
-  tags,
-  image,
-  code,
-  liveSite,
-}: Project) {
+export default function ProjectCard({ name, description, tags, image, code, liveSite }: Project) {
+  const hasSeperateCode = code && liveSite && code !== liveSite;
+
   return (
-    <div className="border-2 border-purple-500 dark:border-purple-200 rounded-3xl p-2 flex flex-col items-start gap-2 max-w-[325px]  shadow-sm shadow-purple-500/50 dark:shadow-purple-200/50">
-      <Image
-        src={image}
-        alt={`Image for ${name}`}
-        width={325}
-        height={200}
-        placeholder="blur"
-        blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
-        className="rounded-2xl self-center"
-      />
-
-      <div className="flex flex-col gap-2">
-        <h5 className="font-extrabold text-xl">{name}</h5>
+    <div className="border-2 border-purple-500/30 rounded-2xl overflow-hidden hover:border-purple-500/60 transition-colors">
+      <a href={liveSite || code} target="_blank" rel="noopener noreferrer">
+        <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+          <Image
+            src={image}
+            alt={`Image for ${name}`}
+            fill
+            className="object-cover"
+            placeholder="blur"
+            blurDataURL="https://cdn.pixabay.com/photo/2024/04/10/22/52/autumn-8688876_1280.jpg"
+          />
+        </div>
+      </a>
+      <div className="p-4 flex flex-col items-center gap-2 text-center">
+        <a href={liveSite || code} target="_blank" rel="noopener noreferrer">
+          <h5 className={`font-extrabold text-lg hover:text-purple-500 transition-colors ${doto.className}`}>{name}</h5>
+        </a>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          {description}
+          {hasSeperateCode && (
+            <>
+              {" — "}
+              <a href={code} target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:underline">
+                view code
+              </a>
+            </>
+          )}
+        </p>
         <ProjectTags tags={tags} />
-      </div>
-
-      <p>{description}</p>
-
-      <div className="flex gap-2 font-bold flex-wrap  w-full justify-between px-2">
-        <ProjectActionBtn type="code" link={code} />
-        <ProjectActionBtn type="live-site" link={liveSite} />
       </div>
     </div>
   );

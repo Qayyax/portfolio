@@ -1,26 +1,45 @@
-import Iframe from "../../components/my_space/iframe";
 import Section from "../../components/my_space/space-sections";
 import Anime from "../../components/my_space/anime";
 import InterestingApps from "../../components/my_space/interesting-apps";
 import interestingApps from "@/app/_data_exports/interestingApps";
 import Books from "../../components/my_space/books";
-import StudyPlaylist from "../../components/my_space/studyPlaylist";
 import ProjectCard from "../../components/project/ProjectCard";
-import ProjectActionBtn from "../../components/project/ProjectActionBtn";
+import featuredData from "@/app/_data_exports/featuredData";
+import { doto } from "../../fonts";
 
 export default function MySpaceMobile() {
+  const neovim = featuredData.find((d) => d.name === "NeoVim Config")!;
+  const typeShooter = featuredData.find((d) => d.name === "TypeShooter")!;
+
   return (
-    <section className="p-2 flex flex-col gap-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 justify-center items-center">
-        <Section header="My Youtube Video">
-          <Iframe />
-        </Section>
+    <div className="w-full px-5 md:px-10 py-8">
+      <div className="border-b-2 border-purple-500/20 pb-6 mb-2">
+        <h1 className={`text-3xl font-extrabold ${doto.className}`}>
+          MY_<span className="text-purple-500">SPACE</span>
+        </h1>
+        <p className="text-sm text-gray-500 mt-1 font-mono">
+          interests, links, media, and misc
+        </p>
+      </div>
 
-        <Section header="My Study Playlist">
-          <StudyPlaylist />
-        </Section>
-
-        <Section header="My Dotfiles">
+      <Section number="01" header="Projects">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <ProjectCard
+            name={neovim.name}
+            description={neovim.description}
+            tags={neovim.tags}
+            image={neovim.image}
+            liveSite={neovim.liveSite}
+            code={neovim.code}
+          />
+          <ProjectCard
+            name={typeShooter.name}
+            description={typeShooter.description}
+            tags={typeShooter.tags}
+            image={typeShooter.image}
+            liveSite={typeShooter.liveSite}
+            code={typeShooter.code}
+          />
           <ProjectCard
             name="My Dotfiles"
             description="Some of my configurations"
@@ -29,44 +48,23 @@ export default function MySpaceMobile() {
             liveSite="https://github.com/Qayyax/dot-files"
             code="https://github.com/Qayyax/dot-files"
           />
-        </Section>
-      </div>
+        </div>
+      </Section>
 
-      <Section header="Books I Enjoyed">
-        <p className="italic font-thin">
+      <Section number="02" header="Books I Enjoyed">
+        <p className="italic text-sm text-gray-500">
           Make sure to practice anything you read that has value to you
         </p>
         <Books />
       </Section>
 
-      <Section header="Anime / Manga List">
+      <Section number="03" header="Anime / Manga List">
         <Anime />
       </Section>
 
-      <Section header="Art Gallery">
-        <p className="italic font-thin text-center">
-          Discover the sketches, art work, and illustrations I share between
-          coding sessions.
-        </p>
-        <ProjectActionBtn
-          type="live-site"
-          link="https://www.deviantart.com/qayyax/gallery"
-        />
-      </Section>
-
-      <Section header="Photo Gallery">
-        <p className="italic font-thin text-center">
-          Discover pictures I take during my night walks and in my daily life.
-        </p>
-        <ProjectActionBtn
-          type="live-site"
-          link="https://www.flickr.com/photos/204502360@N07/"
-        />
-      </Section>
-
-      <Section header="Interesting Apps">
+      <Section number="04" header="Interesting Apps" last>
         <InterestingApps appData={interestingApps} />
       </Section>
-    </section>
+    </div>
   );
 }
