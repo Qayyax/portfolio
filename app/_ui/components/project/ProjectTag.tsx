@@ -1,19 +1,9 @@
-import { doto } from "../../fonts";
-
-type Props = {
-  tag: string;
-};
+type Props = { tag: string };
 
 export default function ProjectTag({ tag }: Props) {
-  // maybe I would put a shadow there or something to make it glow
-  // I stil don't know if I want it to be on the same line as the title
-  // I can also use this outline-color property - check tailwind docs
-  // https://tailwindcss.com/docs/outline-color
   return (
-    <div
-      className={`${doto.className} text-sm  border-2 border-purple-600 rounded-md px-2`}
-    >
+    <span className="text-xs font-mono border border-purple-500/50 rounded-md px-2 py-0.5 text-purple-500">
       {tag}
-    </div>
+    </span>
   );
 }

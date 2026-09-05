@@ -12,8 +12,8 @@ export default function MySpaceMobile() {
   const typeShooter = featuredData.find((d) => d.name === "TypeShooter")!;
 
   return (
-    <div className="w-full px-5 md:px-10 py-8 flex flex-col gap-5">
-      <div className="border-b-2 border-purple-500/20 pb-4 mb-2">
+    <div className="w-full px-5 md:px-10 py-8">
+      <div className="border-b-2 border-purple-500/20 pb-6 mb-2">
         <h1 className={`text-3xl font-extrabold ${doto.className}`}>
           MY_<span className="text-purple-500">SPACE</span>
         </h1>
@@ -22,8 +22,8 @@ export default function MySpaceMobile() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Section header="NeoVim Config">
+      <Section number="01" header="Projects">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ProjectCard
             name={neovim.name}
             description={neovim.description}
@@ -32,9 +32,6 @@ export default function MySpaceMobile() {
             liveSite={neovim.liveSite}
             code={neovim.code}
           />
-        </Section>
-
-        <Section header="TypeShooter">
           <ProjectCard
             name={typeShooter.name}
             description={typeShooter.description}
@@ -43,9 +40,6 @@ export default function MySpaceMobile() {
             liveSite={typeShooter.liveSite}
             code={typeShooter.code}
           />
-        </Section>
-
-        <Section header="My Dotfiles">
           <ProjectCard
             name="My Dotfiles"
             description="Some of my configurations"
@@ -54,21 +48,21 @@ export default function MySpaceMobile() {
             liveSite="https://github.com/Qayyax/dot-files"
             code="https://github.com/Qayyax/dot-files"
           />
-        </Section>
-      </div>
+        </div>
+      </Section>
 
-      <Section header="Books I Enjoyed">
+      <Section number="02" header="Books I Enjoyed">
         <p className="italic text-sm text-gray-500">
           Make sure to practice anything you read that has value to you
         </p>
         <Books />
       </Section>
 
-      <Section header="Anime / Manga List">
+      <Section number="03" header="Anime / Manga List">
         <Anime />
       </Section>
 
-      <Section header="Interesting Apps">
+      <Section number="04" header="Interesting Apps" last>
         <InterestingApps appData={interestingApps} />
       </Section>
     </div>
