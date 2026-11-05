@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaYoutube } from "react-icons/fa6";
-import { SUBSCRIBE_URL, YOUTUBE_URL } from "@/app/_data_exports/socials";
+import { YOUTUBE_URL } from "@/app/_data_exports/socials";
 import { formatDate, type Video } from "@/app/_lib/youtube";
 import Dock from "./Dock";
 import Player from "./Player";
@@ -33,9 +34,9 @@ export default function Hero({ latest, shorts, tickerVideos }: Props) {
       </div>
 
       <header className="topbar">
-        <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="topbar-name">
+        <Link href="/" className="topbar-name">
           Tife Olatunji
-        </a>
+        </Link>
         <nav aria-label="Sections">
           {anchors.map((anchor) => (
             <a key={anchor.href} href={anchor.href}>
@@ -43,7 +44,7 @@ export default function Hero({ latest, shorts, tickerVideos }: Props) {
             </a>
           ))}
         </nav>
-        <a href={SUBSCRIBE_URL} target="_blank" rel="noopener noreferrer" className="topbar-cta">
+        <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="topbar-cta">
           <FaYoutube aria-hidden /> Subscribe
         </a>
       </header>
