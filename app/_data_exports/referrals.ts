@@ -6,12 +6,12 @@ export type Referral = {
 
 export const referrals: Referral[] = [
   {
-    title: "SkillShare",
-    description: "One month free on SkillShare",
+    title: "Preply",
+    description: "One-on-one online language tutors",
     code: {
       type: "link",
-      link: "https://skl.sh/4oDFtkn",
-      code: "4oDFtkn",
+      link: "https://preply.com/en/?pref=Mjg0MzY3NTg=&id=1791767857.613128&ep=w1",
+      code: "Mjg0MzY3NTg=",
     },
   },
   {
@@ -21,6 +21,15 @@ export const referrals: Referral[] = [
       type: "code",
       link: "https://referral.lemfi.com/N2HUdSJaO7b",
       code: "ABDUO3MP",
+    },
+  },
+  {
+    title: "SkillShare",
+    description: "One month free on SkillShare",
+    code: {
+      type: "link",
+      link: "https://skl.sh/4oDFtkn",
+      code: "4oDFtkn",
     },
   },
   {
