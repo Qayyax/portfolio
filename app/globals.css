@@ -1009,8 +1009,13 @@ button {
   color: var(--muted);
 }
 
-.ticket-action {
+.ticket-actions {
   flex: none;
+  display: flex;
+  gap: 8px;
+}
+
+.ticket-action {
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -1234,7 +1239,12 @@ button {
   }
 
   .ticket {
+    flex-wrap: wrap;
     padding: 20px 24px;
+  }
+
+  .ticket > div:first-child {
+    flex-basis: 100%;
   }
 
   .art-grid {

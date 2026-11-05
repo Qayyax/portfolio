@@ -39,23 +39,26 @@ export default function Referrals() {
               <h3>{title}</h3>
               <p>{description}</p>
             </div>
-            {code.type === "link" ? (
-              <a href={code.link} target="_blank" rel="noopener noreferrer" className="ticket-action">
-                Open <FaArrowRight aria-hidden />
-              </a>
-            ) : (
-              <button type="button" onClick={() => copy(code.code)} className="ticket-action">
-                {copied === code.code ? (
-                  <>
-                    Copied <FaCheck aria-hidden />
-                  </>
-                ) : (
-                  <>
-                    {code.code} <FaRegCopy aria-hidden />
-                  </>
-                )}
-              </button>
-            )}
+            <div className="ticket-actions">
+              {code.type === "code" && (
+                <button type="button" onClick={() => copy(code.code)} className="ticket-action">
+                  {copied === code.code ? (
+                    <>
+                      Copied <FaCheck aria-hidden />
+                    </>
+                  ) : (
+                    <>
+                      {code.code} <FaRegCopy aria-hidden />
+                    </>
+                  )}
+                </button>
+              )}
+              {code.link && (
+                <a href={code.link} target="_blank" rel="noopener noreferrer" className="ticket-action">
+                  Open <FaArrowRight aria-hidden />
+                </a>
+              )}
+            </div>
           </article>
         ))}
       </div>

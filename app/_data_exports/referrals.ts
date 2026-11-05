@@ -19,7 +19,7 @@ export const referrals: Referral[] = [
     description: "For sending & receiving money overseas",
     code: {
       type: "code",
-      link: "",
+      link: "https://referral.lemfi.com/N2HUdSJaO7b",
       code: "ABDUO3MP",
     },
   },
