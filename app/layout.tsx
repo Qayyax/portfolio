@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/app/_ui/layout/navbar";
-import { dotGothic16 } from "./_ui/fonts";
-import Footer from "./_ui/layout/footer";
+import { monoton, righteous, vt323 } from "./_ui/fonts";
 
 export const metadata: Metadata = {
-  title: "Qayyax",
-  description:
-    "Running, drawing, photography, cycling, film, and language learning — a log of my interests.",
+  title: "TifeLogs",
+  description: "Daily gym logs, Shorts and the weekly training plan from Tife Olatunji.",
 };
 
 export default function RootLayout({
@@ -16,14 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${dotGothic16.className} font-mono antialiased flex flex-col min-h-dvh`}
-      >
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+    <html lang="en" className={`${monoton.variable} ${righteous.variable} ${vt323.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

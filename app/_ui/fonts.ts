@@ -1,29 +1,19 @@
-import { Doto, DotGothic16, Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
+import { Monoton, Righteous, VT323 } from "next/font/google";
 
-export const dotGothic16 = DotGothic16({
+export const monoton = Monoton({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "400",
+  variable: "--font-monoton",
 });
 
-export const doto = Doto({
+export const righteous = Righteous({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-righteous",
 });
 
-export const fraunces = Fraunces({
+export const vt323 = VT323({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz"],
-  variable: "--font-fraunces",
-});
-
-export const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono-plex",
-});
-
-export const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  weight: "400",
+  variable: "--font-vt323",
 });

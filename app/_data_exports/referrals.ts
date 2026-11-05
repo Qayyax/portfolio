@@ -1,4 +1,10 @@
-export const referrals = [
+export type Referral = {
+  title: string;
+  description: string;
+  code: { type: "code" | "link"; link: string; code: string };
+};
+
+export const referrals: Referral[] = [
   {
     title: "SkillShare",
     description: "One month free on SkillShare",
@@ -31,7 +37,7 @@ export const referrals = [
     description: "Canadian immigration lawyers",
     code: {
       type: "link",
-      link: "app.borderpass.ai/refer/zRUmrb",
+      link: "https://app.borderpass.ai/refer/zRUmrb",
       code: "zRUmrb",
     },
   },

@@ -1,25 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "pbs.twimg.com",
-        pathname: "/media/**",
+        hostname: "i.ytimg.com",
+        pathname: "/vi/**",
       },
     ],
   },
-  logging: {
-    fetches: {
-      fullUrl: true,
-    },
+  async redirects() {
+    return [
+      { source: "/art", destination: "/#art", permanent: false },
+      { source: "/training", destination: "/#plan", permanent: false },
+      { source: "/my_space", destination: "/", permanent: false },
+      { source: "/store", destination: "/", permanent: false },
+    ];
   },
 };
 
