@@ -15,6 +15,7 @@ export const SUBSCRIBE_URL = `${YOUTUBE_URL}?sub_confirmation=1`;
 export const TRAINING_PLAN_URL =
   "https://app.notion.com/p/Training-Plan-40cf4ab2ca6581c68f34f6fbe11b2053?source=copy_link";
 export const EMAIL_URL = "mailto:qayyax@gmail.com";
+export const STORE_URL = "https://thawtail.store";
 
 export const socials: Social[] = [
   { name: "YouTube", action: "Subscribe", href: SUBSCRIBE_URL, icon: FaYoutube },
@@ -26,6 +27,7 @@ export const socials: Social[] = [
 ];
 
 export const moreLinks = [
+  { name: "Thawtail store", href: STORE_URL },
   { name: "GitHub", href: "https://www.github.com/qayyax" },
   { name: "DeviantArt", href: "https://www.deviantart.com/qayyax/gallery" },
   { name: "Flickr", href: "https://www.flickr.com/photos/204502360@N07/" },

@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "i.ytimg.com",
         pathname: "/vi/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.shopify.com",
+        pathname: "/s/files/**",
+      },
     ],
   },
   async redirects() {
@@ -15,7 +20,7 @@ const nextConfig: NextConfig = {
       { source: "/art", destination: "/#art", permanent: false },
       { source: "/training", destination: "/#plan", permanent: false },
       { source: "/my_space", destination: "/", permanent: false },
-      { source: "/store", destination: "/", permanent: false },
+      { source: "/store", destination: "/#shop", permanent: false },
     ];
   },
 };

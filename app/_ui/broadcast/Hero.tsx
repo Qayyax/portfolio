@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaYoutube } from "react-icons/fa6";
-import { YOUTUBE_URL } from "@/app/_data_exports/socials";
+import { FaBagShopping, FaYoutube } from "react-icons/fa6";
+import { STORE_URL, YOUTUBE_URL } from "@/app/_data_exports/socials";
 import { formatDate, type Video } from "@/app/_lib/youtube";
 import Dock from "./Dock";
 import Player from "./Player";
@@ -16,6 +16,7 @@ type Props = {
 };
 
 const anchors = [
+  { label: "Shop", href: "#shop" },
   { label: "Shorts", href: "#shorts" },
   { label: "Logs", href: "#logs" },
   { label: "Plan", href: "#plan" },
@@ -44,9 +45,14 @@ export default function Hero({ latest, shorts, tickerVideos }: Props) {
             </a>
           ))}
         </nav>
-        <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="topbar-cta">
-          <FaYoutube aria-hidden /> Subscribe
-        </a>
+        <div className="topbar-actions">
+          <a href={STORE_URL} target="_blank" rel="noopener noreferrer" className="topbar-cta topbar-shop">
+            <FaBagShopping aria-hidden /> Shop
+          </a>
+          <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="topbar-cta">
+            <FaYoutube aria-hidden /> Subscribe
+          </a>
+        </div>
       </header>
 
       <Wordmark />
