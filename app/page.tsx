@@ -20,8 +20,8 @@ export default async function Home() {
     <>
       <main>
         <Hero latest={latest} shorts={shorts.slice(0, 2)} tickerVideos={long.slice(0, 6)} />
-        <Store products={products} />
         <Posters />
+        <Store products={products} />
         {shorts.length > 0 && <Shorts videos={shorts.slice(0, 10)} />}
         {olderLogs.length > 0 && <Logs videos={olderLogs.slice(0, 6)} />}
         <Schedule />

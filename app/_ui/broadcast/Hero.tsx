@@ -16,8 +16,8 @@ type Props = {
 };
 
 const anchors = [
-  { label: "Shop", href: "#shop" },
   { label: "Posters", href: "#posters" },
+  { label: "Shop", href: "#shop" },
   { label: "Shorts", href: "#shorts" },
   { label: "Logs", href: "#logs" },
   { label: "Plan", href: "#plan" },
