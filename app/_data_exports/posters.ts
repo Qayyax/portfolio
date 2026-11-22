@@ -7,7 +7,7 @@ export type Poster = {
 
 // Set this to the Etsy shop URL (e.g. "https://ironera.etsy.com") once the shop is live.
 // While it is null, the section shows as "Opening soon" and the cards are not links.
-export const ETSY_URL: string | null = null;
+export const ETSY_URL: string | null = "https://tifelogs.etsy.com";
 
 export const posters: Poster[] = [
   {
