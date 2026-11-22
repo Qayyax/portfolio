@@ -220,6 +220,99 @@ button {
   box-shadow: 0 0 22px -6px rgba(168, 85, 247, 0.8);
 }
 
+.shop-menu {
+  position: relative;
+}
+
+.topbar-shop {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
+.shop-menu-caret {
+  font-size: 11px;
+  transition: transform 0.2s;
+}
+
+.shop-menu[data-open="true"] .shop-menu-caret {
+  transform: rotate(180deg);
+}
+
+.shop-menu-list {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 50;
+  display: grid;
+  gap: 4px;
+  width: 260px;
+  padding: 6px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 16px;
+  background: rgba(18, 13, 32, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px -20px rgba(168, 85, 247, 0.7);
+  text-transform: none;
+  animation: shop-menu-in 0.18s ease-out;
+}
+
+.shop-menu-list[hidden] {
+  display: none;
+}
+
+.shop-menu-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 11px;
+  transition: background 0.2s;
+}
+
+.shop-menu-list a:hover,
+.shop-menu-list a:focus-visible {
+  background: rgba(168, 85, 247, 0.18);
+}
+
+.shop-menu-icon {
+  flex: none;
+  font-size: 20px;
+  color: var(--violet-hi);
+}
+
+.shop-menu-list span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.shop-menu-list strong {
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.shop-menu-list small {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.shop-menu-out {
+  flex: none;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+@keyframes shop-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
 /* The word spans the full viewport, so size follows its measured em width. */
 .wordmark {
   --spot-x: 50%;
@@ -1395,6 +1488,14 @@ button {
 @media (max-width: 640px) {
   .topbar-cta {
     padding: 7px 11px;
+  }
+
+  .topbar-actions {
+    position: relative;
+  }
+
+  .shop-menu {
+    position: static;
   }
 
   .storefront {
