@@ -15,8 +15,8 @@ export default function Posters() {
           </p>
           <h2>Iron Era</h2>
           <p className="storefront-pitch">
-            Retro gym posters for your home gym or training room. Instant digital download, print at any size up
-            to 24×36.
+            Retro gym posters for your home gym or training room. Get a printed poster shipped to your door, or an
+            instant digital download to print yourself.
           </p>
           {live && (
             <a href={ETSY_URL!} target="_blank" rel="noopener noreferrer" className="button">
@@ -33,7 +33,7 @@ export default function Posters() {
                   <Image src={poster.image} alt={poster.alt} fill sizes="(max-width: 640px) 60vw, 240px" />
                 </span>
                 <span className="product-title">{poster.title}</span>
-                <span className="product-price">Digital download</span>
+                <span className="product-price">Print from CA$39.99 · Digital CA$6.50</span>
               </>
             );
             return (
