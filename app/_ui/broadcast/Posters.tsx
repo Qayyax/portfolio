@@ -33,7 +33,10 @@ export default function Posters() {
                   <Image src={poster.image} alt={poster.alt} fill sizes="(max-width: 640px) 60vw, 240px" />
                 </span>
                 <span className="product-title">{poster.title}</span>
-                <span className="product-price">Print from CA$39.99 · Digital CA$6.50</span>
+                <span className="product-price product-price-stack">
+                  <span>Print from CA$39.99</span>
+                  <span>Digital CA$6.50</span>
+                </span>
               </>
             );
             return (
