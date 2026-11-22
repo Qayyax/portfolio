@@ -833,6 +833,41 @@ button {
   color: var(--muted);
 }
 
+.storefront-posters {
+  border-color: rgba(251, 146, 60, 0.35);
+  background:
+    linear-gradient(160deg, rgba(194, 65, 12, 0.3), transparent 55%),
+    var(--surface);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 40px 120px -50px rgba(234, 88, 12, 0.7);
+}
+
+.storefront-posters .storefront-glow {
+  background: radial-gradient(circle, rgba(251, 146, 60, 0.25), transparent 65%);
+}
+
+.storefront-posters .storefront-label {
+  color: #fdba74;
+}
+
+.storefront-posters .storefront-sign h2 {
+  background: linear-gradient(180deg, #fff 12%, #fed7aa 46%, #ea580c 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(234, 88, 12, 0.5));
+}
+
+.storefront-posters .product-photo {
+  aspect-ratio: 2 / 3;
+  background: #1d2a44;
+}
+
+.storefront-posters .product-price {
+  font-size: 15px;
+  color: var(--muted);
+}
+
 /* Shorts */
 
 .section-bleed {
