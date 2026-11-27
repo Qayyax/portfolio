@@ -7,9 +7,15 @@ import { formatDate, type Video } from "@/app/_lib/youtube";
 
 const FOLLOW_EASE = 0.14;
 
+// Finds "Daily Gym Log #45" anywhere in the title (start or end) and turns it into the tag.
 function splitTitle(title: string) {
-  const match = title.match(/^Daily Gym Log #(\d+):\s*(.+)$/i);
-  return match ? { number: `#${match[1]}`, name: match[2] } : { number: "", name: title };
+  const match = title.match(/daily gym log\s*#(\d+)/i);
+  if (!match) return { number: "", name: title };
+  const name = title
+    .replace(match[0], "")
+    .replace(/^[\s|:\-–—]+|[\s|:\-–—]+$/g, "")
+    .trim();
+  return { number: `#${match[1]}`, name: name || title };
 }
 
 export default function Logs({ videos }: { videos: Video[] }) {
